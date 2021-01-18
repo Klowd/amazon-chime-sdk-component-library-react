@@ -52,14 +52,11 @@ import Share from '../Share';
 import SignalStrength from '../SignalStrength';
 import Sound from '../Sound';
 import Spinner from '../Spinner';
-<<<<<<< HEAD
-import ZoomOut from '../ZoomOut';
-import ZoomIn from '../ZoomIn';
-=======
 import UpAndDownCaret from '../UpAndDownCaret';
+import ZoomIn from '../ZoomIn';
+import ZoomOut from '../ZoomOut';
 import styled from 'styled-components';
 import { text } from '@storybook/addon-knobs';
->>>>>>> local changes
 
 export default {
   title: 'UI Components/Icons/All',
