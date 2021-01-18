@@ -1,12 +1,12 @@
 // Copyright 2020-2021 Amazon.com, Inc. or its affiliates. All Rights Reserved.
 // SPDX-License-Identifier: Apache-2.0
 
-import React from 'react';
 import '@testing-library/jest-dom';
 
+import Navbar from '../../../../src/components/ui/Navbar';
+import React from 'react';
 import lightTheme from '../../../../src/theme/light';
 import { renderWithTheme } from '../../../test-helpers';
-import Navbar from '../../../../src/components/ui/Navbar';
 
 describe('Navbar', () => {
   it('should render a NavBar', () => {

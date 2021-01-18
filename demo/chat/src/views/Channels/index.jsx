@@ -5,23 +5,25 @@
 // Copyright 2020-2021 Amazon.com, Inc. or its affiliates. All Rights Reserved.
 // SPDX-License-Identifier: Apache-2.0
 
-import React from 'react';
+import './style.css';
+
 import {
-  Heading,
-  Grid,
   Cell,
+  Grid,
+  Heading,
   useNotificationDispatch,
 } from 'amazon-chime-sdk-component-library-react';
-import { useTheme } from 'styled-components';
-import ChannelsWrapper from '../../containers/channels/ChannelsWrapper';
-import Messages from '../../containers/messages/Messages';
-import Input from '../../containers/input/Input';
-import './style.css';
 import {
   useChatChannelState,
   useChatMessagingState,
 } from '../../providers/ChatMessagesProvider';
+
+import ChannelsWrapper from '../../containers/channels/ChannelsWrapper';
+import Input from '../../containers/input/Input';
+import Messages from '../../containers/messages/Messages';
+import React from 'react';
 import { useAuthContext } from '../../providers/AuthProvider';
+import { useTheme } from 'styled-components';
 
 const Channels = () => {
   const currentTheme = useTheme();

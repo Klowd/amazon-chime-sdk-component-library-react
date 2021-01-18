@@ -3,19 +3,21 @@
 // Copyright 2020-2021 Amazon.com, Inc. or its affiliates. All Rights Reserved.
 // SPDX-License-Identifier: Apache-2.0
 
-import React, { useState, useRef, useEffect } from 'react';
+import './Input.css';
+
 import {
-  Input as InputComponent,
   Attachment,
   IconButton,
-  useNotificationDispatch,
-  Remove,
+  Input as InputComponent,
   Label,
+  Remove,
+  useNotificationDispatch,
 } from 'amazon-chime-sdk-component-library-react';
-import { sendChannelMessage } from '../../api/ChimeAPI';
-import formatBytes from '../../utilities/formatBytes';
-import './Input.css';
+import React, { useEffect, useRef, useState } from 'react';
+
 import AttachmentService from '../../services/AttachmentService';
+import formatBytes from '../../utilities/formatBytes';
+import { sendChannelMessage } from '../../api/ChimeAPI';
 
 const uploadObjDefaults = {
   name: '',

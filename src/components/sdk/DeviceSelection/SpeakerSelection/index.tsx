@@ -1,11 +1,10 @@
 // Copyright 2020-2021 Amazon.com, Inc. or its affiliates. All Rights Reserved.
 // SPDX-License-Identifier: Apache-2.0
 
+import DeviceInput from '../DeviceInput';
 import React from 'react';
-
 import { useAudioOutputs } from '../../../../providers/DevicesProvider';
 import useSelectAudioOutputDevice from '../../../../hooks/sdk/useSelectAudioOutputDevice';
-import DeviceInput from '../DeviceInput';
 
 interface Props {
   /** The message that will be shown when no audio output speaker devices are found. */
@@ -18,7 +17,7 @@ interface Props {
 
 export const SpeakerSelection: React.FC<Props> = ({
   notFoundMsg = 'No speaker devices found',
-  label = 'Speaker source',
+  label = 'Speaker',
   onChange,
 }) => {
   const { devices, selectedDevice } = useAudioOutputs();

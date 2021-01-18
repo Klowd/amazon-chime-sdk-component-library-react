@@ -1,13 +1,13 @@
 // Copyright 2020-2021 Amazon.com, Inc. or its affiliates. All Rights Reserved.
 // SPDX-License-Identifier: Apache-2.0
 
-import styled from 'styled-components';
+import { baseSpacing, baseStyles } from '../Base';
 
-import { NotificationProps } from '.';
-import { Severity } from '../../../providers/NotificationProvider';
 import IconButton from '../Button/IconButton';
+import { NotificationProps } from '.';
 import SecondaryButton from '../Button/SecondaryButton';
-import { baseStyles, baseSpacing } from '../Base';
+import { Severity } from '../../../providers/NotificationProvider';
+import styled from 'styled-components';
 
 interface StyledNotificationProps extends NotificationProps {
   severity: Severity;

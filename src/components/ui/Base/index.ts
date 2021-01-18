@@ -1,9 +1,9 @@
 // Copyright 2020-2021 Amazon.com, Inc. or its affiliates. All Rights Reserved.
 // SPDX-License-Identifier: Apache-2.0
 
+import { BaseSdkProps } from '../../sdk/Base';
 import { SpaceProps } from 'styled-system';
 import { space } from 'styled-system';
-import { BaseSdkProps } from '../../sdk/Base';
 
 export interface BaseProps extends SpaceProps, BaseSdkProps {
   /** Optional tag to render the component as a different HTML tag */

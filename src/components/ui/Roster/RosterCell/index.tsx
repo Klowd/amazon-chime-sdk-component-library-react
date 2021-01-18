@@ -1,15 +1,15 @@
 // Copyright 2020-2021 Amazon.com, Inc. or its affiliates. All Rights Reserved.
 // SPDX-License-Identifier: Apache-2.0
 
-import React from 'react';
-
-import RosterName from '../RosterName';
-import LateMessage from './LateMessage';
 import { BaseProps, FocusableProps } from '../../Base';
-import { Microphone, Camera, ScreenShare } from '../../icons';
-import { StyledCell } from './Styled';
-import { PopOverMenu } from '../PopOverMenu';
+import { Camera, Microphone, ScreenShare } from '../../icons';
+
 import { IconButtonProps } from '../../Button/IconButton';
+import LateMessage from './LateMessage';
+import { PopOverMenu } from '../PopOverMenu';
+import React from 'react';
+import RosterName from '../RosterName';
+import { StyledCell } from './Styled';
 
 type MicPosition = 'leading' | 'grouped';
 

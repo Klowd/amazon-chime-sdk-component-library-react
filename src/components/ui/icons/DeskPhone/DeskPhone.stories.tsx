@@ -1,12 +1,12 @@
 // Copyright 2020-2021 Amazon.com, Inc. or its affiliates. All Rights Reserved.
 // SPDX-License-Identifier: Apache-2.0
 
-import React from 'react';
-
 import { boolean, text } from '@storybook/addon-knobs';
+
 import DeskPhone from '.';
 import DeskPhoneIconDocs from './DeskPhone.mdx';
 import Flex from '../../Flex';
+import React from 'react';
 
 export default {
   title: 'UI Components/Icons/DeskPhone',

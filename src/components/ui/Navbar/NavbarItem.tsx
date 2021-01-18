@@ -1,12 +1,12 @@
 // Copyright 2020-2021 Amazon.com, Inc. or its affiliates. All Rights Reserved.
 // SPDX-License-Identifier: Apache-2.0
 
-import React from 'react';
+import { BaseProps, FocusableProps } from '../Base';
 
-import { StyledNavbarItem } from './Styled';
-import { PopOverItemProps } from '../PopOver/PopOverItem';
 import ControlBarButton from '../ControlBar/ControlBarItem';
-import { FocusableProps, BaseProps } from '../Base';
+import { PopOverItemProps } from '../PopOver/PopOverItem';
+import React from 'react';
+import { StyledNavbarItem } from './Styled';
 
 export interface NavbarItemProps extends FocusableProps, BaseProps {
   /** Any icon from the library for button in navbar item */

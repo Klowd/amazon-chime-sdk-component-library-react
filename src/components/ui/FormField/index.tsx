@@ -1,18 +1,18 @@
 // Copyright 2020-2021 Amazon.com, Inc. or its affiliates. All Rights Reserved.
 // SPDX-License-Identifier: Apache-2.0
 
-import React, { FC, forwardRef, Ref, ChangeEvent } from 'react';
+import React, { ChangeEvent, FC, Ref, forwardRef } from 'react';
 
-import useUniqueId from '../../../hooks/useUniqueId';
-import { StyledFormField } from './Styled';
-import Label from '../Label';
-import { InputProps } from '../Input';
-import { SelectProps } from '../Select';
-import { TextareaProps } from '../Textarea';
+import { BaseProps } from '../Base';
 import { CheckboxProps } from '../Checkbox';
+import { InputProps } from '../Input';
+import Label from '../Label';
 import { RadioGroupProps } from '../RadioGroup';
 import { RadioProps } from '../Radio';
-import { BaseProps } from '../Base';
+import { SelectProps } from '../Select';
+import { StyledFormField } from './Styled';
+import { TextareaProps } from '../Textarea';
+import useUniqueId from '../../../hooks/useUniqueId';
 
 export type FieldType =
   | FC<InputProps>

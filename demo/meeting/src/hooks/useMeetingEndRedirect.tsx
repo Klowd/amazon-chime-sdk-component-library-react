@@ -1,17 +1,17 @@
 // Copyright 2020-2021 Amazon.com, Inc. or its affiliates. All Rights Reserved.
 // SPDX-License-Identifier: Apache-2.0
 
+import {
+  ActionType,
+  MeetingStatus,
+  Severity,
+  useMeetingStatus,
+  useNotificationDispatch
+} from 'amazon-chime-sdk-component-library-react';
+
+import routes from '../constants/routes';
 import { useEffect } from 'react';
 import { useHistory } from 'react-router-dom';
-
-import {
-  MeetingStatus,
-  useNotificationDispatch,
-  Severity,
-  ActionType,
-  useMeetingStatus
-} from 'amazon-chime-sdk-component-library-react';
-import routes from '../constants/routes';
 
 const useMeetingEndRedirect = () => {
   const history = useHistory();

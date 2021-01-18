@@ -2,9 +2,9 @@
 // SPDX-License-Identifier: Apache-2.0
 
 import '@testing-library/jest-dom';
-import React from 'react';
 
 import PopOverHeader from '../../../../src/components/ui/PopOver/PopOverHeader';
+import React from 'react';
 import lightTheme from '../../../../src/theme/light';
 import { renderWithTheme } from '../../../test-helpers';
 

@@ -1,20 +1,19 @@
 // Copyright 2020-2021 Amazon.com, Inc. or its affiliates. All Rights Reserved.
 // SPDX-License-Identifier: Apache-2.0
 
-import React from 'react';
-import styled from 'styled-components';
-
-import NotificationGroup from '.';
 import {
-  useNotificationDispatch,
-  NotificationProvider,
   ActionType,
+  NotificationProvider,
   Severity,
+  useNotificationDispatch,
 } from '../../../providers/NotificationProvider';
-import NotificationGroupDocs from './NotificationGroup.mdx';
 
 import Button from '../Button';
 import Flex from '../Flex';
+import NotificationGroup from '.';
+import NotificationGroupDocs from './NotificationGroup.mdx';
+import React from 'react';
+import styled from 'styled-components';
 
 export default {
   title: 'UI Components/NotificationGroup',

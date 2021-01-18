@@ -2,11 +2,12 @@
 // Copyright 2020-2021 Amazon.com, Inc. or its affiliates. All Rights Reserved.
 // SPDX-License-Identifier: Apache-2.0
 
-import React from 'react';
-import { Heading, Grid, Cell } from 'amazon-chime-sdk-component-library-react';
-import { useTheme } from 'styled-components';
+import { Cell, Grid, Heading } from 'amazon-chime-sdk-component-library-react';
+
 import Login from '../../containers/login/Login';
+import React from 'react';
 import { useAuthContext } from '../../providers/AuthProvider';
+import { useTheme } from 'styled-components';
 
 const Signin = () => {
   const { userSignIn, userSignUp } = useAuthContext();

@@ -1,18 +1,17 @@
 // Copyright 2020-2021 Amazon.com, Inc. or its affiliates. All Rights Reserved.
 // SPDX-License-Identifier: Apache-2.0
 
-import React from 'react';
-import styled from 'styled-components';
-
-import PopOver from './';
-import PopOverItem from './PopOverItem';
-import PopOverSubMenu from './PopOverSubMenu';
-import PopOverSeparator from './PopOverSeparator';
-import PopOverHeader from './PopOverHeader';
-import Meeting from '../icons/Meeting';
 import Flex from '../Flex';
 import Heading from '../Heading';
+import Meeting from '../icons/Meeting';
+import PopOver from './';
 import PopOverDocs from './PopOver.mdx';
+import PopOverHeader from './PopOverHeader';
+import PopOverItem from './PopOverItem';
+import PopOverSeparator from './PopOverSeparator';
+import PopOverSubMenu from './PopOverSubMenu';
+import React from 'react';
+import styled from 'styled-components';
 
 export default {
   title: 'UI Components/PopOver',

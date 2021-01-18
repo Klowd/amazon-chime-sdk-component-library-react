@@ -2,19 +2,19 @@
 // SPDX-License-Identifier: Apache-2.0
 
 import React, { useState } from 'react';
-import { select } from '@storybook/addon-knobs';
 
 import Flex from '../Flex';
 import FormField from '../FormField';
-import RadioGroup from '../RadioGroup';
+import Heading from '../Heading';
 import Modal from './';
-import ModalHeader from './ModalHeader';
 import ModalBody from './ModalBody';
 import ModalButton from './ModalButton';
 import ModalButtonGroup from './ModalButtonGroup';
-import PrimaryButton from '../Button/PrimaryButton';
 import ModalDocs from './Modal.mdx';
-import Heading from '../Heading';
+import ModalHeader from './ModalHeader';
+import PrimaryButton from '../Button/PrimaryButton';
+import RadioGroup from '../RadioGroup';
+import { select } from '@storybook/addon-knobs';
 
 export default {
   title: 'UI Components/Modal',

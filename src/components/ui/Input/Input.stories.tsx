@@ -2,13 +2,13 @@
 // SPDX-License-Identifier: Apache-2.0
 
 import React, { useState } from 'react';
-import { select, boolean } from '@storybook/addon-knobs';
+import { boolean, select } from '@storybook/addon-knobs';
 
 import Crown from '../icons/Crown';
-import Input from './';
-import SearchInput from './SearchInput';
 import Flex from '../Flex';
+import Input from './';
 import InputDocs from './Input.mdx';
+import SearchInput from './SearchInput';
 
 export default {
   title: 'UI Components/Form/TextInputs',

@@ -2,11 +2,11 @@
 // SPDX-License-Identifier: Apache-2.0
 
 import '@testing-library/jest-dom';
-import React from 'react';
-import { fireEvent } from '@testing-library/dom';
 
 import ControlBarItem from '../../../../src/components/ui/ControlBar/ControlBarItem';
+import React from 'react';
 import { Sound } from '../../../../src/components/ui/icons';
+import { fireEvent } from '@testing-library/dom';
 import lightTheme from '../../../../src/theme/light';
 import { renderWithTheme } from '../../../test-helpers';
 

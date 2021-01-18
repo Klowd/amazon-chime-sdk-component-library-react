@@ -3,14 +3,13 @@
 
 import React, { useState } from 'react';
 
-import { boolean } from '@storybook/addon-knobs';
-
-import Flex from '../../Flex';
-import ChannelList from './';
-import ChannelItem from './ChannelItem';
-import PopOverItem from '../../PopOver/PopOverItem';
-import ChannelListDocs from './ChannelList.mdx';
 import Badge from '../../Badge';
+import ChannelItem from './ChannelItem';
+import ChannelList from './';
+import ChannelListDocs from './ChannelList.mdx';
+import Flex from '../../Flex';
+import PopOverItem from '../../PopOver/PopOverItem';
+import { boolean } from '@storybook/addon-knobs';
 
 export default {
   title: 'UI Components/Chat',

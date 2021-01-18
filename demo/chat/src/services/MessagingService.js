@@ -3,17 +3,17 @@
 // Copyright 2020-2021 Amazon.com, Inc. or its affiliates. All Rights Reserved.
 // SPDX-License-Identifier: Apache-2.0
 
-import { v4 as uuid } from 'uuid';
-import AWS from 'aws-sdk';
 import {
-  LogLevel,
   ConsoleLogger,
   DefaultMessagingSession,
+  LogLevel,
   MessagingSessionConfiguration
 } from 'amazon-chime-sdk-js';
+import { createMemberArn, getMessagingSessionEndpoint } from '../api/ChimeAPI';
 
-import { getMessagingSessionEndpoint, createMemberArn } from '../api/ChimeAPI';
+import AWS from 'aws-sdk';
 import appConfig from '../Config';
+import { v4 as uuid } from 'uuid';
 
 class MessagingService {
   constructor(member) {

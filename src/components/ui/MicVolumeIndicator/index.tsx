@@ -3,9 +3,9 @@
 
 import React, { HTMLAttributes, Ref, forwardRef } from 'react';
 
+import { BaseProps } from '../Base';
 import Microphone from '../icons/Microphone';
 import { StyledMicVolumeIndicator } from './Styled';
-import { BaseProps } from '../Base';
 
 export interface MicVolumeIndicatorProps
   extends Omit<HTMLAttributes<HTMLDivElement>, 'css'>,

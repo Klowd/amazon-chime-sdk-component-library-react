@@ -3,10 +3,10 @@
 
 import React, { useEffect, useRef } from 'react';
 
-import { useAudioVideo } from '../../../providers/AudioVideoProvider';
+import { BaseSdkProps } from '../Base';
 import MicVolumeIndicator from '../../ui/MicVolumeIndicator';
 import useAttendeeAudioStatus from '../../../hooks/sdk/useAttendeeAudioStatus';
-import { BaseSdkProps } from '../Base';
+import { useAudioVideo } from '../../../providers/AudioVideoProvider';
 
 interface Props extends BaseSdkProps {
   /** The Chime attendee ID */

@@ -1,16 +1,16 @@
 // Copyright 2020-2021 Amazon.com, Inc. or its affiliates. All Rights Reserved.
 // SPDX-License-Identifier: Apache-2.0
 
-import React, { useReducer, Dispatch, useContext } from 'react';
 import {
+  Action,
+  ActionType,
+  NotificationType,
+  Severity,
   StateType,
   initialState,
   reducer,
-  Action,
-  Severity,
-  NotificationType,
-  ActionType,
 } from './state';
+import React, { Dispatch, useContext, useReducer } from 'react';
 
 const StateContext = React.createContext<StateType>(initialState);
 const DispatchContext = React.createContext<Dispatch<Action>>((): void => {});

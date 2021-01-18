@@ -1,8 +1,9 @@
 // Copyright 2020-2021 Amazon.com, Inc. or its affiliates. All Rights Reserved.
 // SPDX-License-Identifier: Apache-2.0
 
+import { baseSpacing, baseStyles } from '../../Base';
+
 import styled from 'styled-components';
-import { baseStyles, baseSpacing } from '../../Base';
 
 export const StyledMessageAttachmentContent = styled.div`
   color: ${(props) => props.theme.messageAttachment.content.fontColor};

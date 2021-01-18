@@ -1,16 +1,16 @@
 // Copyright 2020-2021 Amazon.com, Inc. or its affiliates. All Rights Reserved.
 // SPDX-License-Identifier: Apache-2.0
 
-import React from 'react';
-
 import { boolean, select } from '@storybook/addon-knobs';
+
 import { Button } from './';
-import PrimaryButton from './PrimaryButton';
-import SecondaryButton from './SecondaryButton';
-import IconButton from './IconButton';
-import Meeting from '../icons/Meeting';
 import ButtonDocs from './Button.mdx';
 import Flex from '../Flex';
+import IconButton from './IconButton';
+import Meeting from '../icons/Meeting';
+import PrimaryButton from './PrimaryButton';
+import React from 'react';
+import SecondaryButton from './SecondaryButton';
 
 export default {
   title: 'UI Components/Form/Buttons',

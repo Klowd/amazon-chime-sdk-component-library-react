@@ -1,11 +1,11 @@
 // Copyright 2020-2021 Amazon.com, Inc. or its affiliates. All Rights Reserved.
 // SPDX-License-Identifier: Apache-2.0
 
-import React from 'react';
-
 import { AudioInputProvider, useAudioInputs } from './AudioInputProvider';
 import { AudioOutputProvider, useAudioOutputs } from './AudioOutputProvider';
 import { VideoInputProvider, useVideoInputs } from './VideoInputProvider';
+
+import React from 'react';
 
 const DevicesProvider: React.FC = ({ children }) => (
   <AudioInputProvider>

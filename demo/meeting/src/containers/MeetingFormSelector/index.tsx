@@ -1,17 +1,17 @@
 // Copyright 2020-2021 Amazon.com, Inc. or its affiliates. All Rights Reserved.
 // SPDX-License-Identifier: Apache-2.0
 
-import React from 'react';
 import {
   Flex,
   SecondaryButton
 } from 'amazon-chime-sdk-component-library-react';
+import { StyledDiv, StyledWrapper } from './Styled';
 
 import MeetingForm from '../MeetingForm';
+import React from 'react';
 import SIPMeeting from '../SIPMeeting';
-import useToggle from '../../hooks/useToggle';
 import SIPMeetingProvider from '../../providers/SIPMeetingProvider';
-import { StyledDiv, StyledWrapper } from './Styled';
+import useToggle from '../../hooks/useToggle';
 
 const MeetingFormSelector: React.FC = () => {
   const { isActive, toggle } = useToggle(false);

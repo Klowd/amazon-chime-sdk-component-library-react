@@ -2,11 +2,10 @@
 // SPDX-License-Identifier: Apache-2.0
 
 import React from 'react';
-import styled from 'styled-components';
-import { text } from '@storybook/addon-knobs';
-
 import Textarea from './';
 import TextareaDocs from './Textarea.mdx';
+import styled from 'styled-components';
+import { text } from '@storybook/addon-knobs';
 
 const Wrapper = styled.div`
   width: 30rem;

@@ -1,10 +1,10 @@
 // Copyright 2020-2021 Amazon.com, Inc. or its affiliates. All Rights Reserved.
 // SPDX-License-Identifier: Apache-2.0
 
+import { baseSpacing, baseStyles } from '../Base';
 import styled, { css } from 'styled-components';
 
 import { FieldWrapperProps } from './';
-import { baseStyles, baseSpacing } from '../Base';
 
 export const stack = css`
   &.ch-form-field-input,

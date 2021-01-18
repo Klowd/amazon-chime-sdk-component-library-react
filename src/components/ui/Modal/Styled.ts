@@ -1,10 +1,10 @@
 // Copyright 2020-2021 Amazon.com, Inc. or its affiliates. All Rights Reserved.
 // SPDX-License-Identifier: Apache-2.0
 
-import styled from 'styled-components';
-
 import { fadeAnimation, slideDownAndScaleUp } from '../../../utils/animations';
+
 import { ModalProps } from './';
+import styled from 'styled-components';
 
 export const StyledModal = styled.div<ModalProps>`
   position: fixed;

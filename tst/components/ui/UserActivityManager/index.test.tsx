@@ -2,10 +2,11 @@
 // SPDX-License-Identifier: Apache-2.0
 
 import '@testing-library/jest-dom';
+
 import React, { useState } from 'react';
 
-import UserActivityManager from '../../../../src/components/ui/UserActivityManager';
 import { UserActivityContext } from '../../../../src/providers/UserActivityProvider';
+import UserActivityManager from '../../../../src/components/ui/UserActivityManager';
 import lightTheme from '../../../../src/theme/light';
 import { renderWithTheme } from '../../../test-helpers';
 

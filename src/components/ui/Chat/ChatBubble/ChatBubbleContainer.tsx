@@ -2,11 +2,11 @@
 // SPDX-License-Identifier: Apache-2.0
 
 import React, { FC, HTMLAttributes, ReactNode } from 'react';
+import { StyledChatBubbleContainer, StyledChatBubbleInfo } from './Styled';
 
 import { BaseProps } from '../../Base';
-import { StyledChatBubbleContainer, StyledChatBubbleInfo } from './Styled';
-import PopOver from '../../PopOver';
 import { Dots } from '../../icons';
+import PopOver from '../../PopOver';
 
 export type Message = {
   /** The displayed text of the message sent. */

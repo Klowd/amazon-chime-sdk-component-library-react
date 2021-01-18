@@ -1,10 +1,9 @@
 // Copyright 2020-2021 Amazon.com, Inc. or its affiliates. All Rights Reserved.
 // SPDX-License-Identifier: Apache-2.0
 
-import styled from 'styled-components';
-
-import { fadeAnimation } from '../../../utils/animations';
 import { Props } from './';
+import { fadeAnimation } from '../../../utils/animations';
+import styled from 'styled-components';
 
 export const StyledUserActivityManager = styled.div<Props>`
   z-index: ${(props) =>

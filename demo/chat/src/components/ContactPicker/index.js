@@ -1,9 +1,10 @@
-// Copyright 2020-2021 Amazon.com, Inc. or its affiliates. All Rights Reserved.
+ // Copyright 2020-2021 Amazon.com, Inc. or its affiliates. All Rights Reserved.
 // SPDX-License-Identifier: Apache-2.0
 
 import React, { useState } from 'react';
-import { withTheme } from 'styled-components';
+
 import Select from 'react-select';
+import { withTheme } from 'styled-components';
 
 export const MultiSelect = (props) => {
   const [inputValue, setInputValue] = useState('');

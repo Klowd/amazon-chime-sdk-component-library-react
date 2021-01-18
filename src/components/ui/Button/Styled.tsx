@@ -1,11 +1,11 @@
 // Copyright 2020-2021 Amazon.com, Inc. or its affiliates. All Rights Reserved.
 // SPDX-License-Identifier: Apache-2.0
 
+import { baseSpacing, baseStyles } from '../Base';
 import styled, { css } from 'styled-components';
 
-import { baseStyles, baseSpacing } from '../Base';
-import { visuallyHidden } from '../../../utils/style';
 import { ButtonProps } from './';
+import { visuallyHidden } from '../../../utils/style';
 
 export const StyledButton = styled.button<ButtonProps>`
   border-radius: ${(props) => props.theme.radii.default};

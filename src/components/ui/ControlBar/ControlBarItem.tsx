@@ -1,15 +1,15 @@
 // Copyright 2020-2021 Amazon.com, Inc. or its affiliates. All Rights Reserved.
 // SPDX-License-Identifier: Apache-2.0
 
-import React, { FC, ReactNode } from 'react';
-
-import Caret from '../icons/Caret';
-import { StyledControlBarItem, isVertical } from './Styled';
 import PopOver, { Placement } from '../PopOver';
 import PopOverItem, { PopOverItemProps } from '../PopOver/PopOverItem';
-import { useControlBarContext } from './ControlBarContext';
-import IconButton from '../Button/IconButton';
+import React, { FC, ReactNode } from 'react';
+import { StyledControlBarItem, isVertical } from './Styled';
+
 import { BaseProps } from '../Base';
+import Caret from '../icons/Caret';
+import IconButton from '../Button/IconButton';
+import { useControlBarContext } from './ControlBarContext';
 
 export interface ControlBarButtonProps
   extends Omit<React.HTMLAttributes<HTMLDivElement>, 'css'>,

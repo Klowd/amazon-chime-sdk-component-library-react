@@ -2,17 +2,17 @@
 // SPDX-License-Identifier: Apache-2.0
 
 import React, { useState } from 'react';
-import { text, select, boolean, number } from '@storybook/addon-knobs';
+import { boolean, number, select, text } from '@storybook/addon-knobs';
 
-import Flex from '../Flex';
-import Roster from './';
-import RosterGroup from './RosterGroup';
-import RosterCell from './RosterCell';
-import RosterHeader from './RosterHeader';
-import RosterDocs from './Roster.mdx';
-import IconButton from '../Button/IconButton';
-import SignalStrength from '../icons/SignalStrength';
 import Cog from '../icons/Cog';
+import Flex from '../Flex';
+import IconButton from '../Button/IconButton';
+import Roster from './';
+import RosterCell from './RosterCell';
+import RosterDocs from './Roster.mdx';
+import RosterGroup from './RosterGroup';
+import RosterHeader from './RosterHeader';
+import SignalStrength from '../icons/SignalStrength';
 
 export default {
   title: 'UI Components/Roster',

@@ -2,11 +2,12 @@
 // SPDX-License-Identifier: Apache-2.0
 
 import '@testing-library/jest-dom';
-import React from 'react';
 
 import MessageAttachment from '../../../../../src/components/ui/Chat/MessageAttachment';
+import React from 'react';
 import lightTheme from '../../../../../src/theme/light';
 import { renderWithTheme } from '../../../../test-helpers';
+
 describe('MessageAttachment', () => {
   const defaultProps = {
     name: 'File.txt',

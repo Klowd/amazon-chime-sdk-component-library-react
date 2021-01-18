@@ -1,25 +1,25 @@
 // Copyright 2020-2021 Amazon.com, Inc. or its affiliates. All Rights Reserved.
 // SPDX-License-Identifier: Apache-2.0
 
-import React, { FC } from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import { ThemeProvider } from 'styled-components';
+import { AppStateProvider, useAppState } from './providers/AppStateProvider';
+import { DeviceSetup, Home, Meeting } from './views';
 import {
-  lightTheme,
+  GlobalStyles,
   MeetingProvider,
   NotificationProvider,
   darkTheme,
-  GlobalStyles
+  lightTheme
 } from 'amazon-chime-sdk-component-library-react';
+import React, { FC } from 'react';
+import { Route, BrowserRouter as Router, Switch } from 'react-router-dom';
 
-import { AppStateProvider, useAppState } from './providers/AppStateProvider';
 import ErrorProvider from './providers/ErrorProvider';
-import routes from './constants/routes';
 import { NavigationProvider } from './providers/NavigationProvider';
-import { Meeting, Home, DeviceSetup } from './views';
-import Notifications from './containers/Notifications';
 import NoMeetingRedirect from './containers/NoMeetingRedirect';
+import Notifications from './containers/Notifications';
+import { ThemeProvider } from 'styled-components';
 import meetingConfig from './meetingConfig';
+import routes from './constants/routes';
 
 const App: FC = () => (
   <Router>

@@ -1,13 +1,13 @@
 // Copyright 2020-2021 Amazon.com, Inc. or its affiliates. All Rights Reserved.
 // SPDX-License-Identifier: Apache-2.0
 
+import { ControlBarLayout, ControlBarProps } from '.';
+import { baseSpacing, baseStyles } from '../Base';
 import styled, { css } from 'styled-components';
 
-import { lightTheme } from '../../../theme/light';
-import { darkTheme } from '../../../theme/dark';
-import { ControlBarProps, ControlBarLayout } from '.';
 import { PopOverItemProps } from '../PopOver/PopOverItem';
-import { baseStyles, baseSpacing } from '../Base';
+import { darkTheme } from '../../../theme/dark';
+import { lightTheme } from '../../../theme/light';
 
 interface StyledControlBarProps extends ControlBarProps {
   theme: typeof lightTheme | typeof darkTheme;

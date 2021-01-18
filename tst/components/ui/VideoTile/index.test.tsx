@@ -2,8 +2,8 @@
 // SPDX-License-Identifier: Apache-2.0
 
 import '@testing-library/jest-dom';
-import React from 'react';
 
+import React from 'react';
 import VideoTile from '../../../../src/components/ui/VideoTile';
 import lightTheme from '../../../../src/theme/light';
 import { renderWithTheme } from '../../../test-helpers';

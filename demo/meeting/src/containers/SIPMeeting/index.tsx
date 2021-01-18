@@ -1,16 +1,16 @@
 // Copyright 2020-2021 Amazon.com, Inc. or its affiliates. All Rights Reserved.
 // SPDX-License-Identifier: Apache-2.0
 
-import React, { useState, useContext, FormEvent } from 'react';
 import {
   Modal,
   ModalBody,
   ModalHeader
 } from 'amazon-chime-sdk-component-library-react';
+import React, { FormEvent, useContext, useState } from 'react';
 
 import Card from '../../components/Card';
-import SIPURI from '../SIPURI';
 import SIPMeetingForm from '../../components/SIPMeetingForm';
+import SIPURI from '../SIPURI';
 import { getErrorContext } from '../../providers/ErrorProvider';
 import { useSIPMeetingManager } from '../../providers/SIPMeetingProvider';
 

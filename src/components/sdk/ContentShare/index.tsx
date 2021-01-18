@@ -3,10 +3,10 @@
 
 import React, { useEffect, useRef } from 'react';
 
-import { useAudioVideo } from '../../../providers/AudioVideoProvider';
-import { ContentTile } from '../../ui/ContentTile';
-import { useContentShareState } from '../../../providers/ContentShareProvider';
 import { BaseSdkProps } from '../Base';
+import { ContentTile } from '../../ui/ContentTile';
+import { useAudioVideo } from '../../../providers/AudioVideoProvider';
+import { useContentShareState } from '../../../providers/ContentShareProvider';
 
 interface Props extends BaseSdkProps {}
 

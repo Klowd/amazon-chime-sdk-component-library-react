@@ -2,10 +2,10 @@
 // SPDX-License-Identifier: Apache-2.0
 
 import '@testing-library/jest-dom';
-import React from 'react';
 
 import IconButton from '../../../../src/components/ui/Button/IconButton';
 import Meeting from '../../../../src/components/ui/icons/Meeting';
+import React from 'react';
 import lightTheme from '../../../../src/theme/light';
 import { renderWithTheme } from '../../../test-helpers';
 

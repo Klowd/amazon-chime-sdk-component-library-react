@@ -1,13 +1,12 @@
 // Copyright 2020-2021 Amazon.com, Inc. or its affiliates. All Rights Reserved.
 // SPDX-License-Identifier: Apache-2.0
 
-import React, { useRef, useEffect } from 'react';
+import React, { useEffect, useRef } from 'react';
 
-import { useAudioVideo } from '../../../providers/AudioVideoProvider';
-
+import { BaseSdkProps } from '../Base';
 import VideoTile from '../../ui/VideoTile';
 import styled from 'styled-components';
-import { BaseSdkProps } from '../Base';
+import { useAudioVideo } from '../../../providers/AudioVideoProvider';
 import { useVideoInputs } from '../../../providers/DevicesProvider';
 
 const StyledPreview = styled(VideoTile)`

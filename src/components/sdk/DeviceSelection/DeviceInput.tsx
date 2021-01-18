@@ -1,11 +1,11 @@
 // Copyright 2020-2021 Amazon.com, Inc. or its affiliates. All Rights Reserved.
 // SPDX-License-Identifier: Apache-2.0
 
+import { DeviceType, SelectedDeviceId } from '../../../types';
 import React, { ChangeEvent } from 'react';
 
 import { FormField } from '../../ui/FormField';
 import { Select } from '../../ui/Select';
-import { DeviceType, SelectedDeviceId } from '../../../types';
 
 interface Props {
   label: string;

@@ -2,7 +2,6 @@
 // SPDX-License-Identifier: Apache-2.0
 
 import { useCallback } from 'react';
-
 import { useMeetingManager } from '../../providers/MeetingProvider';
 
 export const useSelectAudioInputDevice = () => {

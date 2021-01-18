@@ -1,13 +1,12 @@
 // Copyright 2020-2021 Amazon.com, Inc. or its affiliates. All Rights Reserved.
 // SPDX-License-Identifier: Apache-2.0
 
+import Add from '../icons/Add';
+import Flex from '../Flex';
+import { Radio } from '.';
+import RadioDocs from './Radio.mdx';
 import React from 'react';
 import { boolean } from '@storybook/addon-knobs';
-
-import { Radio } from '.';
-import Flex from '../Flex';
-import RadioDocs from './Radio.mdx';
-import Add from '../icons/Add';
 
 export default {
   title: 'UI Components/Form/Radio',

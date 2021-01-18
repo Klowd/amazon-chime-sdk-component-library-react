@@ -1,21 +1,21 @@
 // Copyright 2020-2021 Amazon.com, Inc. or its affiliates. All Rights Reserved.
 // SPDX-License-Identifier: Apache-2.0
 
-import React from 'react';
 import {
-  ControlBar,
   AudioInputControl,
-  VideoInputControl,
-  ContentShareControl,
   AudioOutputControl,
+  ContentShareControl,
+  ControlBar,
   ControlBarButton,
-  useUserActivityState,
-  Dots
+  Dots,
+  VideoInputControl,
+  useUserActivityState
 } from 'amazon-chime-sdk-component-library-react';
 
 import EndMeetingControl from '../EndMeetingControl';
-import { useNavigation } from '../../providers/NavigationProvider';
+import React from 'react';
 import { StyledControls } from './Styled';
+import { useNavigation } from '../../providers/NavigationProvider';
 
 const MeetingControls = () => {
   const { toggleNavbar, closeRoster, showRoster } = useNavigation();

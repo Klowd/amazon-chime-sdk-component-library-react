@@ -1,17 +1,16 @@
 // Copyright 2020-2021 Amazon.com, Inc. or its affiliates. All Rights Reserved.
 // SPDX-License-Identifier: Apache-2.0
 
-import React from 'react';
-
 import {
   Modal,
   ModalBody,
   ModalHeader
 } from 'amazon-chime-sdk-component-library-react';
 
-import useDevicePermissionStatus from '../hooks/useDevicePermissionStatus';
-import { DevicePermissionStatus } from '../enums';
 import Card from '../components/Card';
+import { DevicePermissionStatus } from '../enums';
+import React from 'react';
+import useDevicePermissionStatus from '../hooks/useDevicePermissionStatus';
 
 // Show permission prompt when the user is granting the browser permissions
 // Show nothing if permission is already granted or component loads on initial render

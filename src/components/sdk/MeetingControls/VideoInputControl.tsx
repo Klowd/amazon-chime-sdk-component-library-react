@@ -1,16 +1,15 @@
 // Copyright 2020-2021 Amazon.com, Inc. or its affiliates. All Rights Reserved.
 // SPDX-License-Identifier: Apache-2.0
 
-import React from 'react';
-
-import { ControlBarButton } from '../../ui/ControlBar/ControlBarItem';
 import { Camera } from '../../ui/icons';
-import { useVideoInputs } from '../../../providers/DevicesProvider';
-import { useLocalVideo } from '../../../providers/LocalVideoProvider';
+import { ControlBarButton } from '../../ui/ControlBar/ControlBarItem';
 import { DeviceConfig } from '../../../types';
-import { isOptionActive } from '../../../utils/device-utils';
 import { PopOverItemProps } from '../../ui/PopOver/PopOverItem';
+import React from 'react';
+import { isOptionActive } from '../../../utils/device-utils';
+import { useLocalVideo } from '../../../providers/LocalVideoProvider';
 import useSelectVideoInputDevice from '../../../hooks/sdk/useSelectVideoInputDevice';
+import { useVideoInputs } from '../../../providers/DevicesProvider';
 
 interface Props {
   /** The label that will be shown for video input control, it defaults to `Video`. */

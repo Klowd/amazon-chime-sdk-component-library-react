@@ -6,6 +6,8 @@ import { text, select } from '@storybook/addon-knobs';
 import Caution from './';
 import CautionIconDocs from './Caution.mdx';
 import Flex from '../../Flex';
+import React from 'react';
+import { text } from '@storybook/addon-knobs';
 
 export default {
   title: 'UI Components/Icons/Caution',

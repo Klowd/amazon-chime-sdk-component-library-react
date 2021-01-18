@@ -1,16 +1,16 @@
 // Copyright 2020-2021 Amazon.com, Inc. or its affiliates. All Rights Reserved.
 // SPDX-License-Identifier: Apache-2.0
 
-import React, { useEffect } from 'react';
-import { useHistory } from 'react-router-dom';
 import {
-  useMeetingManager,
-  useNotificationDispatch,
+  ActionType,
   Severity,
-  ActionType
+  useMeetingManager,
+  useNotificationDispatch
 } from 'amazon-chime-sdk-component-library-react';
+import React, { useEffect } from 'react';
 
 import routes from '../constants/routes';
+import { useHistory } from 'react-router-dom';
 
 const NoMeetingRedirect: React.FC = ({ children }) => {
   const history = useHistory();

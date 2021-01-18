@@ -1,7 +1,7 @@
 // Copyright 2020-2021 Amazon.com, Inc. or its affiliates. All Rights Reserved.
 // SPDX-License-Identifier: Apache-2.0
 
-import React, { useContext, useState, ReactNode } from 'react';
+import React, { ReactNode, useContext, useState } from 'react';
 
 type Props = {
   children: ReactNode;

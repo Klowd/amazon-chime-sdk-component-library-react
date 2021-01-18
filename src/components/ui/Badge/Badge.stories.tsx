@@ -1,12 +1,12 @@
 // Copyright 2020-2021 Amazon.com, Inc. or its affiliates. All Rights Reserved.
 // SPDX-License-Identifier: Apache-2.0
 
-import React from 'react';
-import { select } from '@storybook/addon-knobs';
-import Flex from '../Flex';
 import { Badge } from './';
-import mdx from './Badge.mdx';
+import Flex from '../Flex';
 import { Lock } from '../icons';
+import React from 'react';
+import mdx from './Badge.mdx';
+import { select } from '@storybook/addon-knobs';
 
 export default {
   title: 'UI Components/Badge',

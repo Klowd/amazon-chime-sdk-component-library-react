@@ -1,9 +1,8 @@
 // Copyright 2020-2021 Amazon.com, Inc. or its affiliates. All Rights Reserved.
 // SPDX-License-Identifier: Apache-2.0
 
-import { useCallback } from 'react';
-
 import { useAudioVideo } from '../../providers/AudioVideoProvider';
+import { useCallback } from 'react';
 
 export type VideoQuality = '360p' | '540p' | '720p';
 

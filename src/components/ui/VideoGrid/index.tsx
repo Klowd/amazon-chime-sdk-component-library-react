@@ -1,7 +1,7 @@
 // Copyright 2020-2021 Amazon.com, Inc. or its affiliates. All Rights Reserved.
 // SPDX-License-Identifier: Apache-2.0
 
-import React, { createRef, useContext, createContext } from 'react';
+import React, { createContext, createRef, useContext } from 'react';
 
 import { StyledGrid } from './Styled';
 import useElementAspectRatio from '../../../hooks/useElementAspectRatio';
@@ -29,7 +29,7 @@ export const VideoGrid: React.FC<VideoGridProps> = ({
   ...rest
 }) => {
   const gridEl = createRef<HTMLDivElement>();
-  const ratio = useElementAspectRatio(gridEl);
+  const ratio = null; //useElementAspectRatio(gridEl);
   const gridSize =
     typeof size === 'number' ? size : React.Children.count(children);
 

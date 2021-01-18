@@ -1,8 +1,9 @@
 // Copyright 2020-2021 Amazon.com, Inc. or its affiliates. All Rights Reserved.
 // SPDX-License-Identifier: Apache-2.0
 
-import React from 'react';
 import Svg, { SvgProps } from '../Svg';
+
+import React from 'react';
 
 const Information: React.SFC<SvgProps> = (props) => (
   <Svg {...props}>

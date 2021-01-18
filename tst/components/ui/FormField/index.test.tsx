@@ -2,11 +2,11 @@
 // SPDX-License-Identifier: Apache-2.0
 
 import '@testing-library/jest-dom';
-import React from 'react';
 
 import FormField from '../../../../src/components/ui/FormField';
 import Input from '../../../../src/components/ui/Input';
 import RadioGroup from '../../../../src/components/ui/RadioGroup';
+import React from 'react';
 import lightTheme from '../../../../src/theme/light';
 import { renderWithTheme } from '../../../test-helpers';
 

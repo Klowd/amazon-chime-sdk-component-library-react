@@ -2,10 +2,10 @@
 // Copyright 2020-2021 Amazon.com, Inc. or its affiliates. All Rights Reserved.
 // SPDX-License-Identifier: Apache-2.0
 
-import React, { useContext, useState, createContext, useEffect } from 'react';
+import React, { createContext, useContext, useEffect, useState } from 'react';
 
-import appConfig from '../Config';
 import { IdentityService } from '../services/IdentifyService';
+import appConfig from '../Config';
 import { useAuthContext } from './AuthProvider';
 
 const IdentifyServiceContext = createContext(null);

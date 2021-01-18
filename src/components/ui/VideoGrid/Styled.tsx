@@ -1,10 +1,9 @@
 // Copyright 2020-2021 Amazon.com, Inc. or its affiliates. All Rights Reserved.
 // SPDX-License-Identifier: Apache-2.0
 
-import styled from 'styled-components';
-
-import { VideoGridProps } from './';
 import { AspectRatio } from '../../../hooks/useElementAspectRatio';
+import { VideoGridProps } from './';
+import styled from 'styled-components';
 
 interface StyledGridProps extends VideoGridProps {
   ratio?: AspectRatio | null;
@@ -30,64 +29,48 @@ const ratioStyles = {
   '1.featured': `grid-template: "ft" 1fr / 1fr;`,
 
   '2': 'grid-template: 1fr / repeat(2,1fr);',
-  '2.slim': `grid-template: repeat(3,1fr) / 1fr;`,
-  '2.r1by2': 'grid-template: repeat(2,1fr) / 1fr;',
-  '2.r2by3': 'grid-template: repeat(2,1fr) / 1fr;',
-  '2.r4by3': 'grid-template: repeat(2,1fr) / repeat(2,1fr);',
-  '2.r16by9': `grid-template: 1fr / repeat(2,1fr);`,
+  '2.r16by9': `grid-template: repeat(3,1fr) / repeat(2,1fr);
+    grid-template-areas: '. .' 'a b' '. .';`,
 
-  '2.featured': `grid-template: repeat(3,1fr) / repeat(2,1fr);
-  grid-template-areas: 'ft ft' 'ft ft';`,
-  '2.r16by9.featured': `grid-template: repeat(2,1fr) / repeat(3,1fr);
-    grid-template-areas: 'ft ft v' 'ft ft v' 'ft ft v';`,
+  '2.featured': `grid-template: 1fr / repeat(2,1fr);
+   grid-template-areas: 'ft v';`,
+  '2.r16by9.featured': `grid-template: repeat(3,1fr) / repeat(2,1fr);
+    grid-template-areas: '. .' 'a b' '. .';`,
 
-  '3': 'grid-template: repeat(3,1fr) / 1fr;',
-  '3.r2by3': 'grid-template: repeat(3,1fr) / repeat(1,1fr);',
-  '3.r1by1': 'grid-template: repeat(2,1fr) / repeat(2,1fr);',
-
-  '3.featured': `grid-template: repeat(3,1fr) / repeat(2,1fr);
-    grid-template-areas: 'ft ft' 'ft ft';
-  `,
-  '3.r16by9.featured': `grid-template: repeat(2,1fr) / repeat(3,1fr);
-    grid-template-areas: 'ft ft v' 'ft ft v';`,
+  '3': `grid-template: repeat(2,1fr) / repeat(4,1fr);
+   grid-template-areas: 'a a b b' '. c c .';`,
+  
+  '3.featured': `grid-template: repeat(3,1fr) / repeat(4,1fr);
+    grid-template-areas: 'ft ft ft ft' 'ft ft ft ft' '. v v .';`,
+  '3.r16by9.featured': `grid-template: repeat(2,1fr) / repeat(4,1fr);
+    grid-template-areas: '. ft ft .' 'v v v v';`,
 
   '4': 'grid-template: repeat(2,1fr) / repeat(2,1fr);',
-  '4.slim': 'grid-template: repeat(4,1fr) / 1fr;',
-  '4.r2by3': 'grid-template: repeat(2,1fr) / repeat(2,1fr);',
-
+  
   '4.featured': `grid-template: repeat(3,1fr) / repeat(3,1fr);
-    grid-template-areas: 'ft ft ft' 'ft ft ft';`,
+    grid-template-areas: 'ft ft ft' 'ft ft ft' 'v v v';`,
   '4.r16by9.featured': `grid-template-areas: 'ft ft v' 'ft ft v' 'ft ft v';`,
 
-  '5': 'grid-template: repeat(2,1fr) / repeat(3,1fr);',
-  '5.slim': 'grid-template: repeat(5,1fr) / 1fr;',
-  '5.r1by2': 'grid-template: repeat(3,1fr) / repeat(2,1fr);',
-  '5.r2by3': 'grid-template: repeat(3,1fr) / repeat(2,1fr);',
-  '5.r3by2': 'grid-template: repeat(2,1fr) / repeat(3,1fr);',
-  '5.r16by9': `grid-template: repeat(2,1fr) / repeat(3,1fr);`,
+  '5': `grid-template: repeat(2,1fr) / repeat(6,1fr);
+    grid-template-areas: 'a a b b c c' '. d d e e .';`,
+  '5.r16by9': `grid-template: repeat(2,1fr) / repeat(6,1fr);
+    grid-template-areas: 'a a b b c c' 'd d e e . .';`,
 
   '5.featured': `grid-template: repeat(4,1fr) / repeat(2,1fr);
-    grid-template-areas: 'ft ft' 'ft ft';`,
-  '5.r1by1.featured': `grid-template: repeat(3,1fr) / repeat(3,1fr);
-    grid-template-areas: 'ft ft v' 'ft ft v';`,
+    grid-template-areas: 'ft ft' 'ft ft' 'v v' 'v v';`,
 
-  '6': 'grid-template: repeat(3,1fr) / repeat(3,1fr);',
-  '6.slim': 'grid-template: repeat(4,1fr) / repeat(2,1fr);',
-  '6.r1by2': 'grid-template: repeat(3,1fr) / repeat(2,1fr);',
-  '6.r1by1': 'grid-template: repeat(3,1fr) / repeat(2,1fr);',
-  '6.r2by3': 'grid-template: repeat(3,1fr) / repeat(2,1fr);',
-  '6.r3by2': 'grid-template: repeat(2,1fr) / repeat(3,1fr);',
+  '6': 'grid-template: repeat(2,1fr) / repeat(3,1fr);',
   '6.r16by9': `grid-template: repeat(2,1fr) / repeat(3,1fr);`,
 
-  '6.featured': `grid-template: repeat(4,1fr) / repeat(3,1fr);
+  '6.featured': `grid-template: repeat(2,1fr) / repeat(3,1fr);
     grid-template-areas: 'ft ft ft' 'ft ft ft';`,
   '6.r1by1.featured': `grid-template: repeat(3,1fr) / repeat(3,1fr);
     grid-template-areas: 'ft ft v' 'ft ft v';`,
 
-  '7': 'grid-template: repeat(3,1fr) / repeat(3,1fr);',
-  '7.slim': 'grid-template: repeat(4,1fr) / repeat(2,1fr);',
-  '7.r4by3': 'grid-template: repeat(3,1fr) / repeat(3,1fr);',
-  '7.r16by9': `grid-template: repeat(2,1fr) / repeat(4,1fr);`,
+  '7': `grid-template: repeat(2,1fr) / repeat(8,1fr);
+        grid-template-areas: 'a a b b c c d d' '. e e f f g g .';`,
+  '7.r16by9': `grid-template: repeat(2,1fr) / repeat(8,1fr);
+        grid-template-areas: 'a a b b c c d d' '. e e f f g g .';`,
 
   '7.featured': `grid-template: repeat(4,1fr) / repeat(3,1fr);
     grid-template-areas: 'ft ft ft' 'ft ft ft';`,
@@ -95,8 +78,6 @@ const ratioStyles = {
     grid-template-areas: 'ft ft ft v' 'ft ft ft v' 'ft ft ft v';`,
 
   '8': 'grid-template: repeat(3,1fr) / repeat(3,1fr);',
-  '8.slim': 'grid-template: repeat(4,1fr) / repeat(2,1fr);',
-  '8.r4by3': 'grid-template: repeat(3,1fr) / repeat(3,1fr);',
   '8.r16by9': 'grid-template: repeat(2,1fr) / repeat(4,1fr);',
 
   '8.featured': `grid-template: repeat(5,1fr) / repeat(4,1fr);
@@ -116,7 +97,6 @@ const ratioStyles = {
     grid-template-areas: 'ft ft ft ft v' 'ft ft ft ft v' 'ft ft ft ft v' 'ft ft ft ft v';`,
 
   '10': 'grid-template: repeat(4,1fr) / repeat(3,1fr);',
-  '10.slim': `grid-template: repeat(5,1fr) / repeat(2,1fr);`,
   '10.r1by1': 'grid-template: repeat(4,1fr) / repeat(3,1fr);',
   '10.r3by2': 'grid-template: repeat(3,1fr) / repeat(4,1fr);',
 
@@ -339,6 +319,72 @@ export const StyledGrid = styled.div<StyledGridProps>`
     } else if (size > 7 || featured) {
       styles += portraitStyles;
     }
+
+    styles += `
+    .cell-a {
+      grid-area: a
+    }
+
+    .cell-b {
+      grid-area: b
+    }
+
+    .cell-c {
+      grid-area: c
+    }
+
+    .cell-d {
+      grid-area: d
+    }
+
+    .cell-e {
+      grid-area: e
+    }
+
+    .cell-f {
+      grid-area: f
+    }
+
+    .cell-g {
+      grid-area: g
+    }
+
+    .cell-h {
+      grid-area: h
+    }
+
+    .cell-i {
+      grid-area: i
+    }
+
+    .cell-j {
+      grid-area: j
+    }
+
+    .cell-k {
+      grid-area: k
+    }
+
+    .cell-l {
+      grid-area: l
+    }
+
+    .cell-m {
+      grid-area: m
+    }
+
+    .cell-n {
+      grid-area: n
+    }
+
+    .cell-o {
+      grid-area: o
+    }
+
+    .cell-p {
+      grid-area: p
+    }
+    `;
 
     return styles;
   }};

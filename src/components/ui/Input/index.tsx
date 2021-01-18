@@ -4,17 +4,17 @@
 import React, {
   ChangeEvent,
   ReactNode,
-  forwardRef,
   Ref,
+  forwardRef,
+  useEffect,
   useRef,
   useState,
-  useEffect,
 } from 'react';
+import { StyledClear, StyledInput } from './Styled';
 
-import InputWrapper from './InputWrapper';
-import { StyledInput, StyledClear } from './Styled';
-import { Clear } from '../icons';
 import { BaseProps } from '../Base';
+import { Clear } from '../icons';
+import InputWrapper from './InputWrapper';
 
 export type Size = 'sm' | 'md';
 

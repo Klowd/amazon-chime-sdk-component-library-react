@@ -2,49 +2,48 @@
 // Copyright 2020-2021 Amazon.com, Inc. or its affiliates. All Rights Reserved.
 // SPDX-License-Identifier: Apache-2.0
 
+import './ChannelsWrapper.css';
+
+import {
+  ChannelItem,
+  ChannelList,
+  Dots,
+  IconButton,
+  PopOverItem,
+  PopOverSeparator,
+  useNotificationDispatch,
+} from 'amazon-chime-sdk-component-library-react';
 /* eslint-disable no-use-before-define */
 /* eslint-disable import/no-unresolved */
 /* eslint-disable react/prop-types */
-import React, { useState, useEffect } from 'react';
-
+import React, { useEffect, useState } from 'react';
 import {
-  PopOverItem,
-  PopOverSeparator,
-  IconButton,
-  Dots,
-  useNotificationDispatch,
-  ChannelList,
-  ChannelItem,
-} from 'amazon-chime-sdk-component-library-react';
-import { useTheme } from 'styled-components';
-import {
-  createMemberArn,
-  createChannelMembership,
   createChannel,
-  listChannelMessages,
-  listChannels,
-  listChannelMembershipsForAppInstanceUser,
-  deleteChannel,
-  describeChannel,
-  listChannelMemberships,
-  deleteChannelMembership,
-  listChannelModerators,
-  listChannelBans,
   createChannelBan,
+  createChannelMembership,
+  createMemberArn,
+  deleteChannel,
   deleteChannelBan,
+  deleteChannelMembership,
+  describeChannel,
+  listChannelBans,
+  listChannelMemberships,
+  listChannelMembershipsForAppInstanceUser,
+  listChannelMessages,
+  listChannelModerators,
+  listChannels,
 } from '../../api/ChimeAPI';
-import appConfig from '../../Config';
-
-import { useUserPermission } from '../../providers/UserPermissionProvider';
-import mergeArrayOfObjects from '../../utilities/mergeArrays';
 import {
   useChatChannelState,
   useChatMessagingState,
 } from '../../providers/ChatMessagesProvider';
-import { useAuthContext } from '../../providers/AuthProvider';
-import ModalManager from './ModalManager';
 
-import './ChannelsWrapper.css';
+import ModalManager from './ModalManager';
+import appConfig from '../../Config';
+import mergeArrayOfObjects from '../../utilities/mergeArrays';
+import { useAuthContext } from '../../providers/AuthProvider';
+import { useTheme } from 'styled-components';
+import { useUserPermission } from '../../providers/UserPermissionProvider';
 
 const ChannelsWrapper = () => {
   const dispatch = useNotificationDispatch();

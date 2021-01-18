@@ -1,12 +1,12 @@
 // Copyright 2020-2021 Amazon.com, Inc. or its affiliates. All Rights Reserved.
 // SPDX-License-Identifier: Apache-2.0
 
-import React from 'react';
 import { number, select } from '@storybook/addon-knobs';
 
+import React from 'react';
 import VideoGrid from './';
-import VideoTile from '../VideoTile';
 import VideoGridDocs from './VideoGrid.mdx';
+import VideoTile from '../VideoTile';
 
 export default {
   title: 'UI Components/Video/VideoGrid',

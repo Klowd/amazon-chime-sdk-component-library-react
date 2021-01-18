@@ -1,9 +1,9 @@
 // Copyright 2020-2021 Amazon.com, Inc. or its affiliates. All Rights Reserved.
 // SPDX-License-Identifier: Apache-2.0
 
-import styled from 'styled-components';
+import { absoluteCenter, visuallyHidden } from '../../../utils/style';
 
-import { visuallyHidden, absoluteCenter } from '../../../utils/style';
+import styled from 'styled-components';
 
 export const HiddenRadio = styled.input`
   ${visuallyHidden};

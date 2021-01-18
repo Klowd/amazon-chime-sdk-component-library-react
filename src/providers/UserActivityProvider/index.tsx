@@ -1,7 +1,7 @@
 // Copyright 2020-2021 Amazon.com, Inc. or its affiliates. All Rights Reserved.
 // SPDX-License-Identifier: Apache-2.0
 
-import React, { createContext, FC, useContext, useMemo, useRef } from 'react';
+import React, { FC, createContext, useContext, useMemo, useRef } from 'react';
 
 import useFocusIn from '../../hooks/useFocusIn';
 import useMouseMove from '../../hooks/useMouseMove';

@@ -1,15 +1,15 @@
 // Copyright 2020-2021 Amazon.com, Inc. or its affiliates. All Rights Reserved.
 // SPDX-License-Identifier: Apache-2.0
 
-import React from 'react';
-import { boolean } from '@storybook/addon-knobs';
+import { Attendees, Information, LeaveMeeting } from '../icons';
 
+import Flex from '../Flex';
 import Navbar from '.';
+import NavbarDocs from './Navbar.mdx';
 import NavbarHeader from './NavbarHeader';
 import NavbarItem from './NavbarItem';
-import { Attendees, LeaveMeeting, Information } from '../icons';
-import Flex from '../Flex';
-import NavbarDocs from './Navbar.mdx';
+import React from 'react';
+import { boolean } from '@storybook/addon-knobs';
 
 export default {
   title: 'UI Components/Navbar',

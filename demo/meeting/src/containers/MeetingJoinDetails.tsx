@@ -1,21 +1,21 @@
 // Copyright 2020-2021 Amazon.com, Inc. or its affiliates. All Rights Reserved.
 // SPDX-License-Identifier: Apache-2.0
 
-import React, { useState } from 'react';
-import { useHistory } from 'react-router-dom';
 import {
-  PrimaryButton,
   Flex,
   Label,
-  useMeetingManager,
   Modal,
   ModalBody,
-  ModalHeader
+  ModalHeader,
+  PrimaryButton,
+  useMeetingManager
 } from 'amazon-chime-sdk-component-library-react';
+import React, { useState } from 'react';
 
-import routes from '../constants/routes';
 import Card from '../components/Card';
+import routes from '../constants/routes';
 import { useAppState } from '../providers/AppStateProvider';
+import { useHistory } from 'react-router-dom';
 
 const MeetingJoinDetails = () => {
   const meetingManager = useMeetingManager();

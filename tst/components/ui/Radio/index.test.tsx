@@ -2,11 +2,11 @@
 // SPDX-License-Identifier: Apache-2.0
 
 import '@testing-library/jest-dom';
+
+import Add from '../../../../src/components/ui/icons/Add';
+import Radio from '../../../../src/components/ui/Radio';
 import React from 'react';
 import { fireEvent } from '@testing-library/dom';
-
-import Radio from '../../../../src/components/ui/Radio';
-import Add from '../../../../src/components/ui/icons/Add';
 import lightTheme from '../../../../src/theme/light';
 import { renderWithTheme } from '../../../test-helpers';
 

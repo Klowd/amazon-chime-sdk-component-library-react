@@ -3,32 +3,32 @@
 // Copyright 2020-2021 Amazon.com, Inc. or its affiliates. All Rights Reserved.
 // SPDX-License-Identifier: Apache-2.0
 
-import React, { useState, useEffect } from 'react';
+import './Messages.css';
+
 import {
-  InfiniteList,
-  PopOverItem,
-  Modal,
-  ModalHeader,
-  ModalBody,
-  ModalButtonGroup,
-  ModalButton,
   ChatBubble,
   ChatBubbleContainer,
   EditableChatBubble,
+  InfiniteList,
+  Modal,
+  ModalBody,
+  ModalButton,
+  ModalButtonGroup,
+  ModalHeader,
+  PopOverItem,
   formatDate,
   formatTime,
 } from 'amazon-chime-sdk-component-library-react';
-import { AttachmentProcessor } from './AttachmentProcessor';
-
+import React, { useEffect, useState } from 'react';
 import {
-  listChannelMessages,
   createMemberArn,
-  updateChannelMessage,
+  listChannelMessages,
   redactChannelMessage,
+  updateChannelMessage,
 } from '../../api/ChimeAPI';
-import insertDateHeaders from '../../utilities/insertDateHeaders';
 
-import './Messages.css';
+import { AttachmentProcessor } from './AttachmentProcessor';
+import insertDateHeaders from '../../utilities/insertDateHeaders';
 import { useChatChannelState } from '../../providers/ChatMessagesProvider';
 
 const Messages = ({

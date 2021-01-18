@@ -1,12 +1,12 @@
 // Copyright 2020-2021 Amazon.com, Inc. or its affiliates. All Rights Reserved.
 // SPDX-License-Identifier: Apache-2.0
 
-import React from 'react';
-
 import RosterCell, { RosterCellProps } from '../../ui/Roster/RosterCell';
+
 import MicrophoneActivity from '../MicrophoneActivity';
-import { useRosterState } from '../../../providers/RosterProvider';
+import React from 'react';
 import useAttendeeStatus from '../../../hooks/sdk/useAttendeeStatus';
+import { useRosterState } from '../../../providers/RosterProvider';
 
 export interface RosterAttendeeProps extends Omit<RosterCellProps, 'name'> {
   /** The ID of a Chime meeting attendee. */

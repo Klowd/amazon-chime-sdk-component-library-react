@@ -1,12 +1,12 @@
 // Copyright 2020-2021 Amazon.com, Inc. or its affiliates. All Rights Reserved.
 // SPDX-License-Identifier: Apache-2.0
 
-import React, { useRef, useEffect, HTMLAttributes } from 'react';
+import React, { HTMLAttributes, useEffect, useRef } from 'react';
 
-import { VideoTile } from '../../ui/VideoTile';
-import { useAudioVideo } from '../../../providers/AudioVideoProvider';
-import { useApplyVideoObjectFit } from '../../../hooks/useApplyVideoObjectFit';
 import { BaseSdkProps } from '../Base';
+import { VideoTile } from '../../ui/VideoTile';
+import { useApplyVideoObjectFit } from '../../../hooks/useApplyVideoObjectFit';
+import { useAudioVideo } from '../../../providers/AudioVideoProvider';
 
 interface Props
   extends Omit<HTMLAttributes<HTMLDivElement>, 'css'>,
@@ -47,7 +47,7 @@ export const RemoteVideo: React.FC<Props> = ({
       {...rest}
       ref={videoEl}
       nameplate={name}
-      className={`ch-remote-video--${tileId} ${className || ''}`}
+      className={`ch-remote-video--${tileId} ${className || ''} cell-${String.fromCharCode(96+tileId)}`}
     />
   );
 };

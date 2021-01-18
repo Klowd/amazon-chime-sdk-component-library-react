@@ -1,17 +1,16 @@
 // Copyright 2020-2021 Amazon.com, Inc. or its affiliates. All Rights Reserved.
 // SPDX-License-Identifier: Apache-2.0
 
-import React, { FC, useEffect, useRef, HTMLAttributes } from 'react';
+import React, { FC, HTMLAttributes, useEffect, useRef } from 'react';
 
-import { StyledModal } from './Styled';
-import trapFocus from '../../../utils/trap-focus';
-import Portal from '../Portal';
+import { BaseProps } from '../Base';
 import { KEY_CODES } from '../../../constants';
 import ModalContext from './ModalContext';
-
+import Portal from '../Portal';
+import { StyledModal } from './Styled';
+import trapFocus from '../../../utils/trap-focus';
 import useClickOutside from '../../../hooks/useClickOutside';
 import useUniqueId from '../../../hooks/useUniqueId';
-import { BaseProps } from '../Base';
 
 export type ModalSize = 'md' | 'lg' | 'fullscreen';
 

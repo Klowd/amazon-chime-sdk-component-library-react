@@ -2,8 +2,9 @@
 // SPDX-License-Identifier: Apache-2.0
 
 import React, { FC } from 'react';
-import { useUserActivityState } from '../../../providers/UserActivityProvider';
+
 import { StyledUserActivityManager } from './Styled';
+import { useUserActivityState } from '../../../providers/UserActivityProvider';
 
 export interface Props {
   isActive?: boolean | null;

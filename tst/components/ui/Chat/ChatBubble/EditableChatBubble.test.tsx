@@ -2,12 +2,12 @@
 // SPDX-License-Identifier: Apache-2.0
 
 import '@testing-library/jest-dom';
-import React from 'react';
 
 import EditableChatBubble from '../../../../../src/components/ui/Chat/ChatBubble/EditableChatBubble';
+import React from 'react';
+import { fireEvent } from '@testing-library/dom';
 import lightTheme from '../../../../../src/theme/light';
 import { renderWithTheme } from '../../../../test-helpers';
-import { fireEvent } from '@testing-library/dom';
 
 describe('ChatBubble', () => {
   const save = jest.fn((e) => e.preventDefault());

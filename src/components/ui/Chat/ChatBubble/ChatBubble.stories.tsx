@@ -1,14 +1,12 @@
 // Copyright 2020-2021 Amazon.com, Inc. or its affiliates. All Rights Reserved.
 // SPDX-License-Identifier: Apache-2.0
 
+import ChatBubble from './';
+import ChatBubbleDocs from './ChatBubble.mdx';
+import Flex from '../../Flex';
+import MessageAttachment from '../MessageAttachment';
 import React from 'react';
 import { boolean } from '@storybook/addon-knobs';
-
-import Flex from '../../Flex';
-import ChatBubble from './';
-import MessageAttachment from '../MessageAttachment';
-
-import ChatBubbleDocs from './ChatBubble.mdx';
 
 export default {
   title: 'UI Components/Chat/ChatBubble',

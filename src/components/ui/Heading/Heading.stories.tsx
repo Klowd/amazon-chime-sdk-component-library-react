@@ -1,12 +1,12 @@
 // Copyright 2020-2021 Amazon.com, Inc. or its affiliates. All Rights Reserved.
 // SPDX-License-Identifier: Apache-2.0
 
-import React from 'react';
 import { select, text } from '@storybook/addon-knobs';
 
 import Flex from '../Flex';
 import Heading from './';
 import HeadingDocs from './Heading.mdx';
+import React from 'react';
 
 export default {
   title: 'UI Components/Headings',

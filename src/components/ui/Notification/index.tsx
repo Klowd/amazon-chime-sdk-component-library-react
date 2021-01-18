@@ -1,12 +1,12 @@
 // Copyright 2020-2021 Amazon.com, Inc. or its affiliates. All Rights Reserved.
 // SPDX-License-Identifier: Apache-2.0
 
-import React, { useEffect, HTMLAttributes, ReactNode } from 'react';
+import { Caution, CheckRound, Clock, Information, Remove } from '../icons';
+import React, { HTMLAttributes, ReactNode, useEffect } from 'react';
+import { StyledCloseIconButton, StyledNotification, StyledNotificationButton } from './Styled';
 
-import { StyledNotification, StyledCloseIconButton, StyledNotificationButton } from './Styled';
-import { Caution, CheckRound, Information, Remove, Clock } from '../icons';
-import { ButtonProps } from '../Button';
 import { BaseProps } from '../Base';
+import { ButtonProps } from '../Button';
 
 export const DEFAULT_DELAY: number = 6000;
 

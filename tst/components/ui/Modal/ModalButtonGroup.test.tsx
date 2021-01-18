@@ -2,12 +2,12 @@
 // SPDX-License-Identifier: Apache-2.0
 
 import '@testing-library/jest-dom';
+
+import ModalButton from '../../../../src/components/ui/Modal/ModalButton';
+import ModalButtonGroup from '../../../../src/components/ui/Modal/ModalButtonGroup';
+import ModalContext from '../../../../src/components/ui/Modal/ModalContext';
 import React from 'react';
 import { fireEvent } from '@testing-library/dom';
-
-import ModalContext from '../../../../src/components/ui/Modal/ModalContext';
-import ModalButtonGroup from '../../../../src/components/ui/Modal/ModalButtonGroup';
-import ModalButton from '../../../../src/components/ui/Modal/ModalButton';
 import lightTheme from '../../../../src/theme/light';
 import { renderWithTheme } from '../../../test-helpers';
 

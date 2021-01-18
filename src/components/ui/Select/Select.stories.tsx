@@ -1,13 +1,12 @@
 // Copyright 2020-2021 Amazon.com, Inc. or its affiliates. All Rights Reserved.
 // SPDX-License-Identifier: Apache-2.0
 
-import React from 'react';
-import { select } from '@storybook/addon-knobs';
-import styled from 'styled-components';
-
 import Flex from '../Flex';
+import React from 'react';
 import Select from './';
 import SelectDocs from './Select.mdx';
+import { select } from '@storybook/addon-knobs';
+import styled from 'styled-components';
 
 const options = [
   {

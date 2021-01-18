@@ -2,11 +2,11 @@
 // SPDX-License-Identifier: Apache-2.0
 
 import '@testing-library/jest-dom';
-import React from 'react';
 
-import ChannelList from '../../../../../src/components/ui/Chat/ChannelList';
 import ChannelItem from '../../../../../src/components/ui/Chat/ChannelList/ChannelItem';
+import ChannelList from '../../../../../src/components/ui/Chat/ChannelList';
 import { PopOverItem } from '../../../../../src/components/ui/PopOver/PopOverItem';
+import React from 'react';
 import lightTheme from '../../../../../src/theme/light';
 import { renderWithTheme } from '../../../../test-helpers';
 

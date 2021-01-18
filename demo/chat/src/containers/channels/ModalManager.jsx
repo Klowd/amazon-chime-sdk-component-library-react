@@ -1,18 +1,19 @@
 // Copyright 2020-2021 Amazon.com, Inc. or its affiliates. All Rights Reserved.
 // SPDX-License-Identifier: Apache-2.0
 
-import React from 'react';
 import {
   AddMemberModal,
-  ManageMembersModal,
+  BanModal,
   DeleteChannelModal,
-  NewChannelModal,
+  EditChannelModal,
   LeaveChannelModal,
+  ManageMembersModal,
+  NewChannelModal,
   ViewChannelDetailsModal,
   ViewMembersModal,
-  EditChannelModal,
-  BanModal,
 } from '../../components/ChannelModals';
+
+import React from 'react';
 
 const ModalManager = ({
   modal,

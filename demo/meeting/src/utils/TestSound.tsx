@@ -60,6 +60,5 @@ class TestSound {
       audioContext.close();
     });
   }
-}
-
-export default TestSound;
+  
+  export default TestSound;

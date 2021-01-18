@@ -1,16 +1,15 @@
 // Copyright 2020-2021 Amazon.com, Inc. or its affiliates. All Rights Reserved.
 // SPDX-License-Identifier: Apache-2.0
 
-import React from 'react';
-
 import { ControlBarButton } from '../../ui/ControlBar/ControlBarItem';
-import { Microphone } from '../../ui/icons';
-import { useMeetingManager } from '../../../providers/MeetingProvider';
-import { useAudioInputs } from '../../../providers/DevicesProvider';
-import { useToggleLocalMute } from '../../../hooks/sdk/useToggleLocalMute';
 import { DeviceConfig } from '../../../types';
-import { isOptionActive } from '../../../utils/device-utils';
+import { Microphone } from '../../ui/icons';
 import { PopOverItemProps } from '../../ui/PopOver/PopOverItem';
+import React from 'react';
+import { isOptionActive } from '../../../utils/device-utils';
+import { useAudioInputs } from '../../../providers/DevicesProvider';
+import { useMeetingManager } from '../../../providers/MeetingProvider';
+import { useToggleLocalMute } from '../../../hooks/sdk/useToggleLocalMute';
 
 interface Props {
   /** The label that will be shown when microphone is muted , it defaults to `Mute`. */

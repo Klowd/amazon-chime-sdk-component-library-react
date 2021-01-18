@@ -2,16 +2,17 @@
 // SPDX-License-Identifier: Apache-2.0
 
 import '@testing-library/jest-dom';
-import React from 'react';
 
 import InfiniteList, {
   InfiniteListProps,
 } from '../../../../../src/components/ui/Chat/InfiniteList';
-import lightTheme from '../../../../../src/theme/light';
 import {
   renderWithTheme,
   setupIntersectionObserverMock,
 } from '../../../../test-helpers';
+
+import React from 'react';
+import lightTheme from '../../../../../src/theme/light';
 
 describe('InfiniteList', () => {
   setupIntersectionObserverMock();

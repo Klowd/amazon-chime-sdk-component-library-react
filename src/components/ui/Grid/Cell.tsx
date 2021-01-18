@@ -1,9 +1,9 @@
 // Copyright 2020-2021 Amazon.com, Inc. or its affiliates. All Rights Reserved.
 // SPDX-License-Identifier: Apache-2.0
 
-import React from 'react';
-import { SpaceProps, GridProps } from 'styled-system';
+import { GridProps, SpaceProps } from 'styled-system';
 
+import React from 'react';
 import { StyledCell } from './Styled';
 
 export interface CellProps extends SpaceProps, GridProps {

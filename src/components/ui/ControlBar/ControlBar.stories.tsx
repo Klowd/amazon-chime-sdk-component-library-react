@@ -1,18 +1,17 @@
 // Copyright 2020-2021 Amazon.com, Inc. or its affiliates. All Rights Reserved.
 // SPDX-License-Identifier: Apache-2.0
 
+import { Camera, Dialer, Laptop, Microphone, Phone, Sound } from '../icons';
 import React, { useState } from 'react';
-import { select, boolean } from '@storybook/addon-knobs';
+import { boolean, select } from '@storybook/addon-knobs';
 
-import { Microphone, Camera, Dialer, Sound, Phone, Laptop } from '../icons';
 import ControlBar from '.';
-import ControlBarItem from './ControlBarItem';
 import ControlBarDocs from './ControlBar.mdx';
-
-import PopOverItem from '../PopOver/PopOverItem';
-import PopOverSubMenu from '../PopOver/PopOverSubMenu';
-import PopOverSeparator from '../PopOver/PopOverSeparator';
+import ControlBarItem from './ControlBarItem';
 import PopOverHeader from '../PopOver/PopOverHeader';
+import PopOverItem from '../PopOver/PopOverItem';
+import PopOverSeparator from '../PopOver/PopOverSeparator';
+import PopOverSubMenu from '../PopOver/PopOverSubMenu';
 
 export default {
   title: 'UI Components/ControlBar',

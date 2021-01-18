@@ -2,9 +2,8 @@
 // SPDX-License-Identifier: Apache-2.0
 
 import React from 'react';
-import { SvgProps } from '../Svg';
-
 import { StyledSvg } from './Styled';
+import { SvgProps } from '../Svg';
 
 export interface MicrophoneProps extends SvgProps {
   /** Whether or not should show muted status. */

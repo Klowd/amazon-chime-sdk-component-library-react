@@ -3,19 +3,18 @@
 
 import React, {
   createContext,
-  useState,
-  useEffect,
-  useContext,
   useCallback,
+  useContext,
+  useEffect,
   useMemo,
+  useState,
 } from 'react';
-import { VideoTileState } from 'amazon-chime-sdk-js';
 
-import { useMeetingManager } from '../MeetingProvider';
-import { useAudioVideo } from '../AudioVideoProvider';
-
-import { videoInputSelectionToDevice } from '../../utils/device-utils';
 import { LocalVideoContextType } from '../../types';
+import { VideoTileState } from 'amazon-chime-sdk-js';
+import { useAudioVideo } from '../AudioVideoProvider';
+import { useMeetingManager } from '../MeetingProvider';
+import { videoInputSelectionToDevice } from '../../utils/device-utils';
 
 const Context = createContext<LocalVideoContextType | null>(null);
 

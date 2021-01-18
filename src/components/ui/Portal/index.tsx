@@ -2,6 +2,7 @@
 // SPDX-License-Identifier: Apache-2.0
 
 import { FC, useEffect, useState } from 'react';
+
 import { createPortal } from 'react-dom';
 
 interface PortalProps {

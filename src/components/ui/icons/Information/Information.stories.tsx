@@ -1,12 +1,11 @@
 // Copyright 2020-2021 Amazon.com, Inc. or its affiliates. All Rights Reserved.
 // SPDX-License-Identifier: Apache-2.0
 
-import React from 'react';
-
-import { text } from '@storybook/addon-knobs';
+import Flex from '../../Flex';
 import Information from '.';
 import InformationIconDocs from './Information.mdx';
-import Flex from '../../Flex';
+import React from 'react';
+import { text } from '@storybook/addon-knobs';
 
 export default {
   title: 'UI Components/Icons/Information',

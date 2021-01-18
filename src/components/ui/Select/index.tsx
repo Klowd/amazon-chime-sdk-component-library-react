@@ -2,14 +2,14 @@
 // SPDX-License-Identifier: Apache-2.0
 
 import React, {
-  ChangeEvent,
-  forwardRef,
-  Ref,
-  InputHTMLAttributes,
   CSSProperties,
+  ChangeEvent,
+  InputHTMLAttributes,
+  Ref,
+  forwardRef,
 } from 'react';
-
 import { StyledSelectInput, StyledWrapper } from './Styled';
+
 import UpAndDownCaret from '../icons/UpAndDownCaret';
 
 export type SelectOptions = {

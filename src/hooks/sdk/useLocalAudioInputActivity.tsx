@@ -1,10 +1,9 @@
 // Copyright 2020-2021 Amazon.com, Inc. or its affiliates. All Rights Reserved.
 // SPDX-License-Identifier: Apache-2.0
 
-import { useEffect } from 'react';
-
-import { useAudioVideo } from '../../providers/AudioVideoProvider';
 import { useAudioInputs } from '../../providers/DevicesProvider';
+import { useAudioVideo } from '../../providers/AudioVideoProvider';
+import { useEffect } from 'react';
 
 export const useLocalAudioInputActivity = (cb: (decimal: number) => void) => {
   const audioVideo = useAudioVideo();

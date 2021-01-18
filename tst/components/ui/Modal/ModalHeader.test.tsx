@@ -2,11 +2,11 @@
 // SPDX-License-Identifier: Apache-2.0
 
 import '@testing-library/jest-dom';
+
+import ModalContext from '../../../../src/components/ui/Modal/ModalContext';
+import ModalHeader from '../../../../src/components/ui/Modal/ModalHeader';
 import React from 'react';
 import { fireEvent } from '@testing-library/dom';
-
-import ModalHeader from '../../../../src/components/ui/Modal/ModalHeader';
-import ModalContext from '../../../../src/components/ui/Modal/ModalContext';
 import lightTheme from '../../../../src/theme/light';
 import { renderWithTheme } from '../../../test-helpers';
 

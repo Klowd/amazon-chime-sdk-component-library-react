@@ -1,15 +1,16 @@
 // Copyright 2020-2021 Amazon.com, Inc. or its affiliates. All Rights Reserved.
 // SPDX-License-Identifier: Apache-2.0
 
-import React from 'react';
 import '@testing-library/jest-dom';
+
 import { fireEvent, getByText } from '@testing-library/dom';
 
+import Echo from '../../../../src/components/ui/icons/Echo';
+import Notification from '../../../../src/components/ui/Notification';
+import React from 'react';
+import { Severity } from '../../../../src/providers/NotificationProvider';
 import lightTheme from '../../../../src/theme/light';
 import { renderWithTheme } from '../../../test-helpers';
-import Notification from '../../../../src/components/ui/Notification';
-import { Severity } from '../../../../src/providers/NotificationProvider';
-import Echo from '../../../../src/components/ui/icons/Echo';
 
 const getNotificationComponent = () => (
   <Notification onClose={jest.fn()} severity={Severity.ERROR} message="Hello" />

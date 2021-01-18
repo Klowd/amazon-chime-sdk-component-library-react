@@ -2,14 +2,14 @@
 // SPDX-License-Identifier: Apache-2.0
 
 import React, { FC, HTMLAttributes, ReactNode } from 'react';
-import classnames from 'classnames';
 
-import { StyledChannelItem } from './Styled';
-import PopOver from '../../PopOver';
-import Button from '../../Button';
-import { BaseProps } from '../../Base';
-import { Dots } from '../../icons';
 import Badge from '../../Badge';
+import { BaseProps } from '../../Base';
+import Button from '../../Button';
+import { Dots } from '../../icons';
+import PopOver from '../../PopOver';
+import { StyledChannelItem } from './Styled';
+import classnames from 'classnames';
 
 export interface ChannelItemProps
   extends Omit<HTMLAttributes<HTMLLIElement & HTMLLIElement>, 'css'>,

@@ -6,15 +6,15 @@ import React, {
   createContext,
   useContext,
   useEffect,
-  useState,
   useRef,
+  useState,
 } from 'react';
+import { createMemberArn, describeChannel } from '../../api/ChimeAPI';
 
-import appConfig from '../../Config';
-import { useAuthContext } from '../AuthProvider';
-import { describeChannel, createMemberArn } from '../../api/ChimeAPI';
 import MessagingService from '../../services/MessagingService';
+import appConfig from '../../Config';
 import mergeArrayOfObjects from '../../utilities/mergeArrays';
+import { useAuthContext } from '../AuthProvider';
 
 const ChatMessagingServiceContext = createContext(MessagingService);
 const ChatMessagingState = createContext();

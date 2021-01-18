@@ -2,34 +2,34 @@
 // SPDX-License-Identifier: Apache-2.0
 
 import {
+  AttendeeResponse,
+  DevicePermissionStatus,
+  FullDeviceInfoType,
+  ManagerConfig,
+  MeetingJoinData,
+  PostLogConfig
+} from './types';
+import {
   AudioVideoFacade,
+  AudioVideoObserver,
   ConsoleLogger,
+  DefaultActiveSpeakerPolicy,
   DefaultDeviceController,
   DefaultMeetingSession,
   LogLevel,
   MeetingSessionConfiguration,
-  DefaultActiveSpeakerPolicy,
+  MeetingSessionPOSTLogger,
   MeetingSessionStatus,
   MeetingSessionStatusCode,
-  AudioVideoObserver,
-  MultiLogger,
-  MeetingSessionPOSTLogger
+  MultiLogger
 } from 'amazon-chime-sdk-js';
-
 import {
   audioInputSelectionToDevice,
   supportsSetSinkId,
   videoInputSelectionToDevice
 } from '../../utils/device-utils';
+
 import { MeetingStatus } from '../../types';
-import {
-  DevicePermissionStatus,
-  MeetingJoinData,
-  AttendeeResponse,
-  FullDeviceInfoType,
-  PostLogConfig,
-  ManagerConfig
-} from './types';
 
 export class MeetingManager implements AudioVideoObserver {
   meetingSession: DefaultMeetingSession | null = null;

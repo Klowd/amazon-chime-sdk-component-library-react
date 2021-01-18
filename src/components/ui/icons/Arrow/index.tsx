@@ -1,11 +1,11 @@
 // Copyright 2020-2021 Amazon.com, Inc. or its affiliates. All Rights Reserved.
 // SPDX-License-Identifier: Apache-2.0
 
+import Svg, { SvgProps } from '../Svg';
+
+import { Direction } from '../../../../types';
 import React from 'react';
 import styled from 'styled-components';
-
-import Svg, { SvgProps } from '../Svg';
-import { Direction } from '../../../../types';
 
 const dirTransform = {
   up: '0',

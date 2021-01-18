@@ -1,28 +1,28 @@
 // Copyright 2020-2021 Amazon.com, Inc. or its affiliates. All Rights Reserved.
 // SPDX-License-Identifier: Apache-2.0
 
-import React, { useState, useContext, ChangeEvent } from 'react';
-import { useHistory } from 'react-router-dom';
 import {
-  Input,
   Flex,
-  Heading,
   FormField,
-  PrimaryButton,
-  useMeetingManager,
+  Heading,
+  Input,
   Modal,
   ModalBody,
-  ModalHeader
+  ModalHeader,
+  PrimaryButton,
+  useMeetingManager
 } from 'amazon-chime-sdk-component-library-react';
+import React, { ChangeEvent, useContext, useState } from 'react';
+import { createGetAttendeeCallback, fetchMeeting } from '../../utils/api';
 
-import { getErrorContext } from '../../providers/ErrorProvider';
-import routes from '../../constants/routes';
 import Card from '../../components/Card';
-import Spinner from '../../components/Spinner';
 import DevicePermissionPrompt from '../DevicePermissionPrompt';
 import RegionSelection from './RegionSelection';
-import { fetchMeeting, createGetAttendeeCallback } from '../../utils/api';
+import Spinner from '../../components/Spinner';
+import { getErrorContext } from '../../providers/ErrorProvider';
+import routes from '../../constants/routes';
 import { useAppState } from '../../providers/AppStateProvider';
+import { useHistory } from 'react-router-dom';
 
 const MeetingForm: React.FC = () => {
   const meetingManager = useMeetingManager();

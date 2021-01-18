@@ -1,12 +1,12 @@
 // Copyright 2020-2021 Amazon.com, Inc. or its affiliates. All Rights Reserved.
 // SPDX-License-Identifier: Apache-2.0
 
-import React from 'react';
+import { select, text } from '@storybook/addon-knobs';
 
-import { text, select } from '@storybook/addon-knobs';
 import Arrow from './';
 import ArrowIconDocs from './Arrow.mdx';
 import Flex from '../../Flex';
+import React from 'react';
 
 export default {
   title: 'UI Components/Icons/Arrow',

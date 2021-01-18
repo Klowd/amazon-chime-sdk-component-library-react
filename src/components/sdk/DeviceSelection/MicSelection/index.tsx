@@ -1,11 +1,10 @@
 // Copyright 2020-2021 Amazon.com, Inc. or its affiliates. All Rights Reserved.
 // SPDX-License-Identifier: Apache-2.0
 
+import DeviceInput from '../DeviceInput';
 import React from 'react';
-
 import { useAudioInputs } from '../../../../providers/DevicesProvider';
 import { useSelectAudioInputDevice } from '../../../../hooks/sdk/useSelectAudioInputDevice';
-import DeviceInput from '../DeviceInput';
 
 interface Props {
   /** The message that will be shown when no microphone devices are found. */
@@ -16,7 +15,7 @@ interface Props {
 
 export const MicSelection: React.FC<Props> = ({
   notFoundMsg = 'No microphone devices found',
-  label = 'Microphone source',
+  label = 'Microphone',
 }) => {
   const selectAudioInput = useSelectAudioInputDevice();
   const { devices, selectedDevice } = useAudioInputs();

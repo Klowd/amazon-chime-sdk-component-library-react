@@ -2,11 +2,12 @@
 // SPDX-License-Identifier: Apache-2.0
 
 import React, { useEffect, useState } from 'react';
-import { MessageAttachment } from 'amazon-chime-sdk-component-library-react';
+
 import AttachmentService from '../../services/AttachmentService';
+import { MessageAttachment } from 'amazon-chime-sdk-component-library-react';
+import appConfig from '../../Config';
 import arnParser from '../../utilities/arnParser';
 import formatBytes from '../../utilities/formatBytes';
-import appConfig from '../../Config';
 
 /**
  * Attachment Processor which provides MessageAttachment component with downloadUrl

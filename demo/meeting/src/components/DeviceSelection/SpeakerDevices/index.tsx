@@ -3,8 +3,8 @@
 
 import React, { useState } from 'react';
 import {
-  SpeakerSelection,
   SecondaryButton,
+  SpeakerSelection,
   useAudioOutputs
 } from 'amazon-chime-sdk-component-library-react';
 

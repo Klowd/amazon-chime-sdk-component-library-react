@@ -3,7 +3,6 @@
     "module": "esnext",
     "outDir": "build",
     "noImplicitAny": true,
-    "noUnusedLocals": true,
     "removeComments": true,
     "preserveConstEnums": true,
     "sourceMap": true,

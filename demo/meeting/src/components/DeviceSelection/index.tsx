@@ -1,12 +1,12 @@
 // Copyright 2020-2021 Amazon.com, Inc. or its affiliates. All Rights Reserved.
 // SPDX-License-Identifier: Apache-2.0
 
-import React from 'react';
+import { StyledAudioGroup, StyledVideoGroup, StyledWrapper } from './Styled';
 
-import { StyledWrapper, StyledAudioGroup, StyledVideoGroup } from './Styled';
-import MicrophoneDevices from './MicrophoneDevices';
-import SpeakerDevices from './SpeakerDevices';
 import CameraDevices from './CameraDevices';
+import MicrophoneDevices from './MicrophoneDevices';
+import React from 'react';
+import SpeakerDevices from './SpeakerDevices';
 
 const DeviceSelection = () => (
   <StyledWrapper>

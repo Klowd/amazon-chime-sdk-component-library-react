@@ -21,8 +21,8 @@ export const StyledLayout = styled.main<Props>`
   ${({ showNav, showRoster }) => {
     if (showNav && showRoster) {
       return `
-        grid-template-columns: auto auto 1fr;
-        grid-template-areas: 'nav roster content';
+        grid-template-columns: auto 1fr auto;
+        grid-template-areas: 'nav content roster';
       `;
     }
 
@@ -35,8 +35,8 @@ export const StyledLayout = styled.main<Props>`
 
     if (showRoster) {
       return `
-        grid-template-columns: auto 1fr;
-        grid-template-areas: 'roster content';
+        grid-template-columns: 1fr auto;
+        grid-template-areas: 'content roster';
       `;
     }
 

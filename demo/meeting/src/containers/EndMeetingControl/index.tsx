@@ -1,23 +1,23 @@
 // Copyright 2020-2021 Amazon.com, Inc. or its affiliates. All Rights Reserved.
 // SPDX-License-Identifier: Apache-2.0
 
-import React, { useState } from 'react';
-import { useHistory } from 'react-router-dom';
 import {
   ControlBarButton,
-  Phone,
   Modal,
   ModalBody,
-  ModalHeader,
   ModalButton,
   ModalButtonGroup,
+  ModalHeader,
+  Phone,
   useMeetingManager
 } from 'amazon-chime-sdk-component-library-react';
+import React, { useState } from 'react';
 
-import { endMeeting } from '../../utils/api';
 import { StyledP } from './Styled';
-import { useAppState } from '../../providers/AppStateProvider';
+import { endMeeting } from '../../utils/api';
 import routes from '../../constants/routes';
+import { useAppState } from '../../providers/AppStateProvider';
+import { useHistory } from 'react-router-dom';
 
 const EndMeetingControl: React.FC = () => {
   const meetingManager = useMeetingManager();

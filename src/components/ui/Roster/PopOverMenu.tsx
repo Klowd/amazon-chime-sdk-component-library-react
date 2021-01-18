@@ -1,11 +1,11 @@
 // Copyright 2020-2021 Amazon.com, Inc. or its affiliates. All Rights Reserved.
 // SPDX-License-Identifier: Apache-2.0
 
-import React from 'react';
+import IconButton, { IconButtonProps } from '../Button/IconButton';
 
 import { Dots } from '../icons';
 import PopOver from '../PopOver';
-import IconButton, { IconButtonProps } from '../Button/IconButton';
+import React from 'react';
 import classNames from 'classnames';
 
 interface PopOverMenuProps {

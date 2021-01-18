@@ -1,9 +1,9 @@
 // Copyright 2020-2021 Amazon.com, Inc. or its affiliates. All Rights Reserved.
 // SPDX-License-Identifier: Apache-2.0
 
-import React, { useState, useRef } from 'react';
-import { PrimaryButton } from 'amazon-chime-sdk-component-library-react';
+import React, { useRef, useState } from 'react';
 
+import { PrimaryButton } from 'amazon-chime-sdk-component-library-react';
 import { StyledDiv } from './Styled';
 
 interface SIPProps {

@@ -2,9 +2,9 @@
 // SPDX-License-Identifier: Apache-2.0
 
 import AudioInputControl from './AudioInputControl';
-import VideoInputControl from './VideoInputControl';
-import ContentShareControl from './ContentShareControl';
 import AudioOutputControl from './AudioOutputControl';
+import ContentShareControl from './ContentShareControl';
+import VideoInputControl from './VideoInputControl';
 
 export {
   AudioInputControl,

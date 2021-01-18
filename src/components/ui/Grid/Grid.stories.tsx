@@ -1,13 +1,13 @@
 // Copyright 2020-2021 Amazon.com, Inc. or its affiliates. All Rights Reserved.
 // SPDX-License-Identifier: Apache-2.0
 
-import React from 'react';
 import { boolean, number, text } from '@storybook/addon-knobs';
 
+import Cell from './Cell';
 import Flex from '../Flex';
 import Grid from './';
-import Cell from './Cell';
 import GridDocs from './Grid.mdx';
+import React from 'react';
 
 export default {
   title: 'UI Components/Grid',

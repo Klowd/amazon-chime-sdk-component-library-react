@@ -1,8 +1,8 @@
 // Copyright 2020-2021 Amazon.com, Inc. or its affiliates. All Rights Reserved.
 // SPDX-License-Identifier: Apache-2.0
 
-import React, { useEffect, ChangeEvent } from 'react';
-import { Select, FormField } from 'amazon-chime-sdk-component-library-react';
+import { FormField, Select } from 'amazon-chime-sdk-component-library-react';
+import React, { ChangeEvent, useEffect } from 'react';
 
 import { AVAILABLE_AWS_REGIONS } from '../../constants';
 import getFormattedOptionsForSelect from '../../utils/select-options-format';

@@ -1,14 +1,10 @@
 // Copyright 2020-2021 Amazon.com, Inc. or its affiliates. All Rights Reserved.
 // SPDX-License-Identifier: Apache-2.0
 
-import React from 'react';
-import styled from 'styled-components';
-import { text } from '@storybook/addon-knobs';
-
 import Add from '../Add';
 import Arrow from '../Arrow';
-import Attendees from '../Attendees';
 import Attachment from '../Attachment';
+import Attendees from '../Attendees';
 import Camera from '../Camera';
 import Caret from '../Caret';
 import Caution from '../Caution';
@@ -19,16 +15,18 @@ import Clear from '../Clear';
 import Clock from '../Clock';
 import Cog from '../Cog';
 import ConnectionProblem from '../ConnectionProblem';
-import Dislike from '../Dislike';
-import Dock from '../Dock';
-import Dots from '../Dots';
-import ScreenShare from '../ScreenShare';
 import Crown from '../Crown';
 import DeskPhone from '../DeskPhone';
-import Echo from '../Echo';
 import Dialer from '../Dialer';
+import Dislike from '../Dislike';
+import Dock from '../Dock';
 import Document from '../Document';
+import Dots from '../Dots';
 import DropToAttach from '../DropToAttach';
+import Echo from '../Echo';
+import EmojiPicker from '../EmojiPicker';
+import Eye from '../Eye';
+import Flex from '../../Flex';
 import Hamburger from '../Hamburger';
 import HandRaise from '../HandRaise';
 import Information from '../Information';
@@ -40,24 +38,28 @@ import Lock from '../Lock';
 import Meeting from '../Meeting';
 import Microphone from '../Microphone';
 import Pause from '../Pause';
-import Pin from '../Pin';
 import Phone from '../Phone';
+import Pin from '../Pin';
 import Play from '../Play';
 import Presenter from '../Presenter';
+import React from 'react';
 import Record from '../Record';
 import Remove from '../Remove';
 import Rooms from '../Rooms';
+import ScreenShare from '../ScreenShare';
 import Search from '../Search';
 import Share from '../Share';
 import SignalStrength from '../SignalStrength';
 import Sound from '../Sound';
-import Flex from '../../Flex';
-import Eye from '../Eye';
-import EmojiPicker from '../EmojiPicker';
-import UpAndDownCaret from '../UpAndDownCaret';
 import Spinner from '../Spinner';
+<<<<<<< HEAD
 import ZoomOut from '../ZoomOut';
 import ZoomIn from '../ZoomIn';
+=======
+import UpAndDownCaret from '../UpAndDownCaret';
+import styled from 'styled-components';
+import { text } from '@storybook/addon-knobs';
+>>>>>>> local changes
 
 export default {
   title: 'UI Components/Icons/All',

@@ -1,16 +1,16 @@
 // Copyright 2020-2021 Amazon.com, Inc. or its affiliates. All Rights Reserved.
 // SPDX-License-Identifier: Apache-2.0
 
-import React, { useState } from 'react';
-import {
-  FormField,
-  Input,
-  Flex,
-  Button,
-  Heading,
-} from 'amazon-chime-sdk-component-library-react';
-
 import './login.css';
+
+import {
+  Button,
+  Flex,
+  FormField,
+  Heading,
+  Input,
+} from 'amazon-chime-sdk-component-library-react';
+import React, { useState } from 'react';
 
 const Login = (props) => {
   const [userName, setUsername] = useState('');

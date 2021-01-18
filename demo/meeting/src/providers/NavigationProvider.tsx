@@ -2,16 +2,16 @@
 // SPDX-License-Identifier: Apache-2.0
 
 import React, {
-  useState,
+  ReactNode,
   useContext,
   useEffect,
   useRef,
-  ReactNode
+  useState
 } from 'react';
-import { useLocation } from 'react-router-dom';
-import { useMeetingManager } from 'amazon-chime-sdk-component-library-react';
 
 import routes from '../constants/routes';
+import { useLocation } from 'react-router-dom';
+import { useMeetingManager } from 'amazon-chime-sdk-component-library-react';
 
 export type NavigationContextType = {
   showNavbar: boolean;

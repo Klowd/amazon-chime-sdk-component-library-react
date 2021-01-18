@@ -2,16 +2,16 @@
 // SPDX-License-Identifier: Apache-2.0
 
 import React, { useState } from 'react';
-import { select, text, boolean } from '@storybook/addon-knobs';
+import { boolean, select, text } from '@storybook/addon-knobs';
 
-import FormField from '.';
-import Input from '../Input';
 import Checkbox from '../Checkbox';
-import Textarea from '../Textarea';
-import Select from '../Select';
-import RadioGroup from '../RadioGroup';
 import Flex from '../Flex';
+import FormField from '.';
 import FormFieldDocs from './FormField.mdx';
+import Input from '../Input';
+import RadioGroup from '../RadioGroup';
+import Select from '../Select';
+import Textarea from '../Textarea';
 
 export default {
   title: 'UI Components/Form/FormField',

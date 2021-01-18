@@ -1,22 +1,22 @@
 // Copyright 2020-2021 Amazon.com, Inc. or its affiliates. All Rights Reserved.
 // SPDX-License-Identifier: Apache-2.0
 
+import { BaseProps, FocusableProps } from '../Base';
 import React, {
-  useState,
-  useRef,
-  useEffect,
   ChangeEvent,
   ReactNode,
+  useEffect,
+  useRef,
+  useState,
 } from 'react';
+import { Remove, Search } from '../icons';
 
-import Flex from '../Flex';
 import Badge from '../Badge';
-import SearchInput from '../Input/SearchInput';
-import { Search, Remove } from '../icons';
+import Flex from '../Flex';
 import IconButton from '../Button/IconButton';
-import { StyledHeader } from './Styled';
 import { PopOverMenu } from './PopOverMenu';
-import { BaseProps, FocusableProps } from '../Base';
+import SearchInput from '../Input/SearchInput';
+import { StyledHeader } from './Styled';
 
 export interface RosterHeaderProps extends BaseProps, FocusableProps {
   /** The title of the roster header. */

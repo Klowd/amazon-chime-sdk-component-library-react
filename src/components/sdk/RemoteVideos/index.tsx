@@ -3,10 +3,10 @@
 
 import React, { memo } from 'react';
 
+import { BaseSdkProps } from '../Base';
+import { RemoteVideo } from '../RemoteVideo';
 import { useRemoteVideoTileState } from '../../../providers/RemoteVideoTileProvider';
 import { useRosterState } from '../../../providers/RosterProvider';
-import { RemoteVideo } from '../RemoteVideo';
-import { BaseSdkProps } from '../Base';
 
 export const RemoteVideos: React.FC<BaseSdkProps> = (props) => {
   const { roster } = useRosterState();

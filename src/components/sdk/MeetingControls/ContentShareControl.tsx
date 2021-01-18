@@ -1,13 +1,12 @@
 // Copyright 2020-2021 Amazon.com, Inc. or its affiliates. All Rights Reserved.
 // SPDX-License-Identifier: Apache-2.0
 
-import React from 'react';
-
 import { ControlBarButton } from '../../ui/ControlBar/ControlBarItem';
-import { ScreenShare } from '../../ui/icons';
-import { useContentShareState } from '../../../providers/ContentShareProvider';
-import { useContentShareControls } from '../../../providers/ContentShareProvider';
 import { PopOverItemProps } from '../../ui/PopOver/PopOverItem';
+import React from 'react';
+import { ScreenShare } from '../../ui/icons';
+import { useContentShareControls } from '../../../providers/ContentShareProvider';
+import { useContentShareState } from '../../../providers/ContentShareProvider';
 
 interface Props {
   /** The label that will be shown for content share control, it defaults to `Content`. */

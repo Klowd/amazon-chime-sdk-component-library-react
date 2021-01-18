@@ -2,9 +2,8 @@
 // SPDX-License-Identifier: Apache-2.0
 
 import React from 'react';
-import { useBandwidthMetrics } from 'amazon-chime-sdk-component-library-react';
-
 import { StyledMetrics } from './Styled';
+import { useBandwidthMetrics } from 'amazon-chime-sdk-component-library-react';
 import { useNavigation } from '../../providers/NavigationProvider';
 
 function formatMetric(metric: number | null) {

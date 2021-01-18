@@ -1,13 +1,13 @@
 // Copyright 2020-2021 Amazon.com, Inc. or its affiliates. All Rights Reserved.
 // SPDX-License-Identifier: Apache-2.0
 
-import React from 'react';
 import '@testing-library/jest-dom';
-import { fireEvent } from '@testing-library/dom';
 
+import NavbarHeader from '../../../../src/components/ui/Navbar/NavbarHeader';
+import React from 'react';
+import { fireEvent } from '@testing-library/dom';
 import lightTheme from '../../../../src/theme/light';
 import { renderWithTheme } from '../../../test-helpers';
-import NavbarHeader from '../../../../src/components/ui/Navbar/NavbarHeader';
 
 describe('NavbarHeader', () => {
   it('should render a title', () => {

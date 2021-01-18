@@ -1,13 +1,12 @@
 // Copyright 2020-2021 Amazon.com, Inc. or its affiliates. All Rights Reserved.
 // SPDX-License-Identifier: Apache-2.0
 
-import React from 'react';
-
-import { RadioGroup } from './';
-import RadioGroupDocs from './RadioGroup.mdx';
+import Dislike from '../icons/Dislike';
 import Flex from '../Flex';
 import Like from '../icons/Like';
-import Dislike from '../icons/Dislike';
+import { RadioGroup } from './';
+import RadioGroupDocs from './RadioGroup.mdx';
+import React from 'react';
 
 export default {
   title: 'UI Components/Form/RadioGroup',

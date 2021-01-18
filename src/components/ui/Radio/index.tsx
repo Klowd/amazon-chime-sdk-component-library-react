@@ -1,16 +1,16 @@
 // Copyright 2020-2021 Amazon.com, Inc. or its affiliates. All Rights Reserved.
 // SPDX-License-Identifier: Apache-2.0
 
+import {
+  HiddenRadio,
+  StyledRadioIcon,
+  StyledRadioLabel,
+  StyledRadioWrapper,
+} from './Styled';
 import React, { FC, InputHTMLAttributes, useRef } from 'react';
 
 import Label from '../Label';
 import useUniqueId from '../../../hooks/useUniqueId';
-import {
-  StyledRadioLabel,
-  HiddenRadio,
-  StyledRadioWrapper,
-  StyledRadioIcon,
-} from './Styled';
 
 export interface RadioProps {
   /** Whether or not the radio is selected. */

@@ -1,15 +1,13 @@
 // Copyright 2020-2021 Amazon.com, Inc. or its affiliates. All Rights Reserved.
 // SPDX-License-Identifier: Apache-2.0
 
-import React from 'react';
-
-import Flex from '../../Flex';
-import ChatBubbleContainer from './ChatBubbleContainer';
 import ChatBubble from './';
-import PopOverItem from '../../PopOver/PopOverItem';
-import { formatTime } from '../../Utilities';
-
+import ChatBubbleContainer from './ChatBubbleContainer';
 import ChatBubbleContainerDocs from './ChatBubbleContainer.mdx';
+import Flex from '../../Flex';
+import PopOverItem from '../../PopOver/PopOverItem';
+import React from 'react';
+import { formatTime } from '../../Utilities';
 
 export default {
   title: 'UI Components/Chat/ChatBubbleContainer',

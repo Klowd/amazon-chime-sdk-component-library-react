@@ -1,8 +1,6 @@
 // Copyright 2020-2021 Amazon.com, Inc. or its affiliates. All Rights Reserved.
 // SPDX-License-Identifier: Apache-2.0
 
-import React from 'react';
-
 import {
   Flex,
   Heading,
@@ -10,8 +8,9 @@ import {
   useMeetingManager
 } from 'amazon-chime-sdk-component-library-react';
 
-import { useAppState } from '../../providers/AppStateProvider';
+import React from 'react';
 import { StyledList } from './Styled';
+import { useAppState } from '../../providers/AppStateProvider';
 
 const MeetingDetails = () => {
   const { meetingId, toggleTheme, theme } = useAppState();

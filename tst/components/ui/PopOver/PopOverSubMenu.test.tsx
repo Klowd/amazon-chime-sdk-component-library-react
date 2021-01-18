@@ -2,13 +2,13 @@
 // SPDX-License-Identifier: Apache-2.0
 
 import '@testing-library/jest-dom';
-import React from 'react';
 
+import PopOverItem from '../../../../src/components/ui/PopOver/PopOverItem';
 import PopOverSubMenu from '../../../../src/components/ui/PopOver/PopOverSubMenu';
+import React from 'react';
+import { fireEvent } from '@testing-library/dom';
 import lightTheme from '../../../../src/theme/light';
 import { renderWithTheme } from '../../../test-helpers';
-import PopOverItem from '../../../../src/components/ui/PopOver/PopOverItem';
-import { fireEvent } from '@testing-library/dom';
 
 describe('PopOver submenu', () => {
   it('should render a popover submenu component', () => {

@@ -2,12 +2,12 @@
 // SPDX-License-Identifier: Apache-2.0
 
 import '@testing-library/jest-dom';
-import React from 'react';
 
+import Cell from '../../../../src/components/ui/Grid/Cell';
 import Grid from '../../../../src/components/ui/Grid';
+import React from 'react';
 import lightTheme from '../../../../src/theme/light';
 import { renderWithTheme } from '../../../test-helpers';
-import Cell from '../../../../src/components/ui/Grid/Cell';
 
 const CHILD = 'Child';
 const Child = () => <p>{CHILD}</p>;

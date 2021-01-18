@@ -4,9 +4,10 @@
 import React, { FC } from 'react';
 import Svg, { SvgProps } from '../Svg';
 
+import { StyledCaution } from './styled';
+
 export type CautionVariant = 'default' | 'fill-warning' | 'fill-error';
 
-import { StyledCaution } from './styled';
 
 export interface CautionProps extends SvgProps {
   /** toggle the range of visual variants */

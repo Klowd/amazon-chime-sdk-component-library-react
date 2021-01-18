@@ -1,11 +1,10 @@
 // Copyright 2020-2021 Amazon.com, Inc. or its affiliates. All Rights Reserved.
 // SPDX-License-Identifier: Apache-2.0
 
+import DeviceInput from '../DeviceInput';
 import React from 'react';
-
 import { useMeetingManager } from '../../../../providers/MeetingProvider';
 import { useVideoInputs } from '../../../../providers/DevicesProvider';
-import DeviceInput from '../DeviceInput';
 
 interface Props {
   /** The message that will be shown when no camera devices are found. */
@@ -16,7 +15,7 @@ interface Props {
 
 export const CameraSelection: React.FC<Props> = ({
   notFoundMsg = 'No camera devices found',
-  label = 'Camera source',
+  label = 'Camera',
 }) => {
   const meetingManager = useMeetingManager();
   const { devices, selectedDevice } = useVideoInputs();

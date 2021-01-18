@@ -1,11 +1,12 @@
 // Copyright 2020-2021 Amazon.com, Inc. or its affiliates. All Rights Reserved.
 // SPDX-License-Identifier: Apache-2.0
 
-import React from 'react';
-
 import { ControlBarButton } from '../../ui/ControlBar/ControlBarItem';
+import { DeviceType } from '../../../types';
+import { PopOverItemProps } from '../../ui/PopOver/PopOverItem';
+import React from 'react';
 import { Sound } from '../../ui/icons';
-import { useMeetingManager } from '../../../providers/MeetingProvider';
+import { isOptionActive } from '../../../utils/device-utils';
 import { useAudioOutputs } from '../../../providers/DevicesProvider';
 import { useLocalAudioOutput } from '../../../providers/LocalAudioOutputProvider';
 import { isOptionActive, supportsSetSinkId } from '../../../utils/device-utils';

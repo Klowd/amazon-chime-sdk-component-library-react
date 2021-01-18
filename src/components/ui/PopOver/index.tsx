@@ -1,21 +1,21 @@
 // Copyright 2020-2021 Amazon.com, Inc. or its affiliates. All Rights Reserved.
 // SPDX-License-Identifier: Apache-2.0
 
+import { Manager, Popper, Reference } from 'react-popper';
 import React, {
   FC,
-  createRef,
-  useState,
   HTMLAttributes,
+  createRef,
   useEffect,
+  useState,
 } from 'react';
-import { Manager, Reference, Popper } from 'react-popper';
-import classnames from 'classnames';
+import { StyledPopOverMenu, StyledPopOverToggle } from './Styled';
 
+import { BaseProps } from '../Base';
 import { KEY_CODES } from '../../../constants';
+import classnames from 'classnames';
 import useClickOutside from '../../../hooks/useClickOutside';
 import useTabOutside from '../../../hooks/useTabOutside';
-import { BaseProps } from '../Base';
-import { StyledPopOverMenu, StyledPopOverToggle } from './Styled';
 
 export type Placement =
   | 'top-start'

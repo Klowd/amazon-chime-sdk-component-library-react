@@ -1,10 +1,9 @@
 // Copyright 2020-2021 Amazon.com, Inc. or its affiliates. All Rights Reserved.
 // SPDX-License-Identifier: Apache-2.0
 
-import styled from 'styled-components';
-
-import { visuallyHidden } from '../../../utils/style';
 import { StyledCheckboxProps } from './';
+import styled from 'styled-components';
+import { visuallyHidden } from '../../../utils/style';
 
 export const HiddenCheckbox = styled.input`
   ${visuallyHidden};
