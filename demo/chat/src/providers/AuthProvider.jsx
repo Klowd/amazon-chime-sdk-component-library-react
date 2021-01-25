@@ -1,6 +1,6 @@
 /* eslint-disable no-console */
 /* eslint-disable import/no-unresolved */
-// Copyright 2020-2021 Amazon.com, Inc. or its affiliates. All Rights Reserved.
+// Copyright 2020 Amazon.com, Inc. or its affiliates. All Rights Reserved.
 // SPDX-License-Identifier: Apache-2.0
 
 import React, { createContext, useContext, useEffect, useState } from 'react';
@@ -15,7 +15,7 @@ const AuthProvider = ({ children }) => {
   // Member
   const [member, setMember] = useState({
     username: '',
-    userId: '',
+    userId: ''
   });
   // Auth state
   const [isAuthenticated, setIsAuthenticated] = useState(false);
@@ -38,16 +38,16 @@ const AuthProvider = ({ children }) => {
         attributes: {
           // TODO: Utilize input field for email that way we can then have users self confirm after reg.
           email: 'email@me.com',
-          profile: 'none',
-        },
+          profile: 'none'
+        }
       });
       notificationDispatch({
         type: 0,
         payload: {
           message:
             'Your registration information has been set to your administrator. Contact them for additional instructions.',
-          severity: 'success',
-        },
+          severity: 'success'
+        }
       });
     } catch (error) {
       console.log('error signing up:', error);
@@ -55,18 +55,18 @@ const AuthProvider = ({ children }) => {
         type: 0,
         payload: {
           message: 'Registration failed.',
-          severity: 'error',
-        },
+          severity: 'error'
+        }
       });
     }
   };
 
-  const updateUserAttributes = async (userId) => {
+  const updateUserAttributes = async userId => {
     try {
       const user = await Auth.currentAuthenticatedUser();
 
       await Auth.updateUserAttributes(user, {
-        profile: userId,
+        profile: userId
       });
     } catch (err) {
       console.log(err);
@@ -84,7 +84,7 @@ const AuthProvider = ({ children }) => {
 
   const setAuthenticatedUser = () => {
     Auth.currentUserInfo()
-      .then((curUser) => {
+      .then(curUser => {
         setMember({ username: curUser.username, userId: curUser.id });
         if (curUser.attributes?.profile === 'none') {
           updateUserAttributes(curUser.id);
@@ -96,14 +96,14 @@ const AuthProvider = ({ children }) => {
             payload: {
               message:
                 'Your account is activated! Please sign in again to confirm.',
-              severity: 'success',
-            },
+              severity: 'success'
+            }
           });
         } else {
           setIsAuthenticated(true);
         }
       })
-      .catch((err) => {
+      .catch(err => {
         console.log(`Failed to set authenticated user! ${err}`);
       });
 
@@ -113,14 +113,14 @@ const AuthProvider = ({ children }) => {
   const userSignIn = (username, password) => {
     Auth.signIn({ username, password })
       .then(setAuthenticatedUser)
-      .catch((err) => {
+      .catch(err => {
         console.log(err);
         notificationDispatch({
           type: 0,
           payload: {
             message: 'Your username and/or password is invalid!',
-            severity: 'error',
-          },
+            severity: 'error'
+          }
         });
       });
   };
@@ -128,7 +128,7 @@ const AuthProvider = ({ children }) => {
   useEffect(() => {
     Auth.currentAuthenticatedUser()
       .then(setAuthenticatedUser)
-      .catch((err) => {
+      .catch(err => {
         console.log(err);
         setIsAuthenticated(false);
       });
@@ -140,7 +140,7 @@ const AuthProvider = ({ children }) => {
     awsCredentials,
     userSignOut,
     userSignUp,
-    userSignIn,
+    userSignIn
   };
 
   return (

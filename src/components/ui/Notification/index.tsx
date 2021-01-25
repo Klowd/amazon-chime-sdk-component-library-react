@@ -1,4 +1,4 @@
-// Copyright 2020-2021 Amazon.com, Inc. or its affiliates. All Rights Reserved.
+// Copyright 2020 Amazon.com, Inc. or its affiliates. All Rights Reserved.
 // SPDX-License-Identifier: Apache-2.0
 
 import { Caution, CheckRound, Clock, Information, Remove } from '../icons';
@@ -14,7 +14,7 @@ enum Severity {
   ERROR = 'error',
   SUCCESS = 'success',
   INFO = 'info',
-  WARNING = 'warning',
+  WARNING = 'warning'
 }
 
 export interface NotificationProps
@@ -44,10 +44,10 @@ const iconMapping = {
   success: <CheckRound />,
   warning: <Clock />,
   error: <Caution />,
-  info: <Information />,
+  info: <Information />
 };
 
-export const Notification: React.FC<NotificationProps> = (props) => {
+export const Notification: React.FC<NotificationProps> = props => {
   const {
     tag,
     message,

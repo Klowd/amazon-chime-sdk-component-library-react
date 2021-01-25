@@ -1,11 +1,12 @@
-// Copyright 2020-2021 Amazon.com, Inc. or its affiliates. All Rights Reserved.
+// Copyright 2020 Amazon.com, Inc. or its affiliates. All Rights Reserved.
 // SPDX-License-Identifier: Apache-2.0
+
+import React, { useEffect } from 'react';
 
 import { ControlBarButton } from '../../ui/ControlBar/ControlBarItem';
 import { DeviceConfig } from '../../../types';
 import { Microphone } from '../../ui/icons';
 import { PopOverItemProps } from '../../ui/PopOver/PopOverItem';
-import React from 'react';
 import { isOptionActive } from '../../../utils/device-utils';
 import { useAudioInputs } from '../../../providers/DevicesProvider';
 import { useMeetingManager } from '../../../providers/MeetingProvider';
@@ -16,25 +17,33 @@ interface Props {
   muteLabel?: string;
   /** The label that will be shown when microphone is unmuted, it defaults to `Unmute`. */
   unmuteLabel?: string;
+  defaultMuted?: boolean;
 }
 
 const AudioInputControl: React.FC<Props> = ({
   muteLabel = 'Mute',
   unmuteLabel = 'Unmute',
+  defaultMuted = false
 }) => {
   const meetingManager = useMeetingManager();
-  const { muted, toggleMute } = useToggleLocalMute();
+  const { muted, toggleMute, audioVideo } = useToggleLocalMute();
   const audioInputConfig: DeviceConfig = {
-    additionalDevices: true,
+    additionalDevices: true
   };
   const { devices, selectedDevice } = useAudioInputs(audioInputConfig);
 
-  const dropdownOptions: PopOverItemProps[] = devices.map((device) => ({
+  const dropdownOptions: PopOverItemProps[] = devices.map(device => ({
     children: <span>{device.label}</span>,
     checked: isOptionActive(selectedDevice, device.deviceId),
     onClick: (): Promise<void> =>
-      meetingManager.selectAudioInputDevice(device.deviceId),
+      meetingManager.selectAudioInputDevice(device.deviceId)
   }));
+
+  useEffect(() => {
+    if (audioVideo && defaultMuted) {
+      toggleMute();
+    }
+  }, [audioVideo]);
 
   return (
     <ControlBarButton

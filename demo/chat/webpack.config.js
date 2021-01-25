@@ -1,4 +1,4 @@
-// Copyright 2020-2021 Amazon.com, Inc. or its affiliates. All Rights Reserved.
+// Copyright 2020 Amazon.com, Inc. or its affiliates. All Rights Reserved.
 // SPDX-License-Identifier: Apache-2.0
 
 const path = require('path');
@@ -64,7 +64,7 @@ module.exports = {
   devServer: {
     proxy: {
       '/': {
-        target: 'http://localhost:8080',
+        target: 'http://localhost:8083',
         bypass: function(req, _res, _proxyOptions) {
           if (req.headers.accept.indexOf('html') !== -1) {
             console.log('Skipping proxy for browser request.');

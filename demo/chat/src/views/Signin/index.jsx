@@ -1,5 +1,5 @@
 /* eslint-disable import/no-unresolved */
-// Copyright 2020-2021 Amazon.com, Inc. or its affiliates. All Rights Reserved.
+// Copyright 2020 Amazon.com, Inc. or its affiliates. All Rights Reserved.
 // SPDX-License-Identifier: Apache-2.0
 
 import { Cell, Grid, Heading } from 'amazon-chime-sdk-component-library-react';
@@ -26,7 +26,7 @@ const Signin = () => {
           level={1}
           style={{
             backgroundColor: currentTheme.colors.greys.grey60,
-            height: '3rem',
+            height: '3rem'
           }}
           className="app-heading"
         >

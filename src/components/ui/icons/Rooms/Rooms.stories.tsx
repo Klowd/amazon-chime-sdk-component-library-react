@@ -1,4 +1,4 @@
-// Copyright 2020-2021 Amazon.com, Inc. or its affiliates. All Rights Reserved.
+// Copyright 2020 Amazon.com, Inc. or its affiliates. All Rights Reserved.
 // SPDX-License-Identifier: Apache-2.0
 
 import Flex from '../../Flex';
@@ -11,14 +11,10 @@ export default {
   title: 'UI Components/Icons/Rooms',
   parameters: {
     docs: {
-      page: RoomsIconDocs.parameters.docs.page().props.children.type,
-    },
+      page: RoomsIconDocs.parameters.docs.page().props.children.type
+    }
   },
-  component: Rooms,
+  component: Rooms
 };
 
-export const _Rooms = () => (
-  <Flex layout="fill-space-centered">
-    <Rooms width={text('width', '2rem')} />
-  </Flex>
-);
+export const _Rooms = () => <Flex layout="fill-space-centered"><Rooms width={text('width', '2rem')} /></Flex>;

@@ -1,4 +1,4 @@
-// Copyright 2020-2021 Amazon.com, Inc. or its affiliates. All Rights Reserved.
+// Copyright 2020 Amazon.com, Inc. or its affiliates. All Rights Reserved.
 // SPDX-License-Identifier: Apache-2.0
 
 import { DeviceConfig, DeviceTypeContext } from '../../types';
@@ -48,17 +48,15 @@ const AudioInputProvider: React.FC = ({ children }) => {
         console.log('AudioInputProvider - audio inputs updated');
 
         const hasSelectedDevice = newAudioInputs.some(
-          (device) => device.deviceId === selectedInputRef.current
+          device => device.deviceId === selectedInputRef.current
         );
 
         if (
-          selectedInputRef.current &&
-          !hasSelectedDevice &&
-          newAudioInputs.length
+          selectedInputRef.current
+          && !hasSelectedDevice
+          && newAudioInputs.length
         ) {
-          console.log(
-            'Previously selected audio input lost. Selecting a default device.'
-          );
+          console.log("Previously selected audio input lost. Selecting a default device.");
           meetingManager.selectAudioInputDevice(newAudioInputs[0].deviceId);
         } else if (selectedInputRef.current === 'default') {
           console.log(
@@ -72,7 +70,7 @@ const AudioInputProvider: React.FC = ({ children }) => {
         }
 
         setAudioInputs(newAudioInputs);
-      },
+      }
     };
 
     async function initAudioInput() {
@@ -99,7 +97,7 @@ const AudioInputProvider: React.FC = ({ children }) => {
   const contextValue: DeviceTypeContext = useMemo(
     () => ({
       devices: audioInputs,
-      selectedDevice: selectedAudioInputDevice,
+      selectedDevice: selectedAudioInputDevice
     }),
     [audioInputs, selectedAudioInputDevice]
   );

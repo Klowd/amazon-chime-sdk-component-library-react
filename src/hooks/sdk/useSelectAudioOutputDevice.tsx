@@ -1,18 +1,19 @@
-// Copyright 2020-2021 Amazon.com, Inc. or its affiliates. All Rights Reserved.
+// Copyright 2020 Amazon.com, Inc. or its affiliates. All Rights Reserved.
 // SPDX-License-Identifier: Apache-2.0
 
+import { supportsSetSinkId } from '../../utils/device-utils';
 import { useCallback } from 'react';
 import { useMeetingManager } from '../../providers/MeetingProvider';
-import { supportsSetSinkId } from '../../utils/device-utils';
 
 export const useSelectAudioOutputDevice = () => {
   const meetingManager = useMeetingManager();
 
-  const selectDevice = useCallback(async (deviceId: string) => {
-    if (supportsSetSinkId()) {
+  const selectDevice = useCallback(
+    async (deviceId: string) => {
       await meetingManager.selectAudioOutputDevice(deviceId);
-    }
-  }, []);
+    },
+    []
+  );
 
   return selectDevice;
 };

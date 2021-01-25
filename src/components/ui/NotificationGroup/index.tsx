@@ -1,11 +1,7 @@
-// Copyright 2020-2021 Amazon.com, Inc. or its affiliates. All Rights Reserved.
+// Copyright 2020 Amazon.com, Inc. or its affiliates. All Rights Reserved.
 // SPDX-License-Identifier: Apache-2.0
 
-import {
-  ActionType,
-  useNotificationDispatch,
-  useNotificationState,
-} from '../../../providers/NotificationProvider';
+import { ActionType, useNotificationDispatch, useNotificationState } from '../../../providers/NotificationProvider';
 
 import Notification from '../Notification';
 import Portal from '../Portal';
@@ -17,8 +13,8 @@ export const NotificationGroup: React.FC = () => {
   const dispatch = useNotificationDispatch();
 
   return (
-    <Portal rootId="notification-group-root">
-      <StyledNotificationGroup data-testid="notification-group">
+    <Portal rootId='notification-group-root'>
+      <StyledNotificationGroup data-testid='notification-group'>
         {notifications.map(({ id, ...rest }): any => (
           <Notification
             key={id}

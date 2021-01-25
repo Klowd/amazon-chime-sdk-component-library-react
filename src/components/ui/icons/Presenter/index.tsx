@@ -1,4 +1,4 @@
-// Copyright 2020-2021 Amazon.com, Inc. or its affiliates. All Rights Reserved.
+// Copyright 2020 Amazon.com, Inc. or its affiliates. All Rights Reserved.
 // SPDX-License-Identifier: Apache-2.0
 
 import Svg, { SvgProps } from '../Svg';
@@ -13,6 +13,6 @@ const Presenter: React.SFC<SvgProps> = (props) => {
   );
 };
 
-Presenter.displayName = 'Presenter';
+Presenter.displayName = "Presenter";
 
 export default Presenter;

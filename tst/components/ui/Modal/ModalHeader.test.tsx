@@ -1,4 +1,4 @@
-// Copyright 2020-2021 Amazon.com, Inc. or its affiliates. All Rights Reserved.
+// Copyright 2020 Amazon.com, Inc. or its affiliates. All Rights Reserved.
 // SPDX-License-Identifier: Apache-2.0
 
 import '@testing-library/jest-dom';
@@ -12,8 +12,8 @@ import { renderWithTheme } from '../../../test-helpers';
 
 describe('ModalHeader', () => {
   it('renders a header', () => {
-    const component = <ModalHeader title="Test Header" />;
-    const { getByText } = renderWithTheme(lightTheme, component);
+    const component = <ModalHeader title='Test Header' />
+    const { getByText } = renderWithTheme(lightTheme, component)
     const el = getByText('Test Header');
     expect(el).toBeInTheDocument();
   });
@@ -39,12 +39,12 @@ describe('ModalHeader', () => {
     const testContext = { onClose, labelID, dismissible: true };
     const component = (
       <ModalContext.Provider value={testContext}>
-        <ModalHeader title="Test Header" />
+        <ModalHeader title='Test Header'/>
       </ModalContext.Provider>
     );
-    const { getByTestId } = renderWithTheme(lightTheme, component);
+    const { getByTestId } = renderWithTheme(lightTheme, component)
     const closeButton = getByTestId('button');
-    fireEvent.click(closeButton);
+    fireEvent.click(closeButton)
     expect(component.props.value.onClose).toHaveBeenCalled();
   });
 

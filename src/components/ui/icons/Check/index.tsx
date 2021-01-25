@@ -1,4 +1,4 @@
-// Copyright 2020-2021 Amazon.com, Inc. or its affiliates. All Rights Reserved.
+// Copyright 2020 Amazon.com, Inc. or its affiliates. All Rights Reserved.
 // SPDX-License-Identifier: Apache-2.0
 
 import Svg, { SvgProps } from '../Svg';
@@ -11,6 +11,6 @@ const Check: React.SFC<SvgProps> = (props) => (
   </Svg>
 );
 
-Check.displayName = 'Check';
+Check.displayName = "Check";
 
 export default Check;

@@ -1,4 +1,4 @@
-// Copyright 2020-2021 Amazon.com, Inc. or its affiliates. All Rights Reserved.
+// Copyright 2020 Amazon.com, Inc. or its affiliates. All Rights Reserved.
 // SPDX-License-Identifier: Apache-2.0
 
 import Dots from '.';
@@ -11,14 +11,10 @@ export default {
   title: 'UI Components/Icons/Dots',
   parameters: {
     docs: {
-      page: DotsIconDocs.parameters.docs.page().props.children.type,
-    },
+      page: DotsIconDocs.parameters.docs.page().props.children.type
+    }
   },
-  component: Dots,
+  component: Dots
 };
 
-export const _Dots = () => (
-  <Flex layout="fill-space-centered">
-    <Dots width={text('width', '2rem')} />
-  </Flex>
-);
+export const _Dots = () => <Flex layout="fill-space-centered"><Dots width={text('width', '2rem')} /></Flex>;

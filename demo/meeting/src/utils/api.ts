@@ -1,4 +1,4 @@
-// Copyright 2020-2021 Amazon.com, Inc. or its affiliates. All Rights Reserved.
+// Copyright 2020 Amazon.com, Inc. or its affiliates. All Rights Reserved.
 // SPDX-License-Identifier: Apache-2.0
 
 import routes from '../constants/routes';
@@ -34,6 +34,36 @@ export async function fetchMeeting(
   }
 
   return data;
+}
+
+export async function getNearestRegion(): Promise<string> {
+  try {
+    const res = await fetch(`https://nearest-media-region.l.chime.aws`, {
+      method: 'GET',
+    });
+
+    if (!res.ok) {
+      throw new Error('Server error');
+    }
+
+    const data = await res.json();
+    return data.region;
+  } catch (e) {
+    console.error('Could not fetch nearest region: ', e.message);
+    throw new Error(e);
+  }
+}
+
+export function getQueryVariable(variable: string, location: any): string {
+  const query = location.search.substring(1);
+  const vars = query.split('&');
+  for (let i = 0; i < vars.length; i++) {
+    const pair = vars[i].split('=');
+    if (pair[0] === variable) {
+      return pair[1];
+    }
+  }
+  return '';
 }
 
 export function createGetAttendeeCallback(meetingId: string) {

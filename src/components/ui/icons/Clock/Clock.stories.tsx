@@ -1,4 +1,4 @@
-// Copyright 2020-2021 Amazon.com, Inc. or its affiliates. All Rights Reserved.
+// Copyright 2020 Amazon.com, Inc. or its affiliates. All Rights Reserved.
 // SPDX-License-Identifier: Apache-2.0
 
 import Clock from '.';
@@ -11,14 +11,10 @@ export default {
   title: 'UI Components/Icons/Clock',
   parameters: {
     docs: {
-      page: ClockIconDocs.parameters.docs.page().props.children.type,
-    },
+      page: ClockIconDocs.parameters.docs.page().props.children.type
+    }
   },
-  component: Clock,
+  component: Clock
 };
 
-export const _Clock = () => (
-  <Flex layout="fill-space-centered">
-    <Clock width={text('width', '2rem')} />
-  </Flex>
-);
+export const _Clock = () => <Flex layout="fill-space-centered"><Clock width={text('width', '2rem')} /></Flex>;

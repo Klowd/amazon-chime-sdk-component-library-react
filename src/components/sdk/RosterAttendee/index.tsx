@@ -1,4 +1,4 @@
-// Copyright 2020-2021 Amazon.com, Inc. or its affiliates. All Rights Reserved.
+// Copyright 2020 Amazon.com, Inc. or its affiliates. All Rights Reserved.
 // SPDX-License-Identifier: Apache-2.0
 
 import RosterCell, { RosterCellProps } from '../../ui/Roster/RosterCell';
@@ -13,10 +13,7 @@ export interface RosterAttendeeProps extends Omit<RosterCellProps, 'name'> {
   attendeeId: string;
 }
 
-export const RosterAttendee: React.FC<RosterAttendeeProps> = ({
-  attendeeId,
-  ...rest
-}) => {
+export const RosterAttendee: React.FC<RosterAttendeeProps> = ({ attendeeId, ...rest }) => {
   const { muted, videoEnabled, sharingContent } = useAttendeeStatus(attendeeId);
   const { roster } = useRosterState();
   const attendeeName = roster[attendeeId]?.name || '';

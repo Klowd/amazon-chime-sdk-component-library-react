@@ -9,7 +9,7 @@ export function useClickOutside(
 ) {
   const isOutside = (e: MouseEvent | TouchEvent) => {
     return !!ref.current && !ref.current.contains(e.target as HTMLElement);
-  };
+  }
 
   const onMouseDown = (e: MouseEvent | TouchEvent) => {
     if (isOutside(e) && onClickOutside) {
@@ -17,16 +17,17 @@ export function useClickOutside(
     }
   };
 
-  useEffect(() => {
-    document.addEventListener('mousedown', onMouseDown);
-    document.addEventListener('touchstart', onMouseDown);
+  useEffect(
+    () => {
+      document.addEventListener('mousedown', onMouseDown);
+      document.addEventListener('touchstart', onMouseDown);
 
-    return () => {
-      document.removeEventListener('mousedown', onMouseDown);
-      document.removeEventListener('touchstart', onMouseDown);
-    };
-  }),
-    [onClickOutside];
+      return () => {
+        document.removeEventListener('mousedown', onMouseDown);
+        document.removeEventListener('touchstart', onMouseDown);
+      };
+    }
+  ), [onClickOutside];
 }
 
 export default useClickOutside;

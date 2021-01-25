@@ -1,4 +1,4 @@
-// Copyright 2020-2021 Amazon.com, Inc. or its affiliates. All Rights Reserved.
+// Copyright 2020 Amazon.com, Inc. or its affiliates. All Rights Reserved.
 // SPDX-License-Identifier: Apache-2.0
 
 import '@testing-library/jest-dom';
@@ -13,7 +13,11 @@ import lightTheme from '../../../../src/theme/light';
 import { renderWithTheme } from '../../../test-helpers';
 
 const getNotificationComponent = () => (
-  <Notification onClose={jest.fn()} severity={Severity.ERROR} message="Hello" />
+  <Notification
+    onClose={jest.fn()}
+    severity={Severity.ERROR}
+    message='Hello'
+  />
 );
 
 const getNotificationWithOptionalProps = () => (
@@ -32,6 +36,7 @@ const getNotificationWithOptionalProps = () => (
 );
 
 describe('Notification', () => {
+
   it('renders a notification', () => {
     const notificationComponent = getNotificationComponent();
     const { getByTestId } = renderWithTheme(lightTheme, notificationComponent);

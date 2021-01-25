@@ -2,7 +2,7 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 /* eslint-disable no-console */
 /* eslint-disable import/no-unresolved */
-// Copyright 2020-2021 Amazon.com, Inc. or its affiliates. All Rights Reserved.
+// Copyright 2020 Amazon.com, Inc. or its affiliates. All Rights Reserved.
 // SPDX-License-Identifier: Apache-2.0
 
 import './style.css';
@@ -15,7 +15,7 @@ import {
 } from 'amazon-chime-sdk-component-library-react';
 import {
   useChatChannelState,
-  useChatMessagingState,
+  useChatMessagingState
 } from '../../providers/ChatMessagesProvider';
 
 import ChannelsWrapper from '../../containers/channels/ChannelsWrapper';
@@ -33,7 +33,7 @@ const Channels = () => {
     messages,
     messagesRef,
     setMessages,
-    onReceiveMessage,
+    onReceiveMessage
   } = useChatMessagingState();
   const notificationDispatch = useNotificationDispatch();
 
@@ -43,10 +43,10 @@ const Channels = () => {
     activeChannel,
     activeChannelRef,
     channelList,
-    hasMembership,
+    hasMembership
   } = useChatChannelState();
 
-  const handleUserNameCopyClick = (_e) => {
+  const handleUserNameCopyClick = _e => {
     // Create new element
     const el = document.createElement('textarea');
     // Set value (string to be copied)
@@ -68,8 +68,8 @@ const Channels = () => {
         message: 'UserId copied to clipboard!',
         severity: 'info',
         autoClose: true,
-        autoCloseDelay: 1000,
-      },
+        autoCloseDelay: 1000
+      }
     });
   };
 
@@ -91,7 +91,7 @@ const Channels = () => {
             backgroundColor: currentTheme.colors.greys.grey60,
             height: '3rem',
             paddingLeft: '1rem',
-            color: 'white',
+            color: 'white'
           }}
           className="app-heading"
         >
@@ -115,7 +115,7 @@ const Channels = () => {
           style={{
             backgroundColor: currentTheme.colors.greys.grey10,
             height: '100%',
-            borderRight: `solid 1px ${currentTheme.colors.greys.grey30}`,
+            borderRight: `solid 1px ${currentTheme.colors.greys.grey30}`
           }}
         >
           {/* SIDEPANEL CHANNELS LIST */}
@@ -143,7 +143,7 @@ const Channels = () => {
               />
               <Input
                 style={{
-                  borderTop: `solid 1px ${currentTheme.colors.greys.grey40}`,
+                  borderTop: `solid 1px ${currentTheme.colors.greys.grey40}`
                 }}
                 activeChannelArn={activeChannel.ChannelArn}
                 member={member}

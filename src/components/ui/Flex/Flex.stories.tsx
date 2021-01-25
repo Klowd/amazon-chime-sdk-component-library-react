@@ -1,4 +1,4 @@
-// Copyright 2020-2021 Amazon.com, Inc. or its affiliates. All Rights Reserved.
+// Copyright 2020 Amazon.com, Inc. or its affiliates. All Rights Reserved.
 // SPDX-License-Identifier: Apache-2.0
 
 import { Flex } from './';
@@ -7,14 +7,14 @@ import React from 'react';
 import styled from 'styled-components';
 
 const Child = styled(Flex)`
-  background-color: ${(props) => props.theme.colors.primary.lightest};
+  background-color: ${props => props.theme.colors.primary.lightest};
   height: 90vh;
   margin: 1rem;
   border-radius: 4px;
 `;
 
 export const Block = styled(Flex)`
-  background-color: ${(props) => props.theme.colors.primary.lightest};
+  background-color: ${props => props.theme.colors.primary.lightest};
   height: 5vh;
   margin: 1rem;
   border-radius: 4px;
@@ -27,12 +27,12 @@ const Stack = styled(Flex)`
 const StackChild = styled.div`
   height: 20vh;
   margin-bottom: 1vh;
-  background-color: ${(props) => props.theme.colors.primary.lightest};
+  background-color: ${props => props.theme.colors.primary.lightest};
 `;
 
 export const Title = styled.h1`
-  background-color: ${(props) => props.theme.colors.primary.lightest};
-  color: ${(props) => props.theme.colors.primary.darkest};
+  background-color: ${props => props.theme.colors.primary.lightest};
+  color: ${props => props.theme.colors.primary.darkest};
   padding: 2rem;
   border-radius: 4px;
 `;
@@ -41,11 +41,11 @@ export default {
   title: 'UI Components/Flex',
   parameters: {
     docs: {
-      page: FlexDocs.parameters.docs.page().props.children.type,
-    },
+      page: FlexDocs.parameters.docs.page().props.children.type
+    }
   },
   component: Flex,
-  excludeStories: ['Block', 'Title'],
+  excludeStories: ['Block', 'Title']
 };
 
 export const FillSpaceCentered = () => {
@@ -57,7 +57,7 @@ export const FillSpaceCentered = () => {
 };
 
 FillSpaceCentered.story = {
-  name: 'fill space centered',
+  name: 'fill space centered'
 };
 
 export const EqualColumns = () => {
@@ -72,7 +72,7 @@ export const EqualColumns = () => {
 };
 
 EqualColumns.story = {
-  name: 'equal columns',
+  name: 'equal columns'
 };
 
 export const _Stack = () => {
@@ -87,5 +87,5 @@ export const _Stack = () => {
 };
 
 _Stack.story = {
-  name: 'stack',
+  name: 'stack'
 };

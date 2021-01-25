@@ -1,4 +1,4 @@
-// Copyright 2020-2021 Amazon.com, Inc. or its affiliates. All Rights Reserved.
+// Copyright 2020 Amazon.com, Inc. or its affiliates. All Rights Reserved.
 // SPDX-License-Identifier: Apache-2.0
 
 import Flex from '../Flex';
@@ -10,11 +10,12 @@ export default {
   title: 'UI Components/Label',
   parameters: {
     docs: {
-      page: LabelDocs.parameters.docs.page().props.children.type,
-    },
+      page: LabelDocs.parameters.docs.page().props.children.type
+    }
   },
-  component: Label,
+  component: Label
 };
+
 
 export const BasicLabel = () => {
   return (

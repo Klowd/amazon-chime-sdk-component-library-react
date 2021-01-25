@@ -1,4 +1,4 @@
-// Copyright 2020-2021 Amazon.com, Inc. or its affiliates. All Rights Reserved.
+// Copyright 2020 Amazon.com, Inc. or its affiliates. All Rights Reserved.
 // SPDX-License-Identifier: Apache-2.0
 
 import { AppStateProvider, useAppState } from './providers/AppStateProvider';
@@ -18,6 +18,7 @@ import { NavigationProvider } from './providers/NavigationProvider';
 import NoMeetingRedirect from './containers/NoMeetingRedirect';
 import Notifications from './containers/Notifications';
 import { ThemeProvider } from 'styled-components';
+// import NoMeetingRedirect from './containers/NoMeetingRedirect';
 import meetingConfig from './meetingConfig';
 import routes from './constants/routes';
 
@@ -33,14 +34,14 @@ const App: FC = () => (
                 <Switch>
                   <Route exact path={routes.HOME} component={Home} />
                   <Route path={routes.DEVICE}>
-                    <NoMeetingRedirect>
+                    {/* <NoMeetingRedirect> */}
                       <DeviceSetup />
-                    </NoMeetingRedirect>
+                    {/* </NoMeetingRedirect> */}
                   </Route>
                   <Route path={routes.MEETING}>
-                    <NoMeetingRedirect>
+                    {/* <NoMeetingRedirect> */}
                       <Meeting />
-                    </NoMeetingRedirect>
+                    {/* </NoMeetingRedirect> */}
                   </Route>
                 </Switch>
               </NavigationProvider>

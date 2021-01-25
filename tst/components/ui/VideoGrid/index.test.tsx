@@ -1,4 +1,4 @@
-// Copyright 2020-2021 Amazon.com, Inc. or its affiliates. All Rights Reserved.
+// Copyright 2020 Amazon.com, Inc. or its affiliates. All Rights Reserved.
 // SPDX-License-Identifier: Apache-2.0
 
 import '@testing-library/jest-dom';
@@ -9,6 +9,7 @@ import lightTheme from '../../../../src/theme/light';
 import { renderWithTheme } from '../../../test-helpers';
 
 describe('VideoGrid', () => {
+
   let mockFunction: any, nameplate: string;
   beforeEach(() => {
     nameplate = 'test-nameplate';
@@ -23,9 +24,7 @@ describe('VideoGrid', () => {
   });
 
   it('should render VideoGrid with size = 3', () => {
-    const tiles = [1, 2, 3].map((item) => (
-      <div key={item}>{`content-${item}`}</div>
-    ));
+    const tiles = [1, 2, 3].map((item) => <div key={item}>{`content-${item}`}</div>);
 
     const component = <VideoGrid size={3}>{tiles}</VideoGrid>;
     const { getAllByText } = renderWithTheme(lightTheme, component);
@@ -35,9 +34,7 @@ describe('VideoGrid', () => {
   });
 
   it('should render VideoGrid with matched content', () => {
-    const tiles = [1, 2].map((item) => (
-      <div key={item}>{`content-${item}`}</div>
-    ));
+    const tiles = [1, 2].map((item) => <div key={item}>{`content-${item}`}</div>);
 
     const component = <VideoGrid size={2}>{tiles}</VideoGrid>;
     const { getByTestId } = renderWithTheme(lightTheme, component);

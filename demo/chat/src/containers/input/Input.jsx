@@ -1,6 +1,6 @@
 /* eslint-disable jsx-a11y/anchor-has-content */
 /* eslint-disable import/no-unresolved */
-// Copyright 2020-2021 Amazon.com, Inc. or its affiliates. All Rights Reserved.
+// Copyright 2020 Amazon.com, Inc. or its affiliates. All Rights Reserved.
 // SPDX-License-Identifier: Apache-2.0
 
 import './Input.css';
@@ -24,7 +24,7 @@ const uploadObjDefaults = {
   file: '',
   type: '',
   response: null,
-  key: '',
+  key: ''
 };
 const Input = ({ activeChannelArn, member, hasMembership }) => {
   const [text, setText] = useState('');
@@ -35,13 +35,13 @@ const Input = ({ activeChannelArn, member, hasMembership }) => {
 
   const deleteImage = () => {
     AttachmentService.delete(uploadObj.key)
-      .then((result) => {
+      .then(result => {
         setUploadObj(uploadObjDefaults);
       })
-      .catch((err) => {
+      .catch(err => {
         setUploadObj({
           response: `Cannot delete file: ${err}`,
-          ...uploadObj,
+          ...uploadObj
         });
       });
   };
@@ -56,11 +56,11 @@ const Input = ({ activeChannelArn, member, hasMembership }) => {
     }
   }, [activeChannelArn]);
 
-  const onChange = (e) => {
+  const onChange = e => {
     setText(e.target.value);
   };
 
-  const onSubmit = async (e) => {
+  const onSubmit = async e => {
     e.preventDefault();
 
     if (uploadRef.current.files[0]) {
@@ -73,7 +73,7 @@ const Input = ({ activeChannelArn, member, hasMembership }) => {
 
         setUploadObj({
           key: response.key,
-          ...uploadObj,
+          ...uploadObj
         });
 
         options.Metadata = JSON.stringify({
@@ -82,9 +82,9 @@ const Input = ({ activeChannelArn, member, hasMembership }) => {
               fileKey: response.key,
               name: uploadObj.name,
               size: uploadObj.file.size,
-              type: uploadObj.file.type,
-            },
-          ],
+              type: uploadObj.file.type
+            }
+          ]
         });
         await sendChannelMessage(
           activeChannelArn,
@@ -98,7 +98,7 @@ const Input = ({ activeChannelArn, member, hasMembership }) => {
       } catch (err) {
         setUploadObj({
           response: `Cannot uploading file: ${err}`,
-          ...uploadObj,
+          ...uploadObj
         });
         throw new Error(`Failed uploading... ${err}`);
       }
@@ -108,7 +108,7 @@ const Input = ({ activeChannelArn, member, hasMembership }) => {
     resetState();
   };
 
-  const onRemoveAttachmentHandler = (event) => {
+  const onRemoveAttachmentHandler = event => {
     event.preventDefault();
 
     setUploadObj(uploadObjDefaults);
@@ -141,7 +141,7 @@ const Input = ({ activeChannelArn, member, hasMembership }) => {
         </form>
         <IconButton
           className="write-link attach"
-          onClick={(_event) => {
+          onClick={_event => {
             uploadRef.current.value = null;
             uploadRef.current.click();
           }}
@@ -152,14 +152,14 @@ const Input = ({ activeChannelArn, member, hasMembership }) => {
           accept="file_extension|audio/*|video/*|image/*|media_type"
           style={{ display: 'none' }}
           ref={uploadRef}
-          onChange={(event) => {
+          onChange={event => {
             const file = event.currentTarget.files[0];
             if (!file) return;
 
             if (file.size / 1024 / 1024 < 5) {
               setUploadObj({
                 file: file,
-                name: file.name,
+                name: file.name
               });
             } else {
               notificationDispatch({
@@ -168,8 +168,8 @@ const Input = ({ activeChannelArn, member, hasMembership }) => {
                   message: `File (${file.name}) size (${formatBytes(
                     file.size
                   )}) Maximum supported size is up to 5MB.`,
-                  severity: 'error',
-                },
+                  severity: 'error'
+                }
               });
             }
           }}

@@ -1,4 +1,4 @@
-// Copyright 2020-2021 Amazon.com, Inc. or its affiliates. All Rights Reserved.
+// Copyright 2020 Amazon.com, Inc. or its affiliates. All Rights Reserved.
 // SPDX-License-Identifier: Apache-2.0
 
 import { MicVolumeIndicatorProps } from '.';
@@ -36,7 +36,7 @@ export const StyledMicVolumeIndicator = styled.div<MicVolumeIndicatorProps>`
     bottom: 0;
     transform-origin: bottom;
     will-change: transform;
-    background-color: ${(props) =>
+    background-color: ${props =>
       props.signalStrength && props.signalStrength <= 0.5
         ? props.theme.colors.error.light
         : props.theme.colors.primary.light};

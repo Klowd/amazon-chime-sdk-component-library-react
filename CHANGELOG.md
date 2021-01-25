@@ -6,6 +6,12 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## Unreleased
+08.01.2021
+- Direct start of meeting via URL params
+- SDK Extension to Audio & Video InputControls for direct start
+- Chat integrated
+- Deploy scripts are fixed for windows
+- Serverless handler.js is extended with /endpoint
 
 ### Fixed
 
@@ -77,7 +83,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Added Attachment, Dock, and Emoji picker icons
 - Added HandRaise and ListHandRaise icons
 - Added ConnectionProblem icon
-- Added linkColors for incoming and outgoing chat in chatBubble
 
 ### Changed
 

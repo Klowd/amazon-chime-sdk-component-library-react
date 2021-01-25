@@ -1,4 +1,4 @@
-// Copyright 2020-2021 Amazon.com, Inc. or its affiliates. All Rights Reserved.
+// Copyright 2020 Amazon.com, Inc. or its affiliates. All Rights Reserved.
 // SPDX-License-Identifier: Apache-2.0
 
 import '@testing-library/jest-dom';
@@ -11,27 +11,22 @@ import lightTheme from '../../../../src/theme/light';
 import { renderWithTheme } from '../../../test-helpers';
 
 export const controlBarItemProps = {
-  icon: <Sound />,
+  icon: <Sound/>,
   label: 'test label',
   onClick: () => null,
 };
 
 export const controlBarItemWithPopOverProps = {
-  icon: <Sound />,
+  icon: <Sound/>,
   label: 'test label',
   onClick: () => null,
-  popOver: [
-    {
-      onClick: () => console.log('popover item clicked'),
-      children: <span>option 1</span>,
-    },
-  ],
+  popOver: [{ onClick: () => console.log('popover item clicked'), children: <span>option 1</span>}]
 };
 
 describe('ControlBarButton', () => {
   it('renders a ControlBarButton', () => {
-    const component = <ControlBarItem {...controlBarItemProps} />;
-    const { getByTestId } = renderWithTheme(lightTheme, component);
+    const component = <ControlBarItem {...controlBarItemProps}/>;
+    const { getByTestId } = renderWithTheme(lightTheme, component)
     const el = getByTestId('control-bar-item');
     expect(el).toBeInTheDocument();
   });

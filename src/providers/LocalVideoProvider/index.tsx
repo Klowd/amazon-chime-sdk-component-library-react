@@ -1,4 +1,4 @@
-// Copyright 2020-2021 Amazon.com, Inc. or its affiliates. All Rights Reserved.
+// Copyright 2020 Amazon.com, Inc. or its affiliates. All Rights Reserved.
 // SPDX-License-Identifier: Apache-2.0
 
 import React, {
@@ -26,7 +26,7 @@ const LocalVideoProvider: React.FC = ({ children }) => {
 
   useEffect(() => {
     if (!audioVideo) {
-      return;
+      return ;
     }
 
     if (audioVideo.hasStartedLocalVideoTile()) {
@@ -35,7 +35,7 @@ const LocalVideoProvider: React.FC = ({ children }) => {
 
     return () => {
       setIsVideoEnabled(false);
-    };
+    }
   }, [audioVideo]);
 
   const toggleVideo = useCallback(async (): Promise<void> => {
@@ -69,14 +69,15 @@ const LocalVideoProvider: React.FC = ({ children }) => {
     };
 
     audioVideo.addObserver({
-      videoTileDidUpdate,
+      videoTileDidUpdate
     });
   }, [audioVideo, tileId]);
 
-  const value = useMemo(() => ({ isVideoEnabled, toggleVideo, tileId }), [
+  const value = useMemo(() => ({ isVideoEnabled, toggleVideo, tileId, audioVideo }), [
     isVideoEnabled,
     toggleVideo,
-    tileId,
+    audioVideo,
+    tileId
   ]);
 
   return <Context.Provider value={value}>{children}</Context.Provider>;

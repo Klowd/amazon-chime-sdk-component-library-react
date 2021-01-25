@@ -1,4 +1,4 @@
-// Copyright 2020-2021 Amazon.com, Inc. or its affiliates. All Rights Reserved.
+// Copyright 2020 Amazon.com, Inc. or its affiliates. All Rights Reserved.
 // SPDX-License-Identifier: Apache-2.0
 
 import { Layout, VideoGrid } from '../../ui/VideoGrid';
@@ -42,15 +42,14 @@ interface Props extends BaseProps {
 
 export const VideoTileGrid: React.FC<Props> = ({
   noRemoteVideoView,
-  layout = 'featured',
+  layout = "featured",
   ...rest
 }) => {
   const { tileId: featureTileId } = useFeaturedTileState();
   const { tiles } = useRemoteVideoTileState();
   const { tileId: contentTileId } = useContentShareState();
   const { isVideoEnabled } = useLocalVideo();
-  const featured =
-    (layout === 'featured' && !!featureTileId) || !!contentTileId;
+  const featured = layout === "featured" && !!featureTileId || !!contentTileId;
   const remoteSize = tiles.length + (contentTileId ? 1 : 0);
   const gridSize =
     remoteSize > 1 && isVideoEnabled ? remoteSize + 1 : remoteSize;
@@ -58,7 +57,7 @@ export const VideoTileGrid: React.FC<Props> = ({
   return (
     <VideoGrid {...rest} size={gridSize} layout={featured ? 'featured' : null}>
       <ContentShare css="grid-area: ft;" />
-      {layout === 'featured' ? <FeaturedRemoteVideos /> : <RemoteVideos />}
+      { layout === "featured" ? <FeaturedRemoteVideos /> : <RemoteVideos/> }
       <LocalVideo
         nameplate="Me"
         css={gridSize > 1 ? fluidStyles : staticStyles}
