@@ -1,21 +1,21 @@
 // Copyright 2020 Amazon.com, Inc. or its affiliates. All Rights Reserved.
 // SPDX-License-Identifier: Apache-2.0
 
+import { DeviceConfig, DeviceTypeContext } from '../../types';
 import React, {
   createContext,
-  useEffect,
-  useState,
   useContext,
+  useEffect,
   useMemo,
-  useRef
+  useRef,
+  useState
 } from 'react';
-import { DeviceChangeObserver } from 'amazon-chime-sdk-js';
 
+import { AUDIO_INPUT } from '../../constants/additional-audio-video-devices';
+import { DeviceChangeObserver } from 'amazon-chime-sdk-js';
+import { getFormattedDropdownDeviceOptions } from '../../utils/device-utils';
 import { useAudioVideo } from '../AudioVideoProvider';
 import { useMeetingManager } from '../MeetingProvider';
-import { getFormattedDropdownDeviceOptions } from '../../utils/device-utils';
-import { DeviceTypeContext, DeviceConfig } from '../../types';
-import { AUDIO_INPUT } from '../../constants/additional-audio-video-devices';
 
 const Context = createContext<DeviceTypeContext | null>(null);
 
@@ -58,11 +58,15 @@ const AudioInputProvider: React.FC = ({ children }) => {
         ) {
           console.log("Previously selected audio input lost. Selecting a default device.");
           meetingManager.selectAudioInputDevice(newAudioInputs[0].deviceId);
-        } else if (
-          selectedInputRef.current === "default"
-        ) {
-          console.log(`Audio devices updated and "default" device is selected. Reselecting input.`);
-          await audioVideo?.chooseAudioInputDevice(selectedInputRef.current);
+        } else if (selectedInputRef.current === 'default') {
+          console.log(
+            `Audio devices updated and "default" device is selected. Reselecting input.`
+          );
+          try {
+            await audioVideo?.chooseAudioInputDevice(selectedInputRef.current);
+          } catch (e) {
+            console.error(`Error in selecting audio input device - ${e}`);
+          }
         }
 
         setAudioInputs(newAudioInputs);

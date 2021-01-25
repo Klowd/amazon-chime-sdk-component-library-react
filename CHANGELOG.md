@@ -20,6 +20,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - [Docs] Fix ContentShare docs
 - Fix non-overridable Mic prop in `RosterAttendee`
 - Fix incorrect fill-rule property on `ZoomIn` and `ZoomOut`
+- Fix meeting manager to handle `setSinkId` error
 
 ### Added
 
@@ -30,10 +31,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Added a classname to PopOverMenu component for styling access
 - Added a "dismissible" prop to Modal to optionally allow persistent modals
 - Added ZoomIn and ZoomOut icons
+- Added style variants to Caution icon
 
 ### Changed
 
+- Update Jest major version
+- Change control bar theme opacity to 1
+
 ### Removed
+
+- Remove playwright tests, scripts, and dependency
 
 ## [1.6.0] - 2020-12-14
 
