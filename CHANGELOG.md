@@ -12,6 +12,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Chat integrated
 - Deploy scripts are fixed for windows
 - Serverless handler.js is extended with /endpoint
+- Fix serverless deploy script to work on Windows
 
 ### Fixed
 
