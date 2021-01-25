@@ -13,8 +13,7 @@ export type AspectRatio =
   | 'r4by3'
   | 'r1by1'
   | 'r2by3'
-  | 'r1by2'
-  | 'slim';
+  | 'r1by2';
 
 // Todo - Use a defined range per aspect ratio, instead of the specific ratio value
 function getAspectRatio(height: number, width: number): AspectRatio {
@@ -39,7 +38,7 @@ function getAspectRatio(height: number, width: number): AspectRatio {
     return 'r1by2';
   }
 
-  return 'slim';
+  return 'r16by9';
 }
 
 export interface VideoGridProps extends React.HTMLAttributes<HTMLDivElement> {

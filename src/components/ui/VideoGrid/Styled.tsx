@@ -12,7 +12,6 @@ interface StyledGridProps extends VideoGridProps {
 }
 
 const sortedRatios: AspectRatio[] = [
-  'slim',
   'r1by2',
   'r2by3',
   'r1by1',
@@ -35,26 +34,27 @@ const ratioStyles = {
   '2.featured': `grid-template: 1fr / repeat(2,1fr);
    grid-template-areas: 'ft v';`,
   '2.r16by9.featured': `grid-template: repeat(3,1fr) / repeat(2,1fr);
-    grid-template-areas: '. .' 'a b' '. .';`,
+    grid-template-areas: '. .' 'v v' '. .';`,
 
   '3': `grid-template: repeat(2,1fr) / repeat(4,1fr);
-   grid-template-areas: 'a a b b' '. c c .';`,
+   grid-template-areas: 'v v v v' '. v v .';`,
   
-  '3.featured': `grid-template: repeat(3,1fr) / repeat(4,1fr);
-    grid-template-areas: 'ft ft ft ft' 'ft ft ft ft' '. v v .';`,
+  '3.featured': `grid-template: repeat(2,1fr) / repeat(4,1fr);
+  grid-template-areas: '. v v .' 'v v v v';`,
   '3.r16by9.featured': `grid-template: repeat(2,1fr) / repeat(4,1fr);
-    grid-template-areas: '. ft ft .' 'v v v v';`,
+  grid-template-areas: '. v v .' 'v v v v';`,
 
   '4': 'grid-template: repeat(2,1fr) / repeat(2,1fr);',
   
-  '4.featured': `grid-template: repeat(3,1fr) / repeat(3,1fr);
-    grid-template-areas: 'ft ft ft' 'ft ft ft' 'v v v';`,
-  '4.r16by9.featured': `grid-template-areas: 'ft ft v' 'ft ft v' 'ft ft v';`,
+  '4.featured': 'grid-template: repeat(2,1fr) / repeat(2,1fr);',
+  '4.r16by9.featured': 'grid-template: repeat(2,1fr) / repeat(2,1fr);',
 
   '5': `grid-template: repeat(2,1fr) / repeat(6,1fr);
-    grid-template-areas: 'a a b b c c' '. d d e e .';`,
+    grid-template-areas: 'v v v v v v' '. v v v v .';
+    grid-area: span 1 / span 2;`,
   '5.r16by9': `grid-template: repeat(2,1fr) / repeat(6,1fr);
-    grid-template-areas: 'a a b b c c' 'd d e e . .';`,
+    grid-template-areas: 'v v v v v v' 'v v v v . .';
+    grid-area: span 1 / span 2;`,
 
   '5.featured': `grid-template: repeat(4,1fr) / repeat(2,1fr);
     grid-template-areas: 'ft ft' 'ft ft' 'v v' 'v v';`,
@@ -67,10 +67,10 @@ const ratioStyles = {
   '6.r1by1.featured': `grid-template: repeat(3,1fr) / repeat(3,1fr);
     grid-template-areas: 'ft ft v' 'ft ft v';`,
 
-  '7': `grid-template: repeat(2,1fr) / repeat(8,1fr);
-        grid-template-areas: 'a a b b c c d d' '. e e f f g g .';`,
+  '7': `grid-template: repeat(3,1fr) / repeat(3,1fr);
+        grid-template-areas: 'v v v' 'v v v' '. v .';`,
   '7.r16by9': `grid-template: repeat(2,1fr) / repeat(8,1fr);
-        grid-template-areas: 'a a b b c c d d' '. e e f f g g .';`,
+        grid-template-areas: 'v v v' 'v v v' '. v .';`,
 
   '7.featured': `grid-template: repeat(4,1fr) / repeat(3,1fr);
     grid-template-areas: 'ft ft ft' 'ft ft ft';`,
@@ -319,72 +319,6 @@ export const StyledGrid = styled.div<StyledGridProps>`
     } else if (size > 7 || featured) {
       styles += portraitStyles;
     }
-
-    styles += `
-    .cell-a {
-      grid-area: a
-    }
-
-    .cell-b {
-      grid-area: b
-    }
-
-    .cell-c {
-      grid-area: c
-    }
-
-    .cell-d {
-      grid-area: d
-    }
-
-    .cell-e {
-      grid-area: e
-    }
-
-    .cell-f {
-      grid-area: f
-    }
-
-    .cell-g {
-      grid-area: g
-    }
-
-    .cell-h {
-      grid-area: h
-    }
-
-    .cell-i {
-      grid-area: i
-    }
-
-    .cell-j {
-      grid-area: j
-    }
-
-    .cell-k {
-      grid-area: k
-    }
-
-    .cell-l {
-      grid-area: l
-    }
-
-    .cell-m {
-      grid-area: m
-    }
-
-    .cell-n {
-      grid-area: n
-    }
-
-    .cell-o {
-      grid-area: o
-    }
-
-    .cell-p {
-      grid-area: p
-    }
-    `;
 
     return styles;
   }};
