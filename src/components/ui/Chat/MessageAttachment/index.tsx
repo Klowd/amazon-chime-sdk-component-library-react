@@ -4,8 +4,11 @@
 import React, { FC, HTMLAttributes } from 'react';
 
 import { BaseProps } from '../../Base';
+import {
+  StyledMessageAttachment,
+  StyledMessageAttachmentContent,
+} from './Styled';
 import { Document } from '../../icons';
-import { StyledMessageAttachmentContent } from './Styled';
 
 export interface MessageAttachmentProps
   extends Omit<HTMLAttributes<HTMLDivElement>, 'css'>,
@@ -14,6 +17,16 @@ export interface MessageAttachmentProps
   name: string;
   /** The file URL string to download attachment. */
   downloadUrl: string;
+  /** Determines whether render image of the attachment. */
+  renderImg?: boolean;
+  /** The URL of the image. */
+  imgUrl?: string;
+  /** The style of the image. */
+  imgStyles?: string;
+  /** How to handle onClick of the image. */
+  imgOnClick?: () => void;
+  /** How to handle onLoad of the image. */
+  imgOnLoad?: () => void;
   /** The size of attachment. */
   size?: string;
 }
@@ -22,21 +35,33 @@ export const MessageAttachment: FC<MessageAttachmentProps> = ({
   size = 'Unknown',
   ...props
 }) => {
-  const { name, downloadUrl } = props;
+  const { name, downloadUrl, renderImg, imgUrl, imgOnClick, imgOnLoad } = props;
 
   return (
-    <StyledMessageAttachmentContent {...props}>
-      <div className="attachment-icon">
-        <Document className="document-icon" width="2rem" height="2rem" />
-      </div>
+    <StyledMessageAttachment {...props}>
+      <StyledMessageAttachmentContent {...props}>
+        <div className="ch-attachment-icon">
+          <Document className="ch-document-icon" width="2rem" height="2rem" />
+        </div>
 
-      <div className="attachment-name">
-        <a target="_blank" href={downloadUrl}>
-          {name}
-        </a>
-        <span className="attachment-size">{size}</span>
-      </div>
-    </StyledMessageAttachmentContent>
+        <div className="ch-attachment-name">
+          <a target="_blank" href={downloadUrl}>
+            {name}
+          </a>
+          <span className="ch-attachment-size">{size}</span>
+        </div>
+      </StyledMessageAttachmentContent>
+      {renderImg && (
+        <img
+          className="ch-attachment-img"
+          data-testid="preview-img"
+          alt={imgUrl || downloadUrl}
+          onClick={imgOnClick}
+          src={imgUrl || downloadUrl}
+          onLoad={imgOnLoad}
+        />
+      )}
+    </StyledMessageAttachment>
   );
 };
 

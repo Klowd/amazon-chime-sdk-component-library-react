@@ -1,3 +1,5 @@
+// Copyright 2020-2021 Amazon.com, Inc. or its affiliates. All Rights Reserved.
+
 # Changelog
 
 All notable changes to this project will be documented in this file.
@@ -12,6 +14,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Chat integrated
 - Deploy scripts are fixed for windows
 - Serverless handler.js is extended with /endpoint
+
 - Fix serverless deploy script to work on Windows
 
 ### Fixed
@@ -21,6 +24,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - [Docs] Fix ContentShare docs
 - Fix non-overridable Mic prop in `RosterAttendee`
 - Fix incorrect fill-rule property on `ZoomIn` and `ZoomOut`
+- [Demo] Fix closing roster from stopping active speaker detection.
 - Fix meeting manager to handle `setSinkId` error
 
 ### Added
@@ -29,7 +33,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Added Echo icon
 - Added poorConnection property to DeskPhone icon
 - Added optional 'id' prop for ui components
+- Added optional `timestamp` prop in ChatBubble
+- Added forwardRef for ChatBubbleContainer
+- Added optional img to MessageAttachment
 - Added a classname to PopOverMenu component for styling access
+- Added forwardRef for Textarea
+- Added `useDevicePermissionStatus` hook as an exported component from the library.
 - Added a "dismissible" prop to Modal to optionally allow persistent modals
 - Added ZoomIn and ZoomOut icons
 - Added style variants to Caution icon
@@ -37,11 +46,21 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 
 - Update Jest major version
+- Changed RosterHeader 'title' prop to all for elements as well as strings
+- Changed senderName to optional in ChatBubble
+- Moved children inside of a div in ChatBubble
+- Changed `MeetingManager` to strictly enforce `DevicePermissionStatus` type.
+- Update `realtimeUnsubscribeFromVolumeIndicator` interface to also accept a callback param.
+- Refactored NavBar to allow static width
+- Refactored NavBarItem to use IconButton directly
 - Change control bar theme opacity to 1
 
 ### Removed
 
 - Remove playwright tests, scripts, and dependency
+- Removed content in ChatBubble
+- Removed showName in ChatBubble
+- Removed unused import statements from NavBar
 
 ## [1.6.0] - 2020-12-14
 

@@ -376,7 +376,7 @@ const chatBubble = {
     fontColor: colors.greys.grey60,
   },
   outgoing: {
-    bgd: colors.primary.light,
+    bgd: colors.primary.main,
     fontColor: colors.greys.grey10,
   },
   container: {
