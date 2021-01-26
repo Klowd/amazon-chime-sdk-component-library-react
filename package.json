@@ -41,6 +41,7 @@
     "fast-memoize": "^2.5.2",
     "react-popper": "^2.2.1",
     "throttle-debounce": "^2.3.0",
+    "ua-parser-js": "^0.7.22",
     "uuid": "^8.0.0"
   },
   "devDependencies": {

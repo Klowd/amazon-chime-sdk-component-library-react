@@ -19,8 +19,12 @@ body {
 }
 
 
-.videos[size="3"] > .video-tile, .videos[size="5"] > .video-tile, .videos[size="7"] > .video-tile {
+.videos[size="3"] > .video-tile, .videos[size="5"] > .video-tile {
   grid-area: span 1 / span 2;
+}
+
+.videos[size="7"] > .video-tile {
+  grid-area: span 1/ span 1;
 }
 
 .videos[size="5"] > div:nth-child(4) {
