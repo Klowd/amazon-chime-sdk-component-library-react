@@ -132,64 +132,6 @@ exports.createMeeting = async (event, context, callback) => {
   callback(null, response);
 };
 
-exports.create = async(event, context, callback) => {
-  var response = {
-    "statusCode": 200,
-    "headers": {},
-    "body": '',
-    "isBase64Encoded": false
-  };
-
-  const query = event.queryStringParameters;
-  if (!query.title || !query.region) {
-    response.statusCode = 400;
-    response.body = JSON.stringify({error: 'Parameters required for create: title, region'});
-    callback(null, response);
-  }
-
-  // Look up the meeting by its title. If it does not exist, create the meeting.
-  let meeting = await getMeeting(query.title);
-  if (!meeting) {
-    const request = {
-      // Use a UUID for the client request token to ensure that any request retries
-      // do not create multiple meetings.
-      ClientRequestToken: uuid(),
-
-      // Specify the media region (where the meeting is hosted).
-      // In this case, we use the region selected by the user.
-      MediaRegion: query.region,
-
-      // Set up SQS notifications if being used
-      NotificationsConfiguration: getNotificationsConfig(),
-
-      //ExternalMeetingId: query.title,
-
-      // Tags associated with the meeting. They can be used in cost allocation console
-/*        Tags: [
-        { Key: 'invitationCode', Value: query.title},
-      ] */
-    };
-
-    console.info('Creating new meeting: ' + JSON.stringify(request));
-    meeting = await chime.createMeeting(request).promise();
-
-    console.info("successfully created  meeting", meeting);
-    
-    // Store the meeting in the table using the meeting title as the key.
-    await putMeeting(query.title, meeting);
-  };
-
-  // Return the meeting response. The client will use these
-  // to join the meeting.
-  response.statusCode = 201;
-  response.body = JSON.stringify({
-    JoinInfo: {
-      Meeting: meeting.Meeting
-    },
-  }, null, 2);
-  callback(null, response);
-}
-
 exports.join = async (event, context, callback) => {
   var response = {
     "statusCode": 200,
@@ -248,12 +190,9 @@ exports.end = async (event, context, callback) => {
   };
   const title = event.queryStringParameters.title;
   let meetingInfo = await getMeeting(title);
-
-  if (meetingInfo){
-    await chime.deleteMeeting({
-      MeetingId: meetingInfo.Meeting.MeetingId,
-    }).promise();
-  }
+  await chime.deleteMeeting({
+    MeetingId: meetingInfo.Meeting.MeetingId,
+  }).promise();
   callback(null, response);
 };
 

@@ -17,23 +17,3 @@ body {
 *:after {
   box-sizing: border-box;
 }
-
-
-.videos[size="3"] > .video-tile, .videos[size="5"] > .video-tile {
-  grid-area: span 1 / span 2;
-}
-
-.videos[size="7"] > .video-tile {
-  grid-area: span 1/ span 1;
-}
-
-.videos[size="5"] > div:nth-child(4) {
-  grid-column: 2 / 4;
-}
-.videos[size="5"] > div:nth-child(5) {
-  grid-column: 4 / 6;
-}
-
-.videos[size="3"]>div:last-child, .videos[size="7"]>div:last-child {
-  grid-column: 1 / -1;
-}

@@ -7,7 +7,7 @@ import React, {
   useContext,
   useEffect,
   useMemo,
-  useState,
+  useState
 } from 'react';
 
 import { LocalVideoContextType } from '../../types';
@@ -73,10 +73,9 @@ const LocalVideoProvider: React.FC = ({ children }) => {
     });
   }, [audioVideo, tileId]);
 
-  const value = useMemo(() => ({ isVideoEnabled, toggleVideo, tileId, audioVideo }), [
+  const value = useMemo(() => ({ isVideoEnabled, toggleVideo, tileId }), [
     isVideoEnabled,
     toggleVideo,
-    audioVideo,
     tileId
   ]);
 

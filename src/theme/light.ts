@@ -340,7 +340,7 @@ const controlBar = {
   shadow: shadows.large,
   bgd: colors.greys.white,
   border: `0.03125rem solid ${colors.greys.grey20}`,
-  opacity: 1,
+  opacity: 0.95,
   selected: {
     text: buttons.primary.selected.text,
     bgd: buttons.primary.selected.bgd,
@@ -376,7 +376,7 @@ const chatBubble = {
     fontColor: colors.greys.grey60,
   },
   outgoing: {
-    bgd: colors.primary.main,
+    bgd: colors.primary.light,
     fontColor: colors.greys.grey10,
   },
   container: {

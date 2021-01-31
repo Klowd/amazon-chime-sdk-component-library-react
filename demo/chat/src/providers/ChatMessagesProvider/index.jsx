@@ -7,7 +7,7 @@ import React, {
   useContext,
   useEffect,
   useRef,
-  useState,
+  useState
 } from 'react';
 import { createMemberArn, describeChannel } from '../../api/ChimeAPI';
 

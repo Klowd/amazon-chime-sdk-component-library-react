@@ -5,7 +5,7 @@ import {
   ContentActionType,
   ContentShareState,
   initialState,
-  reducer,
+  reducer
 } from './state';
 import { DefaultModality, VideoTileState } from 'amazon-chime-sdk-js';
 import React, {

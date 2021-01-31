@@ -5,16 +5,14 @@ import MeetingRoster from '../MeetingRoster';
 import Navigation from '.';
 import React from 'react';
 import { useNavigation } from '../../providers/NavigationProvider';
-import ChatView from '../ChatView/ChatView';
 
 const NavigationControl = () => {
-  const { showNavbar, showRoster, showChat  } = useNavigation();
+  const { showNavbar, showRoster } = useNavigation();
 
   return (
     <>
       {showNavbar ? <Navigation /> : null}
       {showRoster ? <MeetingRoster /> : null}
-      {showChat   ? <ChatView />: null}
     </>
   );
 };

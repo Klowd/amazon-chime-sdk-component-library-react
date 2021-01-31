@@ -76,6 +76,7 @@ export { RemoteVideo } from './components/sdk/RemoteVideo';
 export { RemoteVideos } from './components/sdk/RemoteVideos';
 export { FeaturedRemoteVideos } from './components/sdk/FeaturedRemoteVideos';
 export { VideoTileGrid } from './components/sdk/VideoTileGrid';
+export { VideoTileStrip } from './components/sdk/VideoTileStrip';
 export { MicrophoneActivity } from './components/sdk/MicrophoneActivity';
 export { RosterAttendee } from './components/sdk/RosterAttendee';
 
@@ -136,7 +137,6 @@ export { useMeetingStatus } from './hooks/sdk/useMeetingStatus';
 export { useLocalAudioInputActivity } from './hooks/sdk/useLocalAudioInputActivity';
 export { useLocalAudioInputActivityPreview } from './hooks/sdk/useLocalAudioInputActivityPreview';
 export { useBandwidthMetrics } from './hooks/sdk/useBandwidthMetrics';
-export { useDevicePermissionStatus } from './hooks/sdk/useDevicePermissionStatus';
 
 // Providers
 export { NotificationProvider } from './providers/NotificationProvider';
@@ -161,7 +161,7 @@ export { lightTheme, darkTheme, GlobalStyles, StyledReset } from './theme';
 export { VideoQuality } from './hooks/sdk/useSelectVideoQuality';
 
 // enums
-export { MeetingStatus, DevicePermissionStatus } from './types/index';
+export { MeetingStatus } from './types/index';
 export { Severity, ActionType } from './providers/NotificationProvider';
 
 // Class

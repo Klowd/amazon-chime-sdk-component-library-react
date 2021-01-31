@@ -3,8 +3,7 @@
 // Copyright 2020 Amazon.com, Inc. or its affiliates. All Rights Reserved.
 // SPDX-License-Identifier: Apache-2.0
 
-import React, { createContext, useContext, useEffect, useState } from 'react';
-
+import React, { createContext, useContext, useState, useEffect } from 'react';
 import { Auth } from '@aws-amplify/auth';
 import { useNotificationDispatch } from 'amazon-chime-sdk-component-library-react';
 

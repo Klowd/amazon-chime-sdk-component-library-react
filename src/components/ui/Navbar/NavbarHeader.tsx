@@ -15,14 +15,18 @@ export interface NavbarHeaderProps extends BaseProps, FocusableProps {
   onClose?: () => void;
 }
 
-export const NavbarHeader: React.FC<NavbarHeaderProps> = (props: NavbarHeaderProps) => (
-  <StyledHeader {...props}>
-    <span className="ch-title">{props.title}</span>
-    {props.onClose && (
+export const NavbarHeader: React.FC<NavbarHeaderProps> = ({
+  title,
+  onClose,
+  ...rest
+}: NavbarHeaderProps) => (
+  <StyledHeader {...rest}>
+    <span className="ch-title">{title}</span>
+    {onClose && (
       <IconButton
         className="ch-btn-close"
         label="Close"
-        onClick={props.onClose}
+        onClick={onClose}
         icon={<Remove />}
       />
     )}

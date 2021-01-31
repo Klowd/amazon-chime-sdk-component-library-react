@@ -1,19 +1,19 @@
-// Copyright 2021 Amazon.com, Inc. or its affiliates. All Rights Reserved.
+// Copyright 2020 Amazon.com, Inc. or its affiliates. All Rights Reserved.
 // SPDX-License-Identifier: Apache-2.0
 
 import { useEffect, useState } from 'react';
 
-import { useMeetingManager } from '../../providers/MeetingProvider';
-import { DevicePermissionStatus } from '../../types';
+import { DevicePermissionStatus } from '../enums';
+import { useMeetingManager } from 'amazon-chime-sdk-component-library-react';
 
-export function useDevicePermissionStatus() {
+export default function useDevicePermissionStatus() {
   const meetingManager = useMeetingManager();
-  const [permission, setPermission] = useState<DevicePermissionStatus>(
+  const [permission, setPermission] = useState<string>(
     DevicePermissionStatus.UNSET
   );
 
   useEffect(() => {
-    const callback = (updatedPermission: DevicePermissionStatus): void => {
+    const callback = (updatedPermission: string): void => {
       setPermission(updatedPermission);
     };
     meetingManager.subscribeToDevicePermissionStatus(callback);
@@ -24,5 +24,3 @@ export function useDevicePermissionStatus() {
 
   return permission;
 }
-
-export default useDevicePermissionStatus;

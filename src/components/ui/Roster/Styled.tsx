@@ -6,7 +6,7 @@ import { baseSpacing, baseStyles } from '../Base';
 import { ellipsis } from '../../../utils/style';
 import styled from 'styled-components';
 
-export const StyledRoster = styled.aside`
+export const StyledRoster = styled.div`
   width: 100%;
   height: 100%;
   padding-bottom: 1rem;

@@ -24,7 +24,7 @@ import {
   createMemberArn,
   listChannelMessages,
   redactChannelMessage,
-  updateChannelMessage,
+  updateChannelMessage
 } from '../../api/ChimeAPI';
 
 import { AttachmentProcessor } from './AttachmentProcessor';
@@ -162,13 +162,7 @@ const Messages = ({
     let editedNote;
     if (m.LastEditedTimestamp && !m.Redacted) {
       const time = formatTime(m.LastEditedTimestamp);
-      const date = formatDate(
-        m.LastEditedTimestamp,
-        undefined,
-        undefined,
-        'today',
-        'yesterday'
-      );
+      const date = formatDate(m.LastEditedTimestamp);
       editedNote = (
         <i style={{ fontStyle: 'italic' }}>{` (edited ${date} at ${time})`}</i>
       );
@@ -263,21 +257,21 @@ const Messages = ({
             <ChatBubble
               variant={variant}
               senderName={m.senderName}
+              content={m.content}
               redacted={m.redacted}
               showName={showName}
               showTail={showTail}
             >
-              <div>
-                {m.content}
-                {m.editedNote}
-              </div>
-              {m.metadata && (
+              {m.editedNote}
+              {m.metadata ? (
                 <div style={{ marginTop: '10px' }}>
                   <AttachmentProcessor
                     senderId={m.senderId}
                     {...attachment(m.metadata)}
                   />
                 </div>
+              ) : (
+                ''
               )}
             </ChatBubble>
           )}

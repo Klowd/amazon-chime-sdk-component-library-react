@@ -29,7 +29,6 @@ export type LocalVideoContextType = {
   tileId: null | number;
   isVideoEnabled: boolean;
   toggleVideo: () => Promise<void>;
-  audioVideo: any;
 };
 
 export type ContentShareControlContextType = {
@@ -53,11 +52,4 @@ export type RosterAttendeeType = {
 
 export type RosterType = {
   [attendeeId: string]: RosterAttendeeType;
-};
-
-export enum DevicePermissionStatus {
-  UNSET = 'UNSET',
-  IN_PROGRESS = 'IN_PROGRESS',
-  GRANTED = 'GRANTED',
-  DENIED = 'DENIED',
 };

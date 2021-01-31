@@ -8,7 +8,7 @@ import {
   Severity,
   StateType,
   initialState,
-  reducer,
+  reducer
 } from './state';
 import React, { Dispatch, useContext, useReducer } from 'react';
 

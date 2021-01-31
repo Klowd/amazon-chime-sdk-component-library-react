@@ -111,12 +111,8 @@ export const StyledControlBarItem = styled.div<StyledControlBarItemProps>`
       ''}
   `};
 
-  > :first-child {
-    grid-column-start: ${({ layout, popOver, children }) =>
-      isVertical(layout) && (popOver || children) ? '2' : '1'};
-  }
-
   .ch-control-bar-item-iconButton {
+    grid-column-start: ${({ layout, popOver, children }) => isVertical(layout) && (popOver || children) ? '2' : '1'};
 
     .ch-icon {
       width: 1.5rem;

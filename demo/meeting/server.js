@@ -9,7 +9,7 @@ const uuid = require('uuid/v4');
 const AWS = require('aws-sdk');
 /* eslint-enable */
 
-let hostname = '127.0.0.1';
+let hostname = '0.0.0.0';
 let port = 8080;
 let protocol = 'http';
 let options = {};
@@ -134,35 +134,6 @@ const server = require(protocol).createServer(
         response.write(JSON.stringify(joinInfo), 'utf8');
         response.end();
         log(JSON.stringify(joinInfo, null, 2));
-      } else if (request.method === 'GET' && requestUrl.pathname === '/create') {
-        if (!requestUrl.query.title || !requestUrl.query.region) {
-          throw new Error('Invalid Request');
-        }
-  
-        // Look up the meeting by its title. If it does not exist, create the meeting.
-        if (!meetingTable[requestUrl.query.title]) {
-          meetingTable[requestUrl.query.title] = await chime.createMeeting({
-            // Use a UUID for the client request token to ensure that any request retries
-            // do not create multiple meetings.
-            ClientRequestToken: uuidv4(),
-            // Specify the media region (where the meeting is hosted).
-            // In this case, we use the region selected by the user.
-            MediaRegion: requestUrl.query.region,
-            // Any meeting ID you wish to associate with the meeting.
-            // For simplicity here, we use the meeting title.
-            ExternalMeetingId: requestUrl.query.title.substring(0, 64),
-          }).promise();
-        }
-  
-        // Fetch the meeting info
-        const meeting = meetingTable[requestUrl.query.title];
-        
-        // Return the meeting response.
-        respond(response, 201, 'application/json', JSON.stringify({
-          JoinInfo: {
-            Meeting: meeting.Meeting
-          },
-        }, null, 2));
       } else if (request.method === 'POST' && request.url.startsWith('/end?')) {
         const query = url.parse(request.url, true).query;
         const title = query.title;

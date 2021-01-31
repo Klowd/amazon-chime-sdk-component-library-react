@@ -3,13 +3,11 @@
 
 import '@testing-library/jest-dom';
 
-import { fireEvent, getByText } from '@testing-library/dom';
-
-import Echo from '../../../../src/components/ui/icons/Echo';
 import Notification from '../../../../src/components/ui/Notification';
 import React from 'react';
 import { Severity } from '../../../../src/providers/NotificationProvider';
-import lightTheme from '../../../../src/theme/light';
+import { fireEvent } from '@testing-library/dom';
+import lightTheme from '../../../../src/theme/light'
 import { renderWithTheme } from '../../../test-helpers';
 
 const getNotificationComponent = () => (
@@ -18,21 +16,6 @@ const getNotificationComponent = () => (
     severity={Severity.ERROR}
     message='Hello'
   />
-);
-
-const getNotificationWithOptionalProps = () => (
-  <Notification
-    icon={<Echo />} 
-    onClose={jest.fn()}
-    severity={Severity.SUCCESS}
-    message='Hello'
-    buttonProps={{ 
-      label: 'click me', 
-      onClick: jest.fn(), 
-    }}
-  >
-    <p>This is custom content</p>
-  </Notification>
 );
 
 describe('Notification', () => {
@@ -82,29 +65,5 @@ describe('Notification', () => {
     const closeButton = getByTestId('button');
     fireEvent.click(closeButton);
     expect(notificationComponent.props.onClose).toHaveBeenCalledTimes(1);
-  });
-});
-
-describe('Notification with optional props', () => {
-  it('renders a notification with a button', () => {
-    const notificationComponent = getNotificationWithOptionalProps();
-    const {  getByText } = renderWithTheme(lightTheme, notificationComponent);
-    const button = getByText('click me');
-    expect(button).toBeInTheDocument();
-  });
-
-  it('renders a notification with a custom icon', () => {
-    const notificationComponent = getNotificationWithOptionalProps();
-    const { getByTestId } = renderWithTheme(lightTheme, notificationComponent);
-    const severityIconEl = getByTestId('severity-icon');
-    expect(severityIconEl.children[0].classList.contains('Svg')).toBe(true)
-    expect(severityIconEl).toBeInTheDocument();
-  });
-
-  it('renders children if any are provided', () => {
-    const notificationComponent = getNotificationWithOptionalProps();
-    const { getByText } = renderWithTheme(lightTheme, notificationComponent);
-    const content = getByText('This is custom content');
-    expect(content).toBeInTheDocument();
   });
 });

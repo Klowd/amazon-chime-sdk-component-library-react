@@ -3,7 +3,7 @@
 
 import {
   NotificationGroup,
-  useNotificationState,
+  useNotificationState
 } from 'amazon-chime-sdk-component-library-react';
 
 import React from 'react';

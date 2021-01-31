@@ -7,7 +7,7 @@ import React, {
   useEffect,
   useMemo,
   useRef,
-  useState,
+  useState
 } from 'react';
 
 import { useMeetingManager } from '../MeetingProvider';

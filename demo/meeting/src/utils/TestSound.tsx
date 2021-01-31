@@ -6,7 +6,7 @@ import {
   TimeoutScheduler,
 } from 'amazon-chime-sdk-js';
 
-export default class TestSound {
+class TestSound {
   constructor(
     sinkId: string | null,
     frequency = 440,
@@ -61,3 +61,5 @@ export default class TestSound {
     });
   }
 }
+
+export default TestSound;

@@ -12,7 +12,7 @@ import React from 'react';
 import { Simulate } from 'react-dom/test-utils';
 import lightTheme from '../../../../src/theme/light';
 import { renderWithTheme } from '../../../test-helpers';
-import userEvent from '@testing-library/user-event';
+import userEvent from '@testing-library/user-event'
 
 let mockFunction: any, value: string, label: string;
 

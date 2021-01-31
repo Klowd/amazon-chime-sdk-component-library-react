@@ -3,21 +3,10 @@
 
 import '@testing-library/jest-dom/extend-expect';
 
-import {
-  ActionType,
-  NotificationProvider,
-  Severity,
-  useNotificationDispatch,
-} from '../../../../src/providers/NotificationProvider';
-import {
-  cleanup,
-  fireEvent,
-  render,
-  waitFor,
-  within,
-} from '@testing-library/react';
+import { ActionType, NotificationProvider, Severity, useNotificationDispatch } from '../../../../src/providers/NotificationProvider';
+import { cleanup, fireEvent, render, waitFor, within } from '@testing-library/react';
 
-import NotificationGroup from '../../../../src/components/ui/NotificationGroup';
+import NotificationGroup from '../../../../src/components/ui/NotificationGroup'
 import React from 'react';
 import lightTheme from '../../../../src/theme/light';
 import { renderWithTheme } from '../../../test-helpers';

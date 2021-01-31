@@ -8,7 +8,6 @@ import React from 'react';
 import lightTheme from '../../../../src/theme/light';
 import { renderWithTheme } from '../../../test-helpers';
 
-
 describe('Heading', () => {
 
   it('should render a Heading with children', () => {

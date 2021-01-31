@@ -5,7 +5,7 @@ import {
   ActionType,
   Severity,
   useMeetingManager,
-  useNotificationDispatch
+  useNotificationDispatch,
 } from 'amazon-chime-sdk-component-library-react';
 import React, { useEffect } from 'react';
 

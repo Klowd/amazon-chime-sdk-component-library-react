@@ -31,8 +31,7 @@ export const ModalButtonGroup: FC<ModalButtonGroupProps> = ({
   };
 
   const addCloseBehaviorToButtons = (buttons: JSX.Element[] | JSX.Element) => {
-    if (!context.dismissible || !buttons || (buttons instanceof Array && buttons.length === 0)) {
-      context.dismissible && console.warn("the 'dismissible prop prevents buttons from closing the modal");
+    if (!buttons || (buttons instanceof Array && buttons.length === 0)) {
       return buttons;
     }
     if (!(buttons instanceof Array)) {

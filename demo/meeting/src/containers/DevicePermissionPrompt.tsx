@@ -4,9 +4,7 @@
 import {
   Modal,
   ModalBody,
-  ModalHeader,
-  DevicePermissionStatus,
-  useDevicePermissionStatus
+  ModalHeader
 } from 'amazon-chime-sdk-component-library-react';
 
 import Card from '../components/Card';
