@@ -4,8 +4,8 @@
 import React from 'react';
 import { Label } from 'amazon-chime-sdk-component-library-react';
 
-import { StyledPreviewGroup } from '../Styled';
 import MicrophoneActivityPreviewBar from './MicrophoneActivityPreviewBar';
+import * from '../scss/style.scss';
 
 const MicrophoneActivityPreview = () => {
   return (

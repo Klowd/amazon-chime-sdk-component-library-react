@@ -7,7 +7,8 @@ import {
   MicSelection
 } from 'amazon-chime-sdk-component-library-react';
 
-import { title } from '../Styled';
+import * from '../scss/styles.scss';
+
 import MicrophoneActivityPreview from './MicrophoneActivityPreview';
 
 const MicrophoneDevices = () => {
