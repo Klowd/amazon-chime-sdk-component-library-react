@@ -25,7 +25,6 @@ import {
 } from 'amazon-chime-sdk-js';
 import {
   audioInputSelectionToDevice,
-  supportsSetSinkId,
   videoInputSelectionToDevice
 } from '../../utils/device-utils';
 
@@ -75,7 +74,7 @@ export class MeetingManager implements AudioVideoObserver {
 
   devicePermissionStatus = DevicePermissionStatus.UNSET;
 
-  devicePermissionsObservers: ((permission: DevicePermissionStatus) => void)[] = [];
+  devicePermissionsObservers: ((permission: string) => void)[] = [];
 
   activeSpeakerListener: ((activeSpeakers: string[]) => void) | null = null;
 
@@ -303,13 +302,9 @@ export class MeetingManager implements AudioVideoObserver {
       this.audioInputDevices.length
     ) {
       this.selectedAudioInputDevice = this.audioInputDevices[0].deviceId;
-      try {
-        await this.audioVideo?.chooseAudioInputDevice(
-          this.audioInputDevices[0].deviceId
-        );
-      } catch (e) {
-        console.error(`Error in selecting audio input device - ${e}`);
-      }
+      await this.audioVideo?.chooseAudioInputDevice(
+        this.audioInputDevices[0].deviceId
+      );
       this.publishSelectedAudioInputDevice();
     }
     if (
@@ -318,15 +313,9 @@ export class MeetingManager implements AudioVideoObserver {
       this.audioOutputDevices.length
     ) {
       this.selectedAudioOutputDevice = this.audioOutputDevices[0].deviceId;
-      if (supportsSetSinkId()) {
-        try {
-          await this.audioVideo?.chooseAudioOutputDevice(
-            this.audioOutputDevices[0].deviceId
-          );
-        } catch (e) {
-          console.error('Failed to choose audio output device.', e);
-        }
-      }
+      await this.audioVideo?.chooseAudioOutputDevice(
+        this.audioOutputDevices[0].deviceId
+      );
       this.publishSelectedAudioOutputDevice();
     }
     if (
@@ -343,18 +332,10 @@ export class MeetingManager implements AudioVideoObserver {
     try {
       const receivedDevice = audioInputSelectionToDevice(deviceId);
       if (receivedDevice === null) {
-        try {
-          await this.audioVideo?.chooseAudioInputDevice(null);
-        } catch (e) {
-          console.error('Failed to choose audio input device.', e);
-        }
+        await this.audioVideo?.chooseAudioInputDevice(null);
         this.selectedAudioInputDevice = null;
       } else {
-        try {
-          await this.audioVideo?.chooseAudioInputDevice(receivedDevice);
-        } catch (e) {
-          console.error('Failed to choose audio output device.', e);
-        }
+        await this.audioVideo?.chooseAudioInputDevice(receivedDevice);
         this.selectedAudioInputDevice = deviceId;
       }
       this.publishSelectedAudioInputDevice();
@@ -437,13 +418,13 @@ export class MeetingManager implements AudioVideoObserver {
   };
 
   subscribeToDevicePermissionStatus = (
-    callback: (permission: DevicePermissionStatus) => void
+    callback: (permission: string) => void
   ): void => {
     this.devicePermissionsObservers.push(callback);
   };
 
   unsubscribeFromDevicePermissionStatus = (
-    callbackToRemove: (permission: DevicePermissionStatus) => void
+    callbackToRemove: (permission: string) => void
   ): void => {
     this.devicePermissionsObservers = this.devicePermissionsObservers.filter(
       callback => callback !== callbackToRemove

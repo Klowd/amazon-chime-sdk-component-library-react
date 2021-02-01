@@ -32,7 +32,7 @@ const MeetingRoster = () => {
   const attendeeItems = attendees.map((attendee: any) => {
     const { chimeAttendeeId } = attendee || {};
     return (
-      <RosterAttendee key={chimeAttendeeId} attendeeId={chimeAttendeeId} menu={true}/>
+      <RosterAttendee key={chimeAttendeeId} attendeeId={chimeAttendeeId} />
     );
   });
 
@@ -42,7 +42,7 @@ const MeetingRoster = () => {
         searchValue={filter}
         onSearch={handleSearch}
         onClose={closeRoster}
-        title="Present"
+        title="Attendees"
         badge={attendees.length}
       />
       <RosterGroup>{attendeeItems}</RosterGroup>

@@ -6,11 +6,11 @@ import { boolean, select } from '@storybook/addon-knobs';
 import { Button } from './';
 import ButtonDocs from './Button.mdx';
 import Flex from '../Flex';
-import Badge from '../Badge';
-import Cog from '../icons/Cog';
-import Chat from '../icons/Chat';
-import Caution from '../icons/Caution';
-import SignalStrength from '../icons/SignalStrength'
+import IconButton from './IconButton';
+import Meeting from '../icons/Meeting';
+import PrimaryButton from './PrimaryButton';
+import React from 'react';
+import SecondaryButton from './SecondaryButton';
 
 export default {
   title: 'UI Components/Form/Buttons',
@@ -64,7 +64,7 @@ export const _IconButton = () => {
       <IconButton
         selected={boolean('Selected', false)}
         label="click me"
-        icon={<SignalStrength />}
+        icon={<Meeting />}
         iconSize={select('iconSize', ['sm', 'md', 'lg'], 'sm')}
         disabled={boolean('Disabled', false)}
       />
@@ -74,40 +74,4 @@ export const _IconButton = () => {
 
 _IconButton.story = {
   name: 'Icon button'
-};
-
-export const _IconButtoWithBadge = () => {
-  return (
-    <Flex layout="fill-space-centered">
-      <IconButton
-        selected={boolean('Selected', false)}
-        label="click me"
-        icon={<SignalStrength />}
-        iconSize={select('iconSize', ['sm', 'md', 'lg'], 'sm')}
-        badge={<Badge value="7"/>}
-      />
-    </Flex>
-  );
-};
-
-_IconButtoWithBadge.story = {
-  name: 'Icon button with badge',
-};
-
-export const _IconButtoWithBadgeIcon = () => {
-  return (
-    <Flex layout="fill-space-centered">
-      <IconButton
-        selected={boolean('Selected', false)}
-        label="click me"
-        icon={<SignalStrength />}
-        iconSize={select('iconSize', ['sm', 'md', 'lg'], 'sm')}
-        badge={<Caution width="1.5rem" css={`top: 0; right: 0;`} />}
-      />
-    </Flex>
-  );
-};
-
-_IconButtoWithBadgeIcon.story = {
-  name: 'Icon button with badge icon',
 };

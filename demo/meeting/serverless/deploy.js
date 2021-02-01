@@ -1,5 +1,5 @@
 const { spawnSync } = require('child_process');
-const fs = require('fs-extra');
+const fs = require('fs');
 const path = require('path');
 
 // Parameters
@@ -88,10 +88,6 @@ function parseArgs() {
 }
 
 function spawnOrFail(command, args, options) {
-  options = {
-    ...options,
-    shell: true
-  };
   const cmd = spawnSync(command, args, options);
 
   if (cmd.error) {
@@ -113,10 +109,12 @@ function appHtml(appName) {
 }
 
 function ensureApp(appName = app) {
+  const appPath = appHtml(appName);
+
   console.log(`Building ${appName} application`);
   spawnOrFail('npm', ['run', 'build'], { cwd: path.join(__dirname, '..') });
   spawnOrFail('npm', ['run', 'build:prod'], { cwd: path.join(__dirname, '..') });
-  fs.copySync(appHtml('meeting'), './src/index.html');
+  spawnOrFail('cp', [appPath, `./src/index.html`]);
 }
 
 function ensureTools() {

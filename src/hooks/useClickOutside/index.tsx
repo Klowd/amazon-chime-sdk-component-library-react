@@ -1,18 +1,16 @@
- // Copyright 2020-2021 Amazon.com, Inc. or its affiliates. All Rights Reserved.
+// Copyright 2020 Amazon.com, Inc. or its affiliates. All Rights Reserved.
 // SPDX-License-Identifier: Apache-2.0
 
 import { RefObject, useEffect } from 'react';
 
-export function useClickOutside(
-  ref: RefObject<HTMLElement>,
-  onClickOutside?: (e: MouseEvent | TouchEvent) => void
-) {
+export function useClickOutside(ref: RefObject<HTMLElement>, onClickOutside: (e: MouseEvent | TouchEvent) => void) {
+
   const isOutside = (e: MouseEvent | TouchEvent) => {
     return !!ref.current && !ref.current.contains(e.target as HTMLElement);
   }
 
   const onMouseDown = (e: MouseEvent | TouchEvent) => {
-    if (isOutside(e) && onClickOutside) {
+    if (isOutside(e)) {
       onClickOutside(e);
     }
   };

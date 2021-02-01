@@ -5,7 +5,7 @@ import '@testing-library/jest-dom';
 
 import ModalButton from '../../../../src/components/ui/Modal/ModalButton';
 import React from 'react';
-import lightTheme from '../../../../src/theme/light';
+import lightTheme from '../../../../src/theme/light'
 import { renderWithTheme } from '../../../test-helpers';
 
 describe('ModalButton', () => {

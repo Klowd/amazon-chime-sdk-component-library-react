@@ -1,14 +1,15 @@
 // Copyright 2020 Amazon.com, Inc. or its affiliates. All Rights Reserved.
 // SPDX-License-Identifier: Apache-2.0
 
+import React from 'react';
 import {
   Heading,
   MicSelection
 } from 'amazon-chime-sdk-component-library-react';
 
+import * from '../scss/styles.scss';
+
 import MicrophoneActivityPreview from './MicrophoneActivityPreview';
-import React from 'react';
-import { title } from '../Styled';
 
 const MicrophoneDevices = () => {
   return (

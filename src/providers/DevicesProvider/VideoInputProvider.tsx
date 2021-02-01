@@ -7,7 +7,7 @@ import React, {
   useContext,
   useEffect,
   useMemo,
-  useState,
+  useState
 } from 'react';
 
 import { DeviceChangeObserver } from 'amazon-chime-sdk-js';

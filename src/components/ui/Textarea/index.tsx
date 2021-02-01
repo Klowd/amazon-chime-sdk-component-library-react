@@ -1,7 +1,8 @@
 // Copyright 2020 Amazon.com, Inc. or its affiliates. All Rights Reserved.
 // SPDX-License-Identifier: Apache-2.0
 
-import React, { FC, ChangeEvent, InputHTMLAttributes, Ref } from 'react';
+import React, { ChangeEvent, FC, InputHTMLAttributes } from 'react';
+
 import { StyledTextarea } from './Styled';
 
 export interface TextareaProps
@@ -14,19 +15,16 @@ export interface TextareaProps
   label: string;
 }
 
-export const Textarea: FC<TextareaProps> = React.forwardRef(
-  ({ label, ...props }, ref: Ref<HTMLTextAreaElement>) => {
-    return (
-      <StyledTextarea
-        aria-label={label}
-        className="ch-textarea"
-        data-testid="textarea"
-        ref={ref}
-        {...props}
-      />
-    );
-  }
-);
+export const Textarea: FC<TextareaProps> = ({ label, ...props }) => {
+  return (
+    <StyledTextarea
+      aria-label={label}
+      className="ch-textarea"
+      data-testid="textarea"
+      {...props}
+    />
+  );
+};
 
 Textarea.displayName = 'Textarea';
 

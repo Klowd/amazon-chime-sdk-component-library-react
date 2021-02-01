@@ -5,7 +5,7 @@ import {
   ActionType,
   NotificationProvider,
   Severity,
-  useNotificationDispatch,
+  useNotificationDispatch
 } from '../../../providers/NotificationProvider';
 
 import Button from '../Button';

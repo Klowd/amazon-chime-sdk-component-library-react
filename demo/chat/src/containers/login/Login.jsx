@@ -8,7 +8,7 @@ import {
   Flex,
   FormField,
   Heading,
-  Input,
+  Input
 } from 'amazon-chime-sdk-component-library-react';
 import React, { useState } from 'react';
 

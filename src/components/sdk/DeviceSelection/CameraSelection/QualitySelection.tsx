@@ -2,10 +2,7 @@
 // SPDX-License-Identifier: Apache-2.0
 
 import React, { ChangeEvent, useState } from 'react';
-import {
-  VideoQuality,
-  useSelectVideoQuality,
-} from '../../../../hooks/sdk/useSelectVideoQuality';
+import { VideoQuality, useSelectVideoQuality } from '../../../../hooks/sdk/useSelectVideoQuality';
 
 import { FormField } from '../../../ui/FormField';
 import { Select } from '../../../ui/Select';
@@ -35,9 +32,7 @@ const qualityOptions = [
   }
 ];
 
-export const QualitySelection: React.FC<Props> = ({
-  label = 'Quality',
-}) => {
+export const QualitySelection: React.FC<Props> = ({ label = 'Video quality' }) => {
   const selectVideoQuality = useSelectVideoQuality();
   const [videoQuality, setVideoQuality] = useState('unselected');
 

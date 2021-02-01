@@ -11,7 +11,7 @@ import {
   Input as InputComponent,
   Label,
   Remove,
-  useNotificationDispatch,
+  useNotificationDispatch
 } from 'amazon-chime-sdk-component-library-react';
 import React, { useEffect, useRef, useState } from 'react';
 

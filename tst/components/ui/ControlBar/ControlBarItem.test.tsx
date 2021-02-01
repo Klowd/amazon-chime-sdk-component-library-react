@@ -7,7 +7,7 @@ import ControlBarItem from '../../../../src/components/ui/ControlBar/ControlBarI
 import React from 'react';
 import { Sound } from '../../../../src/components/ui/icons';
 import { fireEvent } from '@testing-library/dom';
-import lightTheme from '../../../../src/theme/light';
+import lightTheme from '../../../../src/theme/light'
 import { renderWithTheme } from '../../../test-helpers';
 
 export const controlBarItemProps = {

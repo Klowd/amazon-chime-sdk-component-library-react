@@ -47,7 +47,7 @@ export const RemoteVideo: React.FC<Props> = ({
       {...rest}
       ref={videoEl}
       nameplate={name}
-      className={`video-tile ch-remote-video--${tileId} ${className || ''}`}
+      className={`ch-remote-video--${tileId} ${className || ''}`}
     />
   );
 };

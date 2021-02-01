@@ -13,9 +13,7 @@ export function useApplyVideoObjectFit(videoEl: RefObject<HTMLVideoElement>) {
       const height = videoEl.current.videoHeight;
       const width = videoEl.current.videoWidth;
 
-      //We never want cover
-      //videoEl.current.style.objectFit = height > width ? 'contain' : 'cover';
-      videoEl.current.style.objectFit = 'contain';
+      videoEl.current.style.objectFit = height > width ? 'contain' : 'cover';
     }
 
     videoEl.current?.addEventListener('loadedmetadata', onLoaded);

@@ -31,7 +31,7 @@ import {
   listChannelMembershipsForAppInstanceUser,
   listChannelMessages,
   listChannelModerators,
-  listChannels,
+  listChannels
 } from '../../api/ChimeAPI';
 import {
   useChatChannelState,

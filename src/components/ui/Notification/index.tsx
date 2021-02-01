@@ -2,11 +2,10 @@
 // SPDX-License-Identifier: Apache-2.0
 
 import { Caution, CheckRound, Clock, Information, Remove } from '../icons';
-import React, { HTMLAttributes, ReactNode, useEffect } from 'react';
-import { StyledCloseIconButton, StyledNotification, StyledNotificationButton } from './Styled';
+import React, { HTMLAttributes, useEffect } from 'react';
+import { StyledCloseIconButton, StyledNotification } from './Styled';
 
 import { BaseProps } from '../Base';
-import { ButtonProps } from '../Button';
 
 export const DEFAULT_DELAY: number = 6000;
 
@@ -32,12 +31,6 @@ export interface NotificationProps
   autoCloseDelay?: number;
   /** CSS classname to apply custom styles. */
   className?: string;
-  /** For rendering a button element adjacent to the message */
-  buttonProps?: ButtonProps;
-  /** optional icon to override the default */
-  icon?: ReactNode;
-  /** optional content to render in the body of the notification */
-  children?: ReactNode | ReactNode[];
 }
 
 const iconMapping = {
@@ -55,10 +48,7 @@ export const Notification: React.FC<NotificationProps> = props => {
     autoClose = false,
     autoCloseDelay = DEFAULT_DELAY,
     severity = Severity.ERROR,
-    className,
-    buttonProps,
-    icon,
-    children,
+    className
   } = props;
 
   const ariaLive = severity === Severity.ERROR ? 'assertive' : 'polite';
@@ -83,13 +73,11 @@ export const Notification: React.FC<NotificationProps> = props => {
       data-testid="notification"
     >
       <div className="ch-severity-icon" data-testid="severity-icon">
-        {icon ? icon : iconMapping[severity]}
+        {iconMapping[severity]}
       </div>
       <output className="ch-message" data-testid="message" role={ariaRole}>
         {message}
       </output>
-      {buttonProps && <StyledNotificationButton aria-hidden {...buttonProps}/>}
-      {children}
       {onClose && (
         <StyledCloseIconButton
           label="close"

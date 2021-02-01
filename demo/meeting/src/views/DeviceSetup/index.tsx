@@ -9,8 +9,8 @@ import { StyledLayout } from './Styled';
 
 const DeviceSetup: React.FC = () => (
   <StyledLayout>
-    <Heading tag="h1" level={3} css="align-self: center">
-      Choose Device Settings
+    <Heading tag="h1" level={3} css="align-self: flex-start">
+      Device settings
     </Heading>
     <DeviceSelection />
     <JoinMeetingDetails />

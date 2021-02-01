@@ -15,7 +15,7 @@ interface Props {
 
 export const CameraSelection: React.FC<Props> = ({
   notFoundMsg = 'No camera devices found',
-  label = 'Camera',
+  label = 'Camera source'
 }) => {
   const meetingManager = useMeetingManager();
   const { devices, selectedDevice } = useVideoInputs();

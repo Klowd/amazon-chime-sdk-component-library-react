@@ -11,7 +11,7 @@ import {
   Cell,
   Grid,
   Heading,
-  useNotificationDispatch,
+  useNotificationDispatch
 } from 'amazon-chime-sdk-component-library-react';
 import {
   useChatChannelState,

@@ -4,7 +4,7 @@
 import { Flex } from '../Flex';
 import React from 'react';
 import { VideoTile } from './';
-import VideoTileDocs from './VideoTile.mdx';
+import VideoTileDocs from './VideoTile.mdx'
 
 export default {
   title: 'UI Components/Video/VideoTile',

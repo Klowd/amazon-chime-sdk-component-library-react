@@ -10,7 +10,7 @@ import {
   ManageMembersModal,
   NewChannelModal,
   ViewChannelDetailsModal,
-  ViewMembersModal,
+  ViewMembersModal
 } from '../../components/ChannelModals';
 
 import React from 'react';

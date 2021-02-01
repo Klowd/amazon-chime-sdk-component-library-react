@@ -15,7 +15,7 @@ interface Props {
 
 export const MicSelection: React.FC<Props> = ({
   notFoundMsg = 'No microphone devices found',
-  label = 'Microphone',
+  label = 'Microphone source'
 }) => {
   const selectAudioInput = useSelectAudioInputDevice();
   const { devices, selectedDevice } = useAudioInputs();

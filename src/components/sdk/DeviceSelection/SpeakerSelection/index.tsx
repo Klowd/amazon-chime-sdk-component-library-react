@@ -17,8 +17,8 @@ interface Props {
 
 export const SpeakerSelection: React.FC<Props> = ({
   notFoundMsg = 'No speaker devices found',
-  label = 'Speaker',
-  onChange,
+  label = 'Speaker source',
+  onChange
 }) => {
   const { devices, selectedDevice } = useAudioOutputs();
   const selectAudioOutput = useSelectAudioOutputDevice();

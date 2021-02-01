@@ -7,7 +7,7 @@ import React from 'react';
 import Textarea from '../../../../src/components/ui/Textarea';
 import lightTheme from '../../../../src/theme/light';
 import { renderWithTheme } from '../../../test-helpers';
-import userEvent from '@testing-library/user-event';
+import userEvent from "@testing-library/user-event";
 
 describe('Textarea', () => {
 
