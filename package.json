@@ -9,7 +9,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git://github.com/aws/amazon-chime-sdk-component-library"
+    "url": "git://github.com/klowd/amazon-chime-sdk-component-library"
   },
   "types": "lib/index.d.ts",
   "scripts": {

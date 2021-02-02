@@ -5,16 +5,16 @@ import React from 'react';
 import { Label } from 'amazon-chime-sdk-component-library-react';
 
 import MicrophoneActivityPreviewBar from './MicrophoneActivityPreviewBar';
-import * from '../scss/style.scss';
+import styled from "../scss/styles.scss"
 
 const MicrophoneActivityPreview = () => {
   return (
-    <StyledPreviewGroup>
+    <div className={styled.StyledPreviewGroup}>
       <Label style={{ display: 'block', marginBottom: '.5rem' }}>
         Microphone activity
       </Label>
       <MicrophoneActivityPreviewBar />
-    </StyledPreviewGroup>
+    </div>
   );
 };
 
