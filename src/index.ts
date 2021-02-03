@@ -76,7 +76,6 @@ export { RemoteVideo } from './components/sdk/RemoteVideo';
 export { RemoteVideos } from './components/sdk/RemoteVideos';
 export { FeaturedRemoteVideos } from './components/sdk/FeaturedRemoteVideos';
 export { VideoTileGrid } from './components/sdk/VideoTileGrid';
-export { VideoTileStrip } from './components/sdk/VideoTileStrip';
 export { MicrophoneActivity } from './components/sdk/MicrophoneActivity';
 export { RosterAttendee } from './components/sdk/RosterAttendee';
 
