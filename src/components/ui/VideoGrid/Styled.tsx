@@ -12,7 +12,6 @@ interface StyledGridProps extends VideoGridProps {
 }
 
 const sortedRatios: AspectRatio[] = [
-  'slim',
   'r1by2',
   'r2by3',
   'r1by1',
@@ -23,70 +22,55 @@ const sortedRatios: AspectRatio[] = [
 
 const ratioStyles = {
   '1': 'grid-template: 1fr / 1fr;',
-  '1.slim': 'grid-template:  1fr / 1fr;',
+  '1.slim': 'grid-template: repeat(2, 1fr) / 1fr;',
   '1.r2by3': 'grid-template: 1fr / 1fr;',
 
   '1.featured': `grid-template: "ft" 1fr / 1fr;`,
 
   '2': 'grid-template: 1fr / repeat(2,1fr);',
-  '2.slim': `grid-template: 1fr / repeat(2,1fr);`,
-  '2.r1by2': 'grid-template: repeat(2,1fr) / 1fr;',
-  '2.r2by3': 'grid-template: repeat(2,1fr) / 1fr;',
-  '2.r4by3': 'grid-template: repeat(2,1fr) / repeat(2,1fr);',
-  '2.r16by9': `grid-template: 1fr / repeat(2,1fr);`,
+  '2.r16by9': `grid-template: repeat(3,1fr) / repeat(2,1fr);
+    grid-template-areas: '. .' 'a b' '. .';`,
 
-  '2.featured': `grid-template: repeat(3,1fr) / repeat(2,1fr);
-  grid-template-areas: 'ft ft' 'ft ft';`,
-  '2.r16by9.featured': `grid-template: repeat(2,1fr) / repeat(3,1fr);
-    grid-template-areas: 'ft ft v' 'ft ft v' 'ft ft v';`,
+  '2.featured': `grid-template: 1fr / repeat(2,1fr);
+   grid-template-areas: 'ft v';`,
+  '2.r16by9.featured': `grid-template: repeat(3,1fr) / repeat(2,1fr);
+    grid-template-areas: '. .' 'v v' '. .';`,
 
-  '3': 'grid-template: repeat(3,1fr) / 1fr;',
-  '3.r2by3': 'grid-template: repeat(3,1fr) / repeat(1,1fr);',
-  '3.r1by1': 'grid-template: repeat(2,1fr) / repeat(2,1fr);',
-
-  '3.featured': `grid-template: repeat(3,1fr) / repeat(2,1fr);
-    grid-template-areas: 'ft ft' 'ft ft';
-  `,
-  '3.r16by9.featured': `grid-template: repeat(2,1fr) / repeat(3,1fr);
-    grid-template-areas: 'ft ft v' 'ft ft v';`,
+  '3': `grid-template: repeat(2,1fr) / repeat(4,1fr);
+   grid-template-areas: 'v v v v' '. v v .';`,
+  
+  '3.featured': `grid-template: repeat(2,1fr) / repeat(4,1fr);
+  grid-template-areas: '. v v .' 'v v v v';`,
+  '3.r16by9.featured': `grid-template: repeat(2,1fr) / repeat(4,1fr);
+  grid-template-areas: '. v v .' 'v v v v';`,
 
   '4': 'grid-template: repeat(2,1fr) / repeat(2,1fr);',
-  '4.slim': 'grid-template:  repeat(2,1fr) / repeat(2,1fr);',
-  '4.r2by3': 'grid-template: repeat(2,1fr) / repeat(2,1fr);',
+  
+  '4.featured': 'grid-template: repeat(2,1fr) / repeat(2,1fr);',
+  '4.r16by9.featured': 'grid-template: repeat(2,1fr) / repeat(2,1fr);',
 
-  '4.featured': `grid-template: repeat(2,1fr) / repeat(2,1fr);
-    grid-template-areas: 'ft ft' 'ft ft';`,
-  '4.r16by9.featured': `grid-template-areas: 'ft ft' 'ft ft';`,
-
-  '5': 'grid-template: repeat(2,1fr) / repeat(3,1fr);',
-  '5.slim': 'grid-template: repeat(5,1fr) / 1fr;',
-  '5.r1by2': 'grid-template: repeat(3,1fr) / repeat(2,1fr);',
-  '5.r2by3': 'grid-template: repeat(3,1fr) / repeat(2,1fr);',
-  '5.r3by2': 'grid-template: repeat(2,1fr) / repeat(3,1fr);',
-  '5.r16by9': `grid-template: repeat(2,1fr) / repeat(3,1fr);`,
+  '5': `grid-template: repeat(2,1fr) / repeat(6,1fr);
+    grid-template-areas: 'v v v v v v' '. v v v v .';
+    grid-area: span 1 / span 2;`,
+  '5.r16by9': `grid-template: repeat(2,1fr) / repeat(6,1fr);
+    grid-template-areas: 'v v v v v v' 'v v v v . .';
+    grid-area: span 1 / span 2;`,
 
   '5.featured': `grid-template: repeat(4,1fr) / repeat(2,1fr);
-    grid-template-areas: 'ft ft' 'ft ft';`,
-  '5.r1by1.featured': `grid-template: repeat(3,1fr) / repeat(3,1fr);
-    grid-template-areas: 'ft ft v' 'ft ft v';`,
+    grid-template-areas: 'ft ft' 'ft ft' 'v v' 'v v';`,
 
-  '6': 'grid-template: repeat(3,1fr) / repeat(3,1fr);',
-  '6.slim': 'grid-template: repeat(4,1fr) / repeat(2,1fr);',
-  '6.r1by2': 'grid-template: repeat(3,1fr) / repeat(2,1fr);',
-  '6.r1by1': 'grid-template: repeat(3,1fr) / repeat(2,1fr);',
-  '6.r2by3': 'grid-template: repeat(3,1fr) / repeat(2,1fr);',
-  '6.r3by2': 'grid-template: repeat(2,1fr) / repeat(3,1fr);',
+  '6': 'grid-template: repeat(2,1fr) / repeat(3,1fr);',
   '6.r16by9': `grid-template: repeat(2,1fr) / repeat(3,1fr);`,
 
-  '6.featured': `grid-template: repeat(4,1fr) / repeat(3,1fr);
+  '6.featured': `grid-template: repeat(2,1fr) / repeat(3,1fr);
     grid-template-areas: 'ft ft ft' 'ft ft ft';`,
   '6.r1by1.featured': `grid-template: repeat(3,1fr) / repeat(3,1fr);
     grid-template-areas: 'ft ft v' 'ft ft v';`,
 
-  '7': 'grid-template: repeat(3,1fr) / repeat(3,1fr);',
-  '7.slim': 'grid-template: repeat(4,1fr) / repeat(2,1fr);',
-  '7.r4by3': 'grid-template: repeat(3,1fr) / repeat(3,1fr);',
-  '7.r16by9': `grid-template: repeat(2,1fr) / repeat(4,1fr);`,
+  '7': `grid-template: repeat(3,1fr) / repeat(3,1fr);
+        grid-template-areas: 'v v v' 'v v v' '. v .';`,
+  '7.r16by9': `grid-template: repeat(2,1fr) / repeat(8,1fr);
+        grid-template-areas: 'v v v' 'v v v' '. v .';`,
 
   '7.featured': `grid-template: repeat(4,1fr) / repeat(3,1fr);
     grid-template-areas: 'ft ft ft' 'ft ft ft';`,
@@ -94,8 +78,6 @@ const ratioStyles = {
     grid-template-areas: 'ft ft ft v' 'ft ft ft v' 'ft ft ft v';`,
 
   '8': 'grid-template: repeat(3,1fr) / repeat(3,1fr);',
-  '8.slim': 'grid-template: repeat(4,1fr) / repeat(2,1fr);',
-  '8.r4by3': 'grid-template: repeat(3,1fr) / repeat(3,1fr);',
   '8.r16by9': 'grid-template: repeat(2,1fr) / repeat(4,1fr);',
 
   '8.featured': `grid-template: repeat(5,1fr) / repeat(4,1fr);
@@ -115,7 +97,6 @@ const ratioStyles = {
     grid-template-areas: 'ft ft ft ft v' 'ft ft ft ft v' 'ft ft ft ft v' 'ft ft ft ft v';`,
 
   '10': 'grid-template: repeat(4,1fr) / repeat(3,1fr);',
-  '10.slim': `grid-template: repeat(5,1fr) / repeat(2,1fr);`,
   '10.r1by1': 'grid-template: repeat(4,1fr) / repeat(3,1fr);',
   '10.r3by2': 'grid-template: repeat(3,1fr) / repeat(4,1fr);',
 
