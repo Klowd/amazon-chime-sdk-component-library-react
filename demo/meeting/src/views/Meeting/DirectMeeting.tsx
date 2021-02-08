@@ -1,29 +1,31 @@
 // Copyright 2020 Amazon.com, Inc. or its affiliates. All Rights Reserved.
 // SPDX-License-Identifier: Apache-2.0
 
+import * as styles from './style.scss';
+
 import React, { useEffect } from 'react';
 import {
-  VideoTileGrid,
   UserActivityProvider,
+  VideoTileGrid,
   useMeetingManager,
 } from 'amazon-chime-sdk-component-library-react';
+import {
+  createGetAttendeeCallback,
+  fetchMeeting,
+  getNearestRegion,
+  getQueryVariable,
+} from '../../utils/api';
+
+import MeetingControls from '../../containers/MeetingControls';
+import MeetingDetails from '../../containers/MeetingDetails';
+import MeetingMetrics from '../../containers/MeetingMetrics';
+import NavigationControl from '../../containers/Navigation/NavigationControl';
+import { RealitimeSubscribeStateProvider } from '../../providers/RealtimeSubscribeProvider';
+import { useAppState } from '../../providers/AppStateProvider';
 // import { useAppState } from '../../providers/AppStateProvider';
 import { useHistory } from 'react-router-dom';
-import { StyledLayout, StyledContent } from './Styled';
-import NavigationControl from '../../containers/Navigation/NavigationControl';
-import { useNavigation } from '../../providers/NavigationProvider';
-import MeetingDetails from '../../containers/MeetingDetails';
-import MeetingControls from '../../containers/MeetingControls';
 import useMeetingEndRedirect from '../../hooks/useMeetingEndRedirect';
-import MeetingMetrics from '../../containers/MeetingMetrics';
-import {
-  fetchMeeting,
-  createGetAttendeeCallback,
-  getQueryVariable,
-  getNearestRegion,
-} from '../../utils/api';
-import { useAppState } from '../../providers/AppStateProvider';
-import { RealitimeSubscribeStateProvider } from '../../providers/RealtimeSubscribeProvider';
+import { useNavigation } from '../../providers/NavigationProvider';
 
 const DirectMeeting = () => {
   const { setAppMeetingInfo, meetingId } = useAppState();
@@ -62,9 +64,9 @@ const DirectMeeting = () => {
 
   return (
     <UserActivityProvider>
-      <StyledLayout showNav={showNavbar} showRoster={showRoster || showChat}>
+      <div className={styles.StyledLayout} showNav={showNavbar} showRoster={showRoster || showChat}>
         <RealitimeSubscribeStateProvider>
-          <StyledContent>
+          <div className={styles.StyledContent}>
             <MeetingMetrics />
             <VideoTileGrid
               className="videos"
@@ -78,10 +80,10 @@ const DirectMeeting = () => {
               type={getQueryVariable('t', history.location)}
               meetingId={meetingId}
             />
-          </StyledContent>
+          </div>
           <NavigationControl />
         </RealitimeSubscribeStateProvider>
-      </StyledLayout>
+      </div>
     </UserActivityProvider>
   );
 };

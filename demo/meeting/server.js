@@ -10,7 +10,7 @@ const AWS = require('aws-sdk');
 /* eslint-enable */
 
 let hostname = '0.0.0.0';
-let port = 8080;
+let port = 4210;
 let protocol = 'http';
 let options = {};
 
@@ -41,6 +41,7 @@ const server = require(protocol).createServer(
   async (request, response) => {
     log(`${request.method} ${request.url} BEGIN`);
     compression({})(request, response, () => {});
+    response.setHeader('Access-Control-Allow-Origin', '*');
     try {
       if (
         request.method === 'GET' &&

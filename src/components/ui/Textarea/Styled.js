@@ -1,0 +1,10 @@
+// Copyright 2020 Amazon.com, Inc. or its affiliates. All Rights Reserved.
+// SPDX-License-Identifier: Apache-2.0
+var __makeTemplateObject = (this && this.__makeTemplateObject) || function (cooked, raw) {
+    if (Object.defineProperty) { Object.defineProperty(cooked, "raw", { value: raw }); } else { cooked.raw = raw; }
+    return cooked;
+};
+import styled from "styled-components";
+export var StyledTextarea = styled.textarea(templateObject_1 || (templateObject_1 = __makeTemplateObject(["\n  background-color: ", ";\n  border: ", ";\n  border-radius: ", ";\n  box-shadow: ", ";\n  color: ", ";\n  font-size: ", ";\n  padding: 0.5rem;\n  position: relative;\n  min-height: 4rem;\n  transition: box-shadow .05s ease-in;\n  width: 100%;\n\n  &:focus,\n  &[aria-invalid=\"true\"]:focus {\n    border: ", ";\n    box-shadow: ", ";\n    outline: none;\n  }\n\n  &[aria-invalid=\"true\"] {\n    border: ", ";\n    box-shadow: ", ";\n  }\n"], ["\n  background-color: ", ";\n  border: ", ";\n  border-radius: ", ";\n  box-shadow: ", ";\n  color: ", ";\n  font-size: ", ";\n  padding: 0.5rem;\n  position: relative;\n  min-height: 4rem;\n  transition: box-shadow .05s ease-in;\n  width: 100%;\n\n  &:focus,\n  &[aria-invalid=\"true\"]:focus {\n    border: ", ";\n    box-shadow: ", ";\n    outline: none;\n  }\n\n  &[aria-invalid=\"true\"] {\n    border: ", ";\n    box-shadow: ", ";\n  }\n"])), function (props) { return props.theme.inputs.bgd; }, function (props) { return props.theme.inputs.border; }, function (props) { return props.theme.inputs.borderRadius; }, function (props) { return props.theme.inputs.shadow; }, function (props) { return props.theme.inputs.fontColor; }, function (props) { return props.theme.fontSizes.text.fontSize; }, function (props) { return props.theme.inputs.focus.border; }, function (props) { return props.theme.inputs.focus.shadow; }, function (props) { return props.theme.inputs.error.border; }, function (props) { return props.theme.inputs.error.shadow; });
+var templateObject_1;
+//# sourceMappingURL=Styled.js.map
